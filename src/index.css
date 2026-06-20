@@ -2086,6 +2086,7 @@ a:hover {
   align-items: center;
   text-align: center;
   position: relative;
+  overflow: visible;
 }
 
 .popular-card {
