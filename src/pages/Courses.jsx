@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { BookOpen, Award, CheckCircle, GraduationCap, Clock, MapPin, Calendar, HelpCircle } from 'lucide-react';
+import { BookOpen, Award, CheckCircle, GraduationCap, Clock, MapPin, Calendar, HelpCircle, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Courses = () => {
   const { hash } = useLocation();
@@ -106,16 +107,30 @@ const Courses = () => {
             </div>
           </div>
 
-          {/* Topics Grid */}
-          <div className="topics-container mt-8">
-            <h3 className="topics-heading text-center">Featured LLL Course Modules</h3>
-            <div className="grid-3 topics-grid">
-              {lllTopics.map((topic, idx) => (
-                <div key={idx} className="card topic-card">
-                  <CheckCircle size={18} className="text-teal topic-icon" />
-                  <span>{topic}</span>
-                </div>
-              ))}
+          {/* Topics Visual Roadmap */}
+          <div className="topics-container mt-12 mb-8">
+            <h3 className="topics-heading text-center" style={{ fontSize: '24px', marginBottom: '40px' }}>ESPEN LLL Learning Roadmap</h3>
+            <div style={{ position: 'relative', padding: '20px 0' }}>
+              <div style={{ position: 'absolute', top: '50%', left: '0', right: '0', height: '4px', background: 'var(--border-ultra-light)', zIndex: 0, transform: 'translateY(-50%)', borderRadius: '4px' }}></div>
+              <div style={{ position: 'absolute', top: '50%', left: '0', width: '70%', height: '4px', background: 'var(--primary)', zIndex: 1, transform: 'translateY(-50%)', borderRadius: '4px' }}></div>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px', position: 'relative', zIndex: 2 }}>
+                {lllTopics.map((topic, idx) => (
+                  <motion.div 
+                    key={idx} 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    style={{ background: 'var(--bg-white)', padding: '20px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', position: 'relative' }}
+                  >
+                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: idx < 4 ? 'var(--primary)' : 'var(--bg-white)', border: idx < 4 ? 'none' : '2px solid var(--border-light)', color: idx < 4 ? 'white' : 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', zIndex: 3 }}>
+                      {idx < 4 ? <CheckCircle size={20} /> : <span style={{ fontWeight: 'bold' }}>{idx + 1}</span>}
+                    </div>
+                    <span style={{ fontSize: '14px', fontWeight: '600', color: 'var(--primary-dark)' }}>{topic}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -2,6 +2,90 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Search, MapPin, Mail, User, Info, Building, X } from 'lucide-react';
 import { chaptersCommittees } from './../data/committees';
+import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
+import { motion } from 'framer-motion';
+
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+const chaptersData = [
+  { name: 'Ahmedabad Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Ketan Patel', email: 'ahmedabad@iapenindia.org', coordinates: [72.5714, 23.0225] },
+  { name: 'Bangaluru Chapter', state: 'Karnataka', region: 'South', coordinator: 'Dr. Amit Gururaj Yelsangikar (President) / Ms. Suneetha Rao (Secretary)', email: 'iapenblr@gmail.com', coordinates: [77.5946, 12.9716] },
+  { name: 'Bhopal Chapter', state: 'Madhya Pradesh', region: 'Central', coordinator: 'Dr. Ajay Sharma', email: 'bhopal@iapenindia.org', coordinates: [77.4126, 23.2599] },
+  { name: 'Bhubaneswar Chapter', state: 'Odisha', region: 'East', coordinator: 'Dr. Mihir Mohanty', email: 'bhubaneswar@iapenindia.org', coordinates: [85.8245, 20.2961] },
+  { name: 'Chandigarh Chapter', state: 'Punjab/Haryana', region: 'North', coordinator: 'Dr. Preeti Singh', email: 'chandigarh@iapenindia.org', coordinates: [76.7794, 30.7333] },
+  { name: 'Chennai Chapter', state: 'Tamil Nadu', region: 'South', coordinator: 'Dr. V. Ramakrishnan', email: 'chennai@iapenindia.org', coordinates: [80.2707, 13.0827] },
+  { name: 'Cochin Chapter', state: 'Kerala', region: 'South', coordinator: 'Dr. Liza Jacob', email: 'cochin@iapenindia.org', coordinates: [76.2673, 9.9312] },
+  { name: 'Coimbatore Chapter', state: 'Tamil Nadu', region: 'South', coordinator: 'Dr. S. Karthik', email: 'coimbatore@iapenindia.org', coordinates: [76.9558, 11.0168] },
+  { name: 'Delhi Chapter', state: 'Delhi NCR', region: 'North', coordinator: 'Dr. Ananya Sen', email: 'delhi@iapenindia.org', coordinates: [77.2090, 28.6139] },
+  { name: 'Etawah Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. R. K. Yadav', email: 'etawah@iapenindia.org', coordinates: [79.0193, 26.7730] },
+  { name: 'Faridabad Chapter', state: 'Haryana', region: 'North', coordinator: 'Dr. Vikram Malhotra', email: 'faridabad@iapenindia.org', coordinates: [77.3178, 28.4089] },
+  { name: 'Guwahati Chapter', state: 'Assam', region: 'East', coordinator: 'Dr. Jyoti Baruah', email: 'guwahati@iapenindia.org', coordinates: [91.7362, 26.1445] },
+  { name: 'Hyderabad Chapter', state: 'Telangana', region: 'South', coordinator: 'Dr. Srinivas Rao', email: 'hyderabad@iapenindia.org', coordinates: [78.4867, 17.3850] },
+  { name: 'Indore Chapter', state: 'Madhya Pradesh', region: 'Central', coordinator: 'Dr. Nidhi Chawla', email: 'indore@iapenindia.org', coordinates: [75.8577, 22.7196] },
+  { name: 'Kannur Chapter', state: 'Kerala', region: 'South', coordinator: 'Dr. K. Rajeevan', email: 'kannur@iapenindia.org', coordinates: [75.3704, 11.8745] },
+  { name: 'Kolkata Chapter', state: 'West Bengal', region: 'East', coordinator: 'Dr. Suchitra Banerjee', email: 'kolkata@iapenindia.org', coordinates: [88.3639, 22.5726] },
+  { name: 'Lucknow Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Amit Tripathi', email: 'lucknow@iapenindia.org', coordinates: [80.9462, 26.8467] },
+  { name: 'Ludhiana Chapter', state: 'Punjab', region: 'North', coordinator: 'Dr. G. S. Grewal', email: 'ludhiana@iapenindia.org', coordinates: [75.8573, 30.9010] },
+  { name: 'Mangaluru Chapter', state: 'Karnataka', region: 'South', coordinator: 'Dr. Shalini Rai', email: 'mangaluru@iapenindia.org', coordinates: [74.8560, 12.9141] },
+  { name: 'Meerut Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Saurabh Gupta', email: 'meerut@iapenindia.org', coordinates: [77.7082, 28.9845] },
+  { name: 'Mumbai Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Ritu Sinha', email: 'mumbai@iapenindia.org', coordinates: [72.8777, 19.0760] },
+  { name: 'Nagpur Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Nitin Deshmukh', email: 'nagpur@iapenindia.org', coordinates: [79.0882, 21.1458] },
+  { name: 'Nashik Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Snehal Patil', email: 'nashik@iapenindia.org', coordinates: [73.7898, 19.9975] },
+  { name: 'Navi Mumbai Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Vinay Kumar', email: 'navimumbai@iapenindia.org', coordinates: [73.0297, 19.0330] },
+  { name: 'Patna Chapter', state: 'Bihar', region: 'East', coordinator: 'Dr. Rajiv Ranjan', email: 'patna@iapenindia.org', coordinates: [85.1376, 25.5941] },
+  { name: 'Prayagraj Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. O. P. Mishra', email: 'prayagraj@iapenindia.org', coordinates: [81.8463, 25.4358] },
+  { name: 'Puducherry Chapter', state: 'Puducherry', region: 'South', coordinator: 'Dr. Marie Dev', email: 'puducherry@iapenindia.org', coordinates: [79.8083, 11.9416] },
+  { name: 'Pune Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Sanjay Agarwal (President) / Ms. Richa Shukla (Secretary)', email: 'iapenpunechapter@gmail.com', coordinates: [73.8567, 18.5204] },
+  { name: 'Raipur Chapter', state: 'Chhattisgarh', region: 'Central', coordinator: 'Dr. Deepa Prasad', email: 'raipur@iapenindia.org', coordinates: [81.6296, 21.2514] },
+  { name: 'Ranchi Chapter', state: 'Jharkhand', region: 'East', coordinator: 'Dr. Abhishek Roy', email: 'ranchi@iapenindia.org', coordinates: [85.3096, 23.3441] },
+  { name: 'Sambhajinagar Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Anil Borse', email: 'sambhajinagar@iapenindia.org', coordinates: [75.3433, 19.8762] },
+  { name: 'Surat Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Meera Vyas', email: 'surat@iapenindia.org', coordinates: [72.8311, 21.1702] },
+  { name: 'Vadodara Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Rajesh Shah', email: 'vadodara@iapenindia.org', coordinates: [73.1812, 22.3072] },
+  { name: 'Varanasi Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Sanjay Sen', email: 'varanasi@iapenindia.org', coordinates: [82.9739, 25.3176] },
+  { name: 'Vijaywada Chapter', state: 'Andhra Pradesh', region: 'South', coordinator: 'Dr. P. V. Rao', email: 'vijayawada@iapenindia.org', coordinates: [80.6480, 16.5062] },
+  { name: 'Vizag Chapter', state: 'Andhra Pradesh', region: 'South', coordinator: 'Dr. L. S. Murthy', email: 'vizag@iapenindia.org', coordinates: [83.2185, 17.6868] }
+];
+
+const MapChart = ({ chapters }) => {
+  return (
+    <div style={{ width: "100%", height: "400px", background: "rgba(5, 27, 44, 0.05)", borderRadius: "var(--radius-lg)", border: "1px solid rgba(11, 60, 93, 0.1)", overflow: "hidden", marginBottom: "40px", position: "relative" }}>
+      <ComposableMap
+        projection="geoMercator"
+        projectionConfig={{ scale: 800, center: [80, 22] }}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <Geographies geography={geoUrl}>
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                fill={geo.properties.name === "India" ? "var(--primary-light)" : "#EAEAEC"}
+                stroke="#D6D6DA"
+                style={{
+                  default: { outline: "none" },
+                  hover: { fill: geo.properties.name === "India" ? "var(--primary)" : "#EAEAEC", outline: "none", transition: "all 250ms" },
+                  pressed: { outline: "none" }
+                }}
+              />
+            ))
+          }
+        </Geographies>
+        {chapters.map((chapter, idx) => (
+          chapter.coordinates && (
+            <Marker key={idx} coordinates={chapter.coordinates}>
+              <circle r={6} fill="var(--accent)" />
+            </Marker>
+          )
+        ))}
+      </ComposableMap>
+      <div style={{ position: "absolute", bottom: "20px", left: "20px", background: "rgba(255,255,255,0.9)", padding: "10px 16px", borderRadius: "8px", boxShadow: "var(--shadow-md)" }}>
+        <h4 style={{ margin: 0, fontSize: "14px", color: "var(--primary-dark)" }}>National Presence</h4>
+        <p style={{ margin: 0, fontSize: "12px", color: "var(--text-muted)" }}>{chapters.length} Active Chapters Shown</p>
+      </div>
+    </div>
+  );
+};
 
 const Chapters = () => {
   const { hash } = useLocation();
@@ -19,45 +103,6 @@ const Chapters = () => {
       window.scrollTo(0, 0);
     }
   }, [hash]);
-
-  const chaptersData = [
-    { name: 'Ahmedabad Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Ketan Patel', email: 'ahmedabad@iapenindia.org' },
-    { name: 'Bangaluru Chapter', state: 'Karnataka', region: 'South', coordinator: 'Dr. Amit Gururaj Yelsangikar (President) / Ms. Suneetha Rao (Secretary)', email: 'iapenblr@gmail.com' },
-    { name: 'Bhopal Chapter', state: 'Madhya Pradesh', region: 'Central', coordinator: 'Dr. Ajay Sharma', email: 'bhopal@iapenindia.org' },
-    { name: 'Bhubaneswar Chapter', state: 'Odisha', region: 'East', coordinator: 'Dr. Mihir Mohanty', email: 'bhubaneswar@iapenindia.org' },
-    { name: 'Chandigarh Chapter', state: 'Punjab/Haryana', region: 'North', coordinator: 'Dr. Preeti Singh', email: 'chandigarh@iapenindia.org' },
-    { name: 'Chennai Chapter', state: 'Tamil Nadu', region: 'South', coordinator: 'Dr. V. Ramakrishnan', email: 'chennai@iapenindia.org' },
-    { name: 'Cochin Chapter', state: 'Kerala', region: 'South', coordinator: 'Dr. Liza Jacob', email: 'cochin@iapenindia.org' },
-    { name: 'Coimbatore Chapter', state: 'Tamil Nadu', region: 'South', coordinator: 'Dr. S. Karthik', email: 'coimbatore@iapenindia.org' },
-    { name: 'Delhi Chapter', state: 'Delhi NCR', region: 'North', coordinator: 'Dr. Ananya Sen', email: 'delhi@iapenindia.org' },
-    { name: 'Etawah Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. R. K. Yadav', email: 'etawah@iapenindia.org' },
-    { name: 'Faridabad Chapter', state: 'Haryana', region: 'North', coordinator: 'Dr. Vikram Malhotra', email: 'faridabad@iapenindia.org' },
-    { name: 'Guwahati Chapter', state: 'Assam', region: 'East', coordinator: 'Dr. Jyoti Baruah', email: 'guwahati@iapenindia.org' },
-    { name: 'Hyderabad Chapter', state: 'Telangana', region: 'South', coordinator: 'Dr. Srinivas Rao', email: 'hyderabad@iapenindia.org' },
-    { name: 'Indore Chapter', state: 'Madhya Pradesh', region: 'Central', coordinator: 'Dr. Nidhi Chawla', email: 'indore@iapenindia.org' },
-    { name: 'Kannur Chapter', state: 'Kerala', region: 'South', coordinator: 'Dr. K. Rajeevan', email: 'kannur@iapenindia.org' },
-    { name: 'Kolkata Chapter', state: 'West Bengal', region: 'East', coordinator: 'Dr. Suchitra Banerjee', email: 'kolkata@iapenindia.org' },
-    { name: 'Lucknow Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Amit Tripathi', email: 'lucknow@iapenindia.org' },
-    { name: 'Ludhiana Chapter', state: 'Punjab', region: 'North', coordinator: 'Dr. G. S. Grewal', email: 'ludhiana@iapenindia.org' },
-    { name: 'Mangaluru Chapter', state: 'Karnataka', region: 'South', coordinator: 'Dr. Shalini Rai', email: 'mangaluru@iapenindia.org' },
-    { name: 'Meerut Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Saurabh Gupta', email: 'meerut@iapenindia.org' },
-    { name: 'Mumbai Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Ritu Sinha', email: 'mumbai@iapenindia.org' },
-    { name: 'Nagpur Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Nitin Deshmukh', email: 'nagpur@iapenindia.org' },
-    { name: 'Nashik Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Snehal Patil', email: 'nashik@iapenindia.org' },
-    { name: 'Navi Mumbai Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Vinay Kumar', email: 'navimumbai@iapenindia.org' },
-    { name: 'Patna Chapter', state: 'Bihar', region: 'East', coordinator: 'Dr. Rajiv Ranjan', email: 'patna@iapenindia.org' },
-    { name: 'Prayagraj Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. O. P. Mishra', email: 'prayagraj@iapenindia.org' },
-    { name: 'Puducherry Chapter', state: 'Puducherry', region: 'South', coordinator: 'Dr. Marie Dev', email: 'puducherry@iapenindia.org' },
-    { name: 'Pune Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Sanjay Agarwal (President) / Ms. Richa Shukla (Secretary)', email: 'iapenpunechapter@gmail.com' },
-    { name: 'Raipur Chapter', state: 'Chhattisgarh', region: 'Central', coordinator: 'Dr. Deepa Prasad', email: 'raipur@iapenindia.org' },
-    { name: 'Ranchi Chapter', state: 'Jharkhand', region: 'East', coordinator: 'Dr. Abhishek Roy', email: 'ranchi@iapenindia.org' },
-    { name: 'Sambhajinagar Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Anil Borse', email: 'sambhajinagar@iapenindia.org' },
-    { name: 'Surat Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Meera Vyas', email: 'surat@iapenindia.org' },
-    { name: 'Vadodara Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Rajesh Shah', email: 'vadodara@iapenindia.org' },
-    { name: 'Varanasi Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Sanjay Sen', email: 'varanasi@iapenindia.org' },
-    { name: 'Vijaywada Chapter', state: 'Andhra Pradesh', region: 'South', coordinator: 'Dr. P. V. Rao', email: 'vijayawada@iapenindia.org' },
-    { name: 'Vizag Chapter', state: 'Andhra Pradesh', region: 'South', coordinator: 'Dr. L. S. Murthy', email: 'vizag@iapenindia.org' }
-  ];
 
   const regions = ['All', 'North', 'South', 'East', 'West', 'Central'];
 
@@ -86,6 +131,11 @@ const Chapters = () => {
             <h2 className="section-title">Chapters Directory</h2>
             <p className="section-desc">Search and connect with our 35+ local chapters distributed across the country to participate in regional clinical programs.</p>
           </div>
+
+          {/* Interactive Map Visualisation */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <MapChart chapters={filteredChapters} />
+          </motion.div>
 
           {/* Interactive Search Controls */}
           <div className="search-filter-container glass-panel">
