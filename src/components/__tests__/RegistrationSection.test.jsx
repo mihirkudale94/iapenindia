@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import RegistrationSection from '../RegistrationSection';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 
 describe('RegistrationSection Component', () => {
   it('renders the form correctly', () => {
@@ -12,7 +12,7 @@ describe('RegistrationSection Component', () => {
 
   it('shows validation errors when submitting an empty form', async () => {
     render(<RegistrationSection />);
-    
+
     const submitButton = screen.getByRole('button', { name: /Submit Application/i });
     fireEvent.click(submitButton);
 
@@ -25,7 +25,7 @@ describe('RegistrationSection Component', () => {
 
   it('updates form state on input change', () => {
     render(<RegistrationSection />);
-    
+
     const nameInput = screen.getByLabelText(/Full Name/i);
     fireEvent.change(nameInput, { target: { value: 'Dr. John Doe' } });
     expect(nameInput.value).toBe('Dr. John Doe');

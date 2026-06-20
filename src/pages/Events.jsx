@@ -1,5 +1,14 @@
-import React, { useState } from 'react';
-import { Calendar, MapPin, Award, ArrowRight, Download, Search, CheckCircle, AlertCircle, X } from 'lucide-react';
+import { useState } from 'react';
+import {
+  Calendar,
+  MapPin,
+  Award,
+  ArrowRight,
+  Download,
+  Search,
+  AlertCircle,
+  X,
+} from 'lucide-react';
 import { certificatesDatabase } from '../data/certificates';
 
 const Events = () => {
@@ -18,7 +27,7 @@ const Events = () => {
       type: 'Flagship Conference',
       desc: 'Join national and global experts in gastroenterology, critical care, and dietetics. Includes hands-on workshops and poster presentations.',
       brochureLink: 'https://iapenindia.org/PDF/ICNC-2026.pdf',
-      color: 'card-primary'
+      color: 'card-primary',
     },
     {
       title: 'ESPEN LLL Module 3: Nutritional Support in ICU',
@@ -27,7 +36,7 @@ const Events = () => {
       type: 'Certified Course',
       desc: 'Advanced LLL module covering septic shock nutrition, enteral tube placement strategies, and parenteral nutrition monitoring protocols.',
       brochureLink: '/courses',
-      color: 'card-teal'
+      color: 'card-teal',
     },
     {
       title: 'National Webinar on Pediatric Nutrition Standards',
@@ -36,14 +45,14 @@ const Events = () => {
       type: 'Continuing Education',
       desc: 'Free webinar for members detailing the localized pediatric clinical guidelines launched by the IAPEN Pediatric Core Group.',
       brochureLink: '#',
-      color: 'card-accent'
-    }
+      color: 'card-accent',
+    },
   ];
 
   const handleCertSearch = (e) => {
     e.preventDefault();
     setError('');
-    
+
     const trimmedEmail = certQuery.trim().toLowerCase();
     if (!trimmedEmail) {
       setError('Email address is required');
@@ -61,22 +70,22 @@ const Events = () => {
     setTimeout(() => {
       setSearchingCert(false);
       const delegate = certificatesDatabase.find(
-        item => item.email.toLowerCase() === trimmedEmail
+        (item) => item.email.toLowerCase() === trimmedEmail
       );
-      
+
       const eventRecord = delegate?.events[certConference];
-      
+
       if (delegate && eventRecord) {
         setCertResult({
           delegateName: delegate.delegateName,
           email: delegate.email,
           conferenceName: eventRecord.eventName,
           certId: eventRecord.certId,
-          status: 'verified'
+          status: 'verified',
         });
       } else {
         setCertResult({
-          status: 'not_found'
+          status: 'not_found',
         });
       }
     }, 1500);
@@ -98,7 +107,10 @@ const Events = () => {
           <div className="section-title-wrapper">
             <span className="section-subtitle">Calendar 2026</span>
             <h2 className="section-title">Upcoming Scientific Events</h2>
-            <p className="section-desc">Mark your calendar for the upcoming physical congresses, LLL live workshops, and clinical tele-seminars organized by IAPEN India.</p>
+            <p className="section-desc">
+              Mark your calendar for the upcoming physical congresses, LLL live workshops, and
+              clinical tele-seminars organized by IAPEN India.
+            </p>
           </div>
 
           <div className="grid-3 events-grid">
@@ -106,7 +118,7 @@ const Events = () => {
               <div key={idx} className={`card event-card-item ${evt.color}`}>
                 <span className="event-type-badge">{evt.type}</span>
                 <h3 className="event-title">{evt.title}</h3>
-                
+
                 <div className="event-meta-list mt-4">
                   <div className="event-meta-item">
                     <Calendar size={14} className="text-primary" />
@@ -119,13 +131,13 @@ const Events = () => {
                 </div>
 
                 <p className="event-desc-text mt-4">{evt.desc}</p>
-                
+
                 <div className="event-actions mt-6">
                   {evt.brochureLink.endsWith('.pdf') ? (
-                    <a 
-                      href={evt.brochureLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={evt.brochureLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="btn btn-primary w-full"
                     >
                       Download Brochure <Download size={14} />
@@ -148,21 +160,34 @@ const Events = () => {
           <div className="section-title-wrapper">
             <span className="section-subtitle">Downloads</span>
             <h2 className="section-title">Certificate Verification Portal</h2>
-            <p className="section-desc">Search and download participation/attendance certificates for recent IAPEN conferences and ESPEN workshops.</p>
+            <p className="section-desc">
+              Search and download participation/attendance certificates for recent IAPEN conferences
+              and ESPEN workshops.
+            </p>
           </div>
 
           <div className="form-container-box glass-panel cert-portal-box">
             <h3 className="form-box-title">Search Certificate</h3>
-            <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '24px', marginTop: '-8px' }}>
-              For testing, try searching: <code>president@iapenindia.org</code> or <code>info@iapenindia.org</code>.
+            <p
+              style={{
+                fontSize: '13px',
+                color: 'var(--text-muted)',
+                marginBottom: '24px',
+                marginTop: '-8px',
+              }}
+            >
+              For testing, try searching: <code>president@iapenindia.org</code> or{' '}
+              <code>info@iapenindia.org</code>.
             </p>
-            
+
             <form onSubmit={handleCertSearch} className="cert-search-form">
               <div className="grid-2">
                 <div className="form-group">
-                  <label className="form-label" htmlFor="conference">Conference/Event</label>
-                  <select 
-                    id="conference" 
+                  <label className="form-label" htmlFor="conference">
+                    Conference/Event
+                  </label>
+                  <select
+                    id="conference"
                     className="form-select"
                     value={certConference}
                     onChange={(e) => setCertConference(e.target.value)}
@@ -174,13 +199,15 @@ const Events = () => {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label" htmlFor="certQuery">Registered Email Address</label>
+                  <label className="form-label" htmlFor="certQuery">
+                    Registered Email Address
+                  </label>
                   <div className="input-with-icon">
                     <Search size={18} className="input-icon" />
-                    <input 
-                      type="text" 
-                      id="certQuery" 
-                      className={`form-input ${error ? 'is-invalid' : ''}`} 
+                    <input
+                      type="text"
+                      id="certQuery"
+                      className={`form-input ${error ? 'is-invalid' : ''}`}
                       placeholder="Enter the email used for registration"
                       value={certQuery}
                       onChange={(e) => {
@@ -196,11 +223,11 @@ const Events = () => {
                       }}
                     />
                     {certQuery && (
-                      <button 
+                      <button
                         onClick={() => {
                           setCertQuery('');
                           setError('');
-                        }} 
+                        }}
                         className="clear-search-btn"
                         style={{ right: '14px' }}
                         aria-label="Clear search"
@@ -210,13 +237,17 @@ const Events = () => {
                       </button>
                     )}
                   </div>
-                  {error && <span className="form-error"><AlertCircle size={12} /> {error}</span>}
+                  {error && (
+                    <span className="form-error">
+                      <AlertCircle size={12} /> {error}
+                    </span>
+                  )}
                 </div>
               </div>
 
               <div className="text-center mt-4">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-primary w-full-md"
                   disabled={searchingCert}
                 >
@@ -254,9 +285,13 @@ const Events = () => {
                         <span>Reference ID:</span> <code>{certResult.certId}</code>
                       </div>
                     </div>
-                    
-                    <button 
-                      onClick={() => alert('Mock Download: Certificate PDF has been compiled and downloaded successfully!')}
+
+                    <button
+                      onClick={() =>
+                        alert(
+                          'Mock Download: Certificate PDF has been compiled and downloaded successfully!'
+                        )
+                      }
                       className="btn btn-accent mt-6"
                     >
                       Download PDF Certificate <Download size={14} />
@@ -267,7 +302,9 @@ const Events = () => {
                     <AlertCircle className="text-accent mb-4" size={48} />
                     <h3>No Certificate Record Found</h3>
                     <p className="text-muted mt-2">
-                      We could not find any delegate record matching the email <strong>"{certQuery}"</strong>. Please ensure the email is typed correctly or check the selected event.
+                      We could not find any delegate record matching the email{' '}
+                      <strong>"{certQuery}"</strong>. Please ensure the email is typed correctly or
+                      check the selected event.
                     </p>
                   </div>
                 )}
@@ -283,15 +320,36 @@ const Events = () => {
           <div className="section-title-wrapper">
             <span className="section-subtitle">Highlights</span>
             <h2 className="section-title">Glimpses from ICNC 2022</h2>
-            <p className="section-desc font-semibold text-primary">Reflecting on the successful milestones and scientific panels of the Indian Clinical Nutrition Congress 2022.</p>
+            <p className="section-desc font-semibold text-primary">
+              Reflecting on the successful milestones and scientific panels of the Indian Clinical
+              Nutrition Congress 2022.
+            </p>
           </div>
 
-          <div className="glass-panel" style={{ padding: '30px', maxWidth: '800px', margin: '30px auto 0 auto', textAlign: 'center' }}>
+          <div
+            className="glass-panel"
+            style={{
+              padding: '30px',
+              maxWidth: '800px',
+              margin: '30px auto 0 auto',
+              textAlign: 'center',
+            }}
+          >
             <div className="past-event-glimpse-box">
               <Award className="text-teal" size={48} style={{ margin: '0 auto 16px auto' }} />
-              <h3 style={{ color: 'var(--primary-dark)', fontSize: '18px', marginBottom: '12px' }}>ICNC 2022 Key Takeaways</h3>
-              <p className="about-text" style={{ fontSize: '15px', lineHeight: '1.6', color: 'var(--text-muted)' }}>
-                The Indian Clinical Nutrition Congress 2022 brought together leading physicians, clinical dietitians, and pharmacologists from across India. Sessions focused on formulating localized guideline frameworks, enhancing ICU parenteral nutrition safety checklists, and advocating for structured Medical Nutrition Therapy (MNT). We are proud to share the scientific progress and collaborative milestones achieved during this congress.
+              <h3 style={{ color: 'var(--primary-dark)', fontSize: '18px', marginBottom: '12px' }}>
+                ICNC 2022 Key Takeaways
+              </h3>
+              <p
+                className="about-text"
+                style={{ fontSize: '15px', lineHeight: '1.6', color: 'var(--text-muted)' }}
+              >
+                The Indian Clinical Nutrition Congress 2022 brought together leading physicians,
+                clinical dietitians, and pharmacologists from across India. Sessions focused on
+                formulating localized guideline frameworks, enhancing ICU parenteral nutrition
+                safety checklists, and advocating for structured Medical Nutrition Therapy (MNT). We
+                are proud to share the scientific progress and collaborative milestones achieved
+                during this congress.
               </p>
             </div>
           </div>

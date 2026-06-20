@@ -1,58 +1,321 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Search, MapPin, Mail, User, Info, Building, X } from 'lucide-react';
 import { chaptersCommittees } from './../data/committees';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 import { motion } from 'framer-motion';
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const geoUrl = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
 const chaptersData = [
-  { name: 'Ahmedabad Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Ketan Patel', email: 'ahmedabad@iapenindia.org', coordinates: [72.5714, 23.0225] },
-  { name: 'Bangaluru Chapter', state: 'Karnataka', region: 'South', coordinator: 'Dr. Amit Gururaj Yelsangikar (President) / Ms. Suneetha Rao (Secretary)', email: 'iapenblr@gmail.com', coordinates: [77.5946, 12.9716] },
-  { name: 'Bhopal Chapter', state: 'Madhya Pradesh', region: 'Central', coordinator: 'Dr. Ajay Sharma', email: 'bhopal@iapenindia.org', coordinates: [77.4126, 23.2599] },
-  { name: 'Bhubaneswar Chapter', state: 'Odisha', region: 'East', coordinator: 'Dr. Mihir Mohanty', email: 'bhubaneswar@iapenindia.org', coordinates: [85.8245, 20.2961] },
-  { name: 'Chandigarh Chapter', state: 'Punjab/Haryana', region: 'North', coordinator: 'Dr. Preeti Singh', email: 'chandigarh@iapenindia.org', coordinates: [76.7794, 30.7333] },
-  { name: 'Chennai Chapter', state: 'Tamil Nadu', region: 'South', coordinator: 'Dr. V. Ramakrishnan', email: 'chennai@iapenindia.org', coordinates: [80.2707, 13.0827] },
-  { name: 'Cochin Chapter', state: 'Kerala', region: 'South', coordinator: 'Dr. Liza Jacob', email: 'cochin@iapenindia.org', coordinates: [76.2673, 9.9312] },
-  { name: 'Coimbatore Chapter', state: 'Tamil Nadu', region: 'South', coordinator: 'Dr. S. Karthik', email: 'coimbatore@iapenindia.org', coordinates: [76.9558, 11.0168] },
-  { name: 'Delhi Chapter', state: 'Delhi NCR', region: 'North', coordinator: 'Dr. Ananya Sen', email: 'delhi@iapenindia.org', coordinates: [77.2090, 28.6139] },
-  { name: 'Etawah Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. R. K. Yadav', email: 'etawah@iapenindia.org', coordinates: [79.0193, 26.7730] },
-  { name: 'Faridabad Chapter', state: 'Haryana', region: 'North', coordinator: 'Dr. Vikram Malhotra', email: 'faridabad@iapenindia.org', coordinates: [77.3178, 28.4089] },
-  { name: 'Guwahati Chapter', state: 'Assam', region: 'East', coordinator: 'Dr. Jyoti Baruah', email: 'guwahati@iapenindia.org', coordinates: [91.7362, 26.1445] },
-  { name: 'Hyderabad Chapter', state: 'Telangana', region: 'South', coordinator: 'Dr. Srinivas Rao', email: 'hyderabad@iapenindia.org', coordinates: [78.4867, 17.3850] },
-  { name: 'Indore Chapter', state: 'Madhya Pradesh', region: 'Central', coordinator: 'Dr. Nidhi Chawla', email: 'indore@iapenindia.org', coordinates: [75.8577, 22.7196] },
-  { name: 'Kannur Chapter', state: 'Kerala', region: 'South', coordinator: 'Dr. K. Rajeevan', email: 'kannur@iapenindia.org', coordinates: [75.3704, 11.8745] },
-  { name: 'Kolkata Chapter', state: 'West Bengal', region: 'East', coordinator: 'Dr. Suchitra Banerjee', email: 'kolkata@iapenindia.org', coordinates: [88.3639, 22.5726] },
-  { name: 'Lucknow Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Amit Tripathi', email: 'lucknow@iapenindia.org', coordinates: [80.9462, 26.8467] },
-  { name: 'Ludhiana Chapter', state: 'Punjab', region: 'North', coordinator: 'Dr. G. S. Grewal', email: 'ludhiana@iapenindia.org', coordinates: [75.8573, 30.9010] },
-  { name: 'Mangaluru Chapter', state: 'Karnataka', region: 'South', coordinator: 'Dr. Shalini Rai', email: 'mangaluru@iapenindia.org', coordinates: [74.8560, 12.9141] },
-  { name: 'Meerut Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Saurabh Gupta', email: 'meerut@iapenindia.org', coordinates: [77.7082, 28.9845] },
-  { name: 'Mumbai Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Ritu Sinha', email: 'mumbai@iapenindia.org', coordinates: [72.8777, 19.0760] },
-  { name: 'Nagpur Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Nitin Deshmukh', email: 'nagpur@iapenindia.org', coordinates: [79.0882, 21.1458] },
-  { name: 'Nashik Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Snehal Patil', email: 'nashik@iapenindia.org', coordinates: [73.7898, 19.9975] },
-  { name: 'Navi Mumbai Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Vinay Kumar', email: 'navimumbai@iapenindia.org', coordinates: [73.0297, 19.0330] },
-  { name: 'Patna Chapter', state: 'Bihar', region: 'East', coordinator: 'Dr. Rajiv Ranjan', email: 'patna@iapenindia.org', coordinates: [85.1376, 25.5941] },
-  { name: 'Prayagraj Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. O. P. Mishra', email: 'prayagraj@iapenindia.org', coordinates: [81.8463, 25.4358] },
-  { name: 'Puducherry Chapter', state: 'Puducherry', region: 'South', coordinator: 'Dr. Marie Dev', email: 'puducherry@iapenindia.org', coordinates: [79.8083, 11.9416] },
-  { name: 'Pune Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Sanjay Agarwal (President) / Ms. Richa Shukla (Secretary)', email: 'iapenpunechapter@gmail.com', coordinates: [73.8567, 18.5204] },
-  { name: 'Raipur Chapter', state: 'Chhattisgarh', region: 'Central', coordinator: 'Dr. Deepa Prasad', email: 'raipur@iapenindia.org', coordinates: [81.6296, 21.2514] },
-  { name: 'Ranchi Chapter', state: 'Jharkhand', region: 'East', coordinator: 'Dr. Abhishek Roy', email: 'ranchi@iapenindia.org', coordinates: [85.3096, 23.3441] },
-  { name: 'Sambhajinagar Chapter', state: 'Maharashtra', region: 'West', coordinator: 'Dr. Anil Borse', email: 'sambhajinagar@iapenindia.org', coordinates: [75.3433, 19.8762] },
-  { name: 'Surat Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Meera Vyas', email: 'surat@iapenindia.org', coordinates: [72.8311, 21.1702] },
-  { name: 'Vadodara Chapter', state: 'Gujarat', region: 'West', coordinator: 'Dr. Rajesh Shah', email: 'vadodara@iapenindia.org', coordinates: [73.1812, 22.3072] },
-  { name: 'Varanasi Chapter', state: 'Uttar Pradesh', region: 'North', coordinator: 'Dr. Sanjay Sen', email: 'varanasi@iapenindia.org', coordinates: [82.9739, 25.3176] },
-  { name: 'Vijaywada Chapter', state: 'Andhra Pradesh', region: 'South', coordinator: 'Dr. P. V. Rao', email: 'vijayawada@iapenindia.org', coordinates: [80.6480, 16.5062] },
-  { name: 'Vizag Chapter', state: 'Andhra Pradesh', region: 'South', coordinator: 'Dr. L. S. Murthy', email: 'vizag@iapenindia.org', coordinates: [83.2185, 17.6868] }
+  {
+    name: 'Ahmedabad Chapter',
+    state: 'Gujarat',
+    region: 'West',
+    coordinator: 'Dr. Ketan Patel',
+    email: 'ahmedabad@iapenindia.org',
+    coordinates: [72.5714, 23.0225],
+  },
+  {
+    name: 'Bangaluru Chapter',
+    state: 'Karnataka',
+    region: 'South',
+    coordinator: 'Dr. Amit Gururaj Yelsangikar (President) / Ms. Suneetha Rao (Secretary)',
+    email: 'iapenblr@gmail.com',
+    coordinates: [77.5946, 12.9716],
+  },
+  {
+    name: 'Bhopal Chapter',
+    state: 'Madhya Pradesh',
+    region: 'Central',
+    coordinator: 'Dr. Ajay Sharma',
+    email: 'bhopal@iapenindia.org',
+    coordinates: [77.4126, 23.2599],
+  },
+  {
+    name: 'Bhubaneswar Chapter',
+    state: 'Odisha',
+    region: 'East',
+    coordinator: 'Dr. Mihir Mohanty',
+    email: 'bhubaneswar@iapenindia.org',
+    coordinates: [85.8245, 20.2961],
+  },
+  {
+    name: 'Chandigarh Chapter',
+    state: 'Punjab/Haryana',
+    region: 'North',
+    coordinator: 'Dr. Preeti Singh',
+    email: 'chandigarh@iapenindia.org',
+    coordinates: [76.7794, 30.7333],
+  },
+  {
+    name: 'Chennai Chapter',
+    state: 'Tamil Nadu',
+    region: 'South',
+    coordinator: 'Dr. V. Ramakrishnan',
+    email: 'chennai@iapenindia.org',
+    coordinates: [80.2707, 13.0827],
+  },
+  {
+    name: 'Cochin Chapter',
+    state: 'Kerala',
+    region: 'South',
+    coordinator: 'Dr. Liza Jacob',
+    email: 'cochin@iapenindia.org',
+    coordinates: [76.2673, 9.9312],
+  },
+  {
+    name: 'Coimbatore Chapter',
+    state: 'Tamil Nadu',
+    region: 'South',
+    coordinator: 'Dr. S. Karthik',
+    email: 'coimbatore@iapenindia.org',
+    coordinates: [76.9558, 11.0168],
+  },
+  {
+    name: 'Delhi Chapter',
+    state: 'Delhi NCR',
+    region: 'North',
+    coordinator: 'Dr. Ananya Sen',
+    email: 'delhi@iapenindia.org',
+    coordinates: [77.209, 28.6139],
+  },
+  {
+    name: 'Etawah Chapter',
+    state: 'Uttar Pradesh',
+    region: 'North',
+    coordinator: 'Dr. R. K. Yadav',
+    email: 'etawah@iapenindia.org',
+    coordinates: [79.0193, 26.773],
+  },
+  {
+    name: 'Faridabad Chapter',
+    state: 'Haryana',
+    region: 'North',
+    coordinator: 'Dr. Vikram Malhotra',
+    email: 'faridabad@iapenindia.org',
+    coordinates: [77.3178, 28.4089],
+  },
+  {
+    name: 'Guwahati Chapter',
+    state: 'Assam',
+    region: 'East',
+    coordinator: 'Dr. Jyoti Baruah',
+    email: 'guwahati@iapenindia.org',
+    coordinates: [91.7362, 26.1445],
+  },
+  {
+    name: 'Hyderabad Chapter',
+    state: 'Telangana',
+    region: 'South',
+    coordinator: 'Dr. Srinivas Rao',
+    email: 'hyderabad@iapenindia.org',
+    coordinates: [78.4867, 17.385],
+  },
+  {
+    name: 'Indore Chapter',
+    state: 'Madhya Pradesh',
+    region: 'Central',
+    coordinator: 'Dr. Nidhi Chawla',
+    email: 'indore@iapenindia.org',
+    coordinates: [75.8577, 22.7196],
+  },
+  {
+    name: 'Kannur Chapter',
+    state: 'Kerala',
+    region: 'South',
+    coordinator: 'Dr. K. Rajeevan',
+    email: 'kannur@iapenindia.org',
+    coordinates: [75.3704, 11.8745],
+  },
+  {
+    name: 'Kolkata Chapter',
+    state: 'West Bengal',
+    region: 'East',
+    coordinator: 'Dr. Suchitra Banerjee',
+    email: 'kolkata@iapenindia.org',
+    coordinates: [88.3639, 22.5726],
+  },
+  {
+    name: 'Lucknow Chapter',
+    state: 'Uttar Pradesh',
+    region: 'North',
+    coordinator: 'Dr. Amit Tripathi',
+    email: 'lucknow@iapenindia.org',
+    coordinates: [80.9462, 26.8467],
+  },
+  {
+    name: 'Ludhiana Chapter',
+    state: 'Punjab',
+    region: 'North',
+    coordinator: 'Dr. G. S. Grewal',
+    email: 'ludhiana@iapenindia.org',
+    coordinates: [75.8573, 30.901],
+  },
+  {
+    name: 'Mangaluru Chapter',
+    state: 'Karnataka',
+    region: 'South',
+    coordinator: 'Dr. Shalini Rai',
+    email: 'mangaluru@iapenindia.org',
+    coordinates: [74.856, 12.9141],
+  },
+  {
+    name: 'Meerut Chapter',
+    state: 'Uttar Pradesh',
+    region: 'North',
+    coordinator: 'Dr. Saurabh Gupta',
+    email: 'meerut@iapenindia.org',
+    coordinates: [77.7082, 28.9845],
+  },
+  {
+    name: 'Mumbai Chapter',
+    state: 'Maharashtra',
+    region: 'West',
+    coordinator: 'Dr. Ritu Sinha',
+    email: 'mumbai@iapenindia.org',
+    coordinates: [72.8777, 19.076],
+  },
+  {
+    name: 'Nagpur Chapter',
+    state: 'Maharashtra',
+    region: 'West',
+    coordinator: 'Dr. Nitin Deshmukh',
+    email: 'nagpur@iapenindia.org',
+    coordinates: [79.0882, 21.1458],
+  },
+  {
+    name: 'Nashik Chapter',
+    state: 'Maharashtra',
+    region: 'West',
+    coordinator: 'Dr. Snehal Patil',
+    email: 'nashik@iapenindia.org',
+    coordinates: [73.7898, 19.9975],
+  },
+  {
+    name: 'Navi Mumbai Chapter',
+    state: 'Maharashtra',
+    region: 'West',
+    coordinator: 'Dr. Vinay Kumar',
+    email: 'navimumbai@iapenindia.org',
+    coordinates: [73.0297, 19.033],
+  },
+  {
+    name: 'Patna Chapter',
+    state: 'Bihar',
+    region: 'East',
+    coordinator: 'Dr. Rajiv Ranjan',
+    email: 'patna@iapenindia.org',
+    coordinates: [85.1376, 25.5941],
+  },
+  {
+    name: 'Prayagraj Chapter',
+    state: 'Uttar Pradesh',
+    region: 'North',
+    coordinator: 'Dr. O. P. Mishra',
+    email: 'prayagraj@iapenindia.org',
+    coordinates: [81.8463, 25.4358],
+  },
+  {
+    name: 'Puducherry Chapter',
+    state: 'Puducherry',
+    region: 'South',
+    coordinator: 'Dr. Marie Dev',
+    email: 'puducherry@iapenindia.org',
+    coordinates: [79.8083, 11.9416],
+  },
+  {
+    name: 'Pune Chapter',
+    state: 'Maharashtra',
+    region: 'West',
+    coordinator: 'Dr. Sanjay Agarwal (President) / Ms. Richa Shukla (Secretary)',
+    email: 'iapenpunechapter@gmail.com',
+    coordinates: [73.8567, 18.5204],
+  },
+  {
+    name: 'Raipur Chapter',
+    state: 'Chhattisgarh',
+    region: 'Central',
+    coordinator: 'Dr. Deepa Prasad',
+    email: 'raipur@iapenindia.org',
+    coordinates: [81.6296, 21.2514],
+  },
+  {
+    name: 'Ranchi Chapter',
+    state: 'Jharkhand',
+    region: 'East',
+    coordinator: 'Dr. Abhishek Roy',
+    email: 'ranchi@iapenindia.org',
+    coordinates: [85.3096, 23.3441],
+  },
+  {
+    name: 'Sambhajinagar Chapter',
+    state: 'Maharashtra',
+    region: 'West',
+    coordinator: 'Dr. Anil Borse',
+    email: 'sambhajinagar@iapenindia.org',
+    coordinates: [75.3433, 19.8762],
+  },
+  {
+    name: 'Surat Chapter',
+    state: 'Gujarat',
+    region: 'West',
+    coordinator: 'Dr. Meera Vyas',
+    email: 'surat@iapenindia.org',
+    coordinates: [72.8311, 21.1702],
+  },
+  {
+    name: 'Vadodara Chapter',
+    state: 'Gujarat',
+    region: 'West',
+    coordinator: 'Dr. Rajesh Shah',
+    email: 'vadodara@iapenindia.org',
+    coordinates: [73.1812, 22.3072],
+  },
+  {
+    name: 'Varanasi Chapter',
+    state: 'Uttar Pradesh',
+    region: 'North',
+    coordinator: 'Dr. Sanjay Sen',
+    email: 'varanasi@iapenindia.org',
+    coordinates: [82.9739, 25.3176],
+  },
+  {
+    name: 'Vijaywada Chapter',
+    state: 'Andhra Pradesh',
+    region: 'South',
+    coordinator: 'Dr. P. V. Rao',
+    email: 'vijayawada@iapenindia.org',
+    coordinates: [80.648, 16.5062],
+  },
+  {
+    name: 'Vizag Chapter',
+    state: 'Andhra Pradesh',
+    region: 'South',
+    coordinator: 'Dr. L. S. Murthy',
+    email: 'vizag@iapenindia.org',
+    coordinates: [83.2185, 17.6868],
+  },
 ];
 
 const MapChart = ({ chapters }) => {
   return (
-    <div style={{ width: "100%", height: "400px", background: "rgba(5, 27, 44, 0.05)", borderRadius: "var(--radius-lg)", border: "1px solid rgba(11, 60, 93, 0.1)", overflow: "hidden", marginBottom: "40px", position: "relative" }}>
+    <div
+      style={{
+        width: '100%',
+        height: '400px',
+        background: 'rgba(5, 27, 44, 0.05)',
+        borderRadius: 'var(--radius-lg)',
+        border: '1px solid rgba(11, 60, 93, 0.1)',
+        overflow: 'hidden',
+        marginBottom: '40px',
+        position: 'relative',
+      }}
+    >
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{ scale: 800, center: [80, 22] }}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: '100%', height: '100%' }}
       >
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -60,28 +323,47 @@ const MapChart = ({ chapters }) => {
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill={geo.properties.name === "India" ? "var(--primary-light)" : "#EAEAEC"}
+                fill={geo.properties.name === 'India' ? 'var(--primary-light)' : '#EAEAEC'}
                 stroke="#D6D6DA"
                 style={{
-                  default: { outline: "none" },
-                  hover: { fill: geo.properties.name === "India" ? "var(--primary)" : "#EAEAEC", outline: "none", transition: "all 250ms" },
-                  pressed: { outline: "none" }
+                  default: { outline: 'none' },
+                  hover: {
+                    fill: geo.properties.name === 'India' ? 'var(--primary)' : '#EAEAEC',
+                    outline: 'none',
+                    transition: 'all 250ms',
+                  },
+                  pressed: { outline: 'none' },
                 }}
               />
             ))
           }
         </Geographies>
-        {chapters.map((chapter, idx) => (
-          chapter.coordinates && (
-            <Marker key={idx} coordinates={chapter.coordinates}>
-              <circle r={6} fill="var(--accent)" />
-            </Marker>
-          )
-        ))}
+        {chapters.map(
+          (chapter, idx) =>
+            chapter.coordinates && (
+              <Marker key={idx} coordinates={chapter.coordinates}>
+                <circle r={6} fill="var(--accent)" />
+              </Marker>
+            )
+        )}
       </ComposableMap>
-      <div style={{ position: "absolute", bottom: "20px", left: "20px", background: "rgba(255,255,255,0.9)", padding: "10px 16px", borderRadius: "8px", boxShadow: "var(--shadow-md)" }}>
-        <h4 style={{ margin: 0, fontSize: "14px", color: "var(--primary-dark)" }}>National Presence</h4>
-        <p style={{ margin: 0, fontSize: "12px", color: "var(--text-muted)" }}>{chapters.length} Active Chapters Shown</p>
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '20px',
+          background: 'rgba(255,255,255,0.9)',
+          padding: '10px 16px',
+          borderRadius: '8px',
+          boxShadow: 'var(--shadow-md)',
+        }}
+      >
+        <h4 style={{ margin: 0, fontSize: '14px', color: 'var(--primary-dark)' }}>
+          National Presence
+        </h4>
+        <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)' }}>
+          {chapters.length} Active Chapters Shown
+        </p>
       </div>
     </div>
   );
@@ -106,10 +388,11 @@ const Chapters = () => {
 
   const regions = ['All', 'North', 'South', 'East', 'West', 'Central'];
 
-  const filteredChapters = chaptersData.filter(chapter => {
-    const matchesSearch = chapter.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          chapter.state.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          chapter.coordinator.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredChapters = chaptersData.filter((chapter) => {
+    const matchesSearch =
+      chapter.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      chapter.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      chapter.coordinator.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRegion = filterRegion === 'All' || chapter.region === filterRegion;
     return matchesSearch && matchesRegion;
   });
@@ -129,11 +412,18 @@ const Chapters = () => {
         <div className="container">
           <div className="section-title-wrapper">
             <h2 className="section-title">Chapters Directory</h2>
-            <p className="section-desc">Search and connect with our 35+ local chapters distributed across the country to participate in regional clinical programs.</p>
+            <p className="section-desc">
+              Search and connect with our 35+ local chapters distributed across the country to
+              participate in regional clinical programs.
+            </p>
           </div>
 
           {/* Interactive Map Visualisation */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <MapChart chapters={filteredChapters} />
           </motion.div>
 
@@ -141,16 +431,16 @@ const Chapters = () => {
           <div className="search-filter-container glass-panel">
             <div className="search-box-wrapper">
               <Search className="search-icon" size={20} />
-              <input 
-                type="text" 
-                placeholder="Search chapter, state, or coordinator..." 
+              <input
+                type="text"
+                placeholder="Search chapter, state, or coordinator..."
                 className="search-input-field"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
               {searchTerm && (
-                <button 
-                  onClick={() => setSearchTerm('')} 
+                <button
+                  onClick={() => setSearchTerm('')}
                   className="clear-search-btn"
                   aria-label="Clear search"
                   type="button"
@@ -159,7 +449,7 @@ const Chapters = () => {
                 </button>
               )}
             </div>
-            
+
             <div className="region-filter-tabs">
               {regions.map((reg) => (
                 <button
@@ -183,8 +473,8 @@ const Chapters = () => {
             {filteredChapters.map((chapter, index) => {
               const hasDetails = !!chaptersCommittees[chapter.name];
               return (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`card chapter-card card-primary ${hasDetails ? 'cursor-pointer hover-lift' : ''}`}
                   onClick={() => {
                     if (hasDetails) {
@@ -192,7 +482,7 @@ const Chapters = () => {
                         name: chapter.name,
                         state: chapter.state,
                         region: chapter.region,
-                        ...chaptersCommittees[chapter.name]
+                        ...chaptersCommittees[chapter.name],
                       });
                     }
                   }}
@@ -207,7 +497,9 @@ const Chapters = () => {
                   <div className="chapter-body">
                     <div className="chapter-detail-item">
                       <MapPin size={16} className="detail-icon" />
-                      <span>State: <strong>{chapter.state}</strong></span>
+                      <span>
+                        State: <strong>{chapter.state}</strong>
+                      </span>
                     </div>
                     <div className="chapter-detail-item">
                       <User size={16} className="detail-icon" />
@@ -233,7 +525,9 @@ const Chapters = () => {
             <div className="no-results-box text-center glass-panel">
               <Info size={48} className="text-muted mb-4" />
               <h3>No Chapters Found</h3>
-              <p className="text-muted">Try searching with a different keyword or selecting a different region.</p>
+              <p className="text-muted">
+                Try searching with a different keyword or selecting a different region.
+              </p>
             </div>
           )}
         </div>
@@ -242,12 +536,23 @@ const Chapters = () => {
       {/* Chapter Committee Modal */}
       {selectedChapter && (
         <div className="modal-backdrop" onClick={() => setSelectedChapter(null)}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '800px' }}>
-            <button className="modal-close" onClick={() => setSelectedChapter(null)} aria-label="Close modal">
+          <div
+            className="modal-container"
+            onClick={(e) => e.stopPropagation()}
+            style={{ maxWidth: '800px' }}
+          >
+            <button
+              className="modal-close"
+              onClick={() => setSelectedChapter(null)}
+              aria-label="Close modal"
+            >
               <X size={24} />
             </button>
             <div className="modal-body-content">
-              <div className="modal-member-header" style={{ marginBottom: '16px', paddingBottom: '16px' }}>
+              <div
+                className="modal-member-header"
+                style={{ marginBottom: '16px', paddingBottom: '16px' }}
+              >
                 <div className="modal-avatar" style={{ backgroundColor: 'var(--primary-light)' }}>
                   <Building size={36} className="text-primary" />
                 </div>
@@ -260,28 +565,104 @@ const Chapters = () => {
               </div>
 
               <div className="chapter-committee-section text-left">
-                <h4 className="details-title" style={{ fontSize: '1.2rem', marginBottom: '16px', color: 'var(--primary-dark)', borderBottom: '2px solid var(--primary-light)', paddingBottom: '6px' }}>
+                <h4
+                  className="details-title"
+                  style={{
+                    fontSize: '1.2rem',
+                    marginBottom: '16px',
+                    color: 'var(--primary-dark)',
+                    borderBottom: '2px solid var(--primary-light)',
+                    paddingBottom: '6px',
+                  }}
+                >
                   Executive Committee Members
                 </h4>
-                <div className="chapter-members-list" style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxHeight: '50vh', overflowY: 'auto', paddingRight: '10px' }}>
+                <div
+                  className="chapter-members-list"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '20px',
+                    maxHeight: '50vh',
+                    overflowY: 'auto',
+                    paddingRight: '10px',
+                  }}
+                >
                   {selectedChapter.members.map((member, idx) => (
-                    <div key={idx} className="chapter-member-item" style={{ borderBottom: idx < selectedChapter.members.length - 1 ? '1px dashed var(--border-ultra-light)' : 'none', paddingBottom: '16px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
-                        <strong style={{ fontSize: '16px', color: 'var(--primary-dark)' }}>{member.name}</strong>
-                        <span className="custom-badge bg-primary-light" style={{ fontSize: '12px' }}>{member.role}</span>
+                    <div
+                      key={idx}
+                      className="chapter-member-item"
+                      style={{
+                        borderBottom:
+                          idx < selectedChapter.members.length - 1
+                            ? '1px dashed var(--border-ultra-light)'
+                            : 'none',
+                        paddingBottom: '16px',
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'flex-start',
+                          flexWrap: 'wrap',
+                          gap: '8px',
+                        }}
+                      >
+                        <strong style={{ fontSize: '16px', color: 'var(--primary-dark)' }}>
+                          {member.name}
+                        </strong>
+                        <span
+                          className="custom-badge bg-primary-light"
+                          style={{ fontSize: '12px' }}
+                        >
+                          {member.role}
+                        </span>
                       </div>
-                      <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginTop: '6px', lineHeight: '1.5' }}>{member.details}</p>
+                      <p
+                        style={{
+                          fontSize: '14px',
+                          color: 'var(--text-muted)',
+                          marginTop: '6px',
+                          lineHeight: '1.5',
+                        }}
+                      >
+                        {member.details}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="chapter-contact-box" style={{ marginTop: '24px', backgroundColor: 'var(--bg-section)', padding: '16px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-ultra-light)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+              <div
+                className="chapter-contact-box"
+                style={{
+                  marginTop: '24px',
+                  backgroundColor: 'var(--bg-section)',
+                  padding: '16px',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '1px solid var(--border-ultra-light)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                }}
+              >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Mail size={20} className="text-primary" />
                   <div className="text-left">
-                    <strong style={{ display: 'block', fontSize: '14px', color: 'var(--primary-navy)' }}>Official Chapter Contact Email</strong>
-                    <a href={`mailto:${selectedChapter.email}`} style={{ fontSize: '14px', fontWeight: '600' }}>{selectedChapter.email}</a>
+                    <strong
+                      style={{ display: 'block', fontSize: '14px', color: 'var(--primary-navy)' }}
+                    >
+                      Official Chapter Contact Email
+                    </strong>
+                    <a
+                      href={`mailto:${selectedChapter.email}`}
+                      style={{ fontSize: '14px', fontWeight: '600' }}
+                    >
+                      {selectedChapter.email}
+                    </a>
                   </div>
                 </div>
               </div>

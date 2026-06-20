@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Mail } from 'lucide-react';
 
@@ -23,6 +23,7 @@ const Navbar = () => {
 
   // Close mobile menu on route change
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location]);
@@ -37,38 +38,38 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { 
-      name: 'About Us', 
+    {
+      name: 'About Us',
       dropdown: [
         { name: 'About IAPEN India', path: '/about' },
         { name: 'Office Bearers', path: '/about#office-bearers' },
-        { name: 'Advisory Board', path: '/about#advisory-board' }
-      ]
+        { name: 'Advisory Board', path: '/about#advisory-board' },
+      ],
     },
-    { 
-      name: 'Chapters', 
+    {
+      name: 'Chapters',
       path: '/chapters',
       dropdown: [
         { name: 'Search Chapters', path: '/chapters' },
-        { name: 'Chapters Directory', path: '/chapters#directory' }
-      ]
+        { name: 'Chapters Directory', path: '/chapters#directory' },
+      ],
     },
-    { 
-      name: 'Core Groups', 
-      path: '/core-groups'
+    {
+      name: 'Core Groups',
+      path: '/core-groups',
     },
-    { 
-      name: 'ESPEN', 
+    {
+      name: 'ESPEN',
       dropdown: [
         { name: 'ESPEN LLL Courses', path: '/courses#espen-lll' },
         { name: 'ESPEN Membership', path: '/courses#espen-membership' },
-        { name: 'Eligibility for T-LLL', path: '/courses#t-lll' }
-      ]
+        { name: 'Eligibility for T-LLL', path: '/courses#t-lll' },
+      ],
     },
     { name: 'Courses', path: '/courses' },
     { name: 'Journal', path: '/journal' },
     { name: 'Events', path: '/events' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -83,11 +84,13 @@ const Navbar = () => {
             <span className="top-time">Mon - Fri: 10:00 AM - 6:00 PM</span>
           </div>
           <div className="top-right-links">
-            <Link to="/membership" className="top-link-btn">Become a Member</Link>
+            <Link to="/membership" className="top-link-btn">
+              Become a Member
+            </Link>
           </div>
         </div>
       </div>
-      
+
       <nav className="main-nav glass-nav">
         <div className="container nav-container">
           {/* Logo */}
@@ -98,21 +101,21 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="desktop-menu">
             {navLinks.map((link) => (
-              <div 
-                key={link.name} 
+              <div
+                key={link.name}
                 className="nav-item-wrapper"
                 onMouseEnter={() => !link.path && setActiveDropdown(link.name)}
                 onMouseLeave={() => !link.path && setActiveDropdown(null)}
               >
                 {link.path ? (
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
                   >
                     {link.name}
                   </Link>
                 ) : (
-                  <button 
+                  <button
                     onClick={() => toggleDropdown(link.name)}
                     className={`nav-link dropdown-toggle ${activeDropdown === link.name ? 'active' : ''}`}
                   >
@@ -123,11 +126,7 @@ const Navbar = () => {
                 {link.dropdown && (
                   <div className={`dropdown-menu ${activeDropdown === link.name ? 'show' : ''}`}>
                     {link.dropdown.map((subItem) => (
-                      <Link 
-                        key={subItem.name} 
-                        to={subItem.path} 
-                        className="dropdown-item"
-                      >
+                      <Link key={subItem.name} to={subItem.path} className="dropdown-item">
                         {subItem.name}
                       </Link>
                     ))}
@@ -141,7 +140,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="mobile-menu-btn"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -155,19 +154,24 @@ const Navbar = () => {
       <div className={`mobile-sidebar ${isOpen ? 'open' : ''}`}>
         <div className="mobile-sidebar-header">
           <Link to="/" className="logo-container" onClick={() => setIsOpen(false)}>
-            <img src="/logo.png" alt="IAPEN INDIA" className="navbar-logo-img" style={{ height: '36px' }} />
+            <img
+              src="/logo.png"
+              alt="IAPEN INDIA"
+              className="navbar-logo-img"
+              style={{ height: '36px' }}
+            />
           </Link>
           <button onClick={() => setIsOpen(false)} className="close-sidebar-btn">
             <X size={24} />
           </button>
         </div>
-        
+
         <div className="mobile-menu-items">
           {navLinks.map((link) => (
             <div key={link.name} className="mobile-nav-group">
               {link.path ? (
-                <Link 
-                  to={link.path} 
+                <Link
+                  to={link.path}
                   className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -175,17 +179,21 @@ const Navbar = () => {
                 </Link>
               ) : (
                 <>
-                  <button 
+                  <button
                     onClick={() => toggleDropdown(link.name)}
                     className="mobile-nav-link dropdown-toggle"
                   >
-                    {link.name} <ChevronDown size={16} className={`chevron-icon ${activeDropdown === link.name ? 'rotate' : ''}`} />
+                    {link.name}{' '}
+                    <ChevronDown
+                      size={16}
+                      className={`chevron-icon ${activeDropdown === link.name ? 'rotate' : ''}`}
+                    />
                   </button>
                   <div className={`mobile-dropdown ${activeDropdown === link.name ? 'show' : ''}`}>
                     {link.dropdown.map((subItem) => (
-                      <Link 
-                        key={subItem.name} 
-                        to={subItem.path} 
+                      <Link
+                        key={subItem.name}
+                        to={subItem.path}
                         className="mobile-dropdown-item"
                         onClick={() => setIsOpen(false)}
                       >
@@ -198,8 +206,8 @@ const Navbar = () => {
             </div>
           ))}
           <div className="mobile-cta-wrapper">
-            <Link 
-              to="/membership#register" 
+            <Link
+              to="/membership#register"
               className="btn btn-accent w-full"
               onClick={() => setIsOpen(false)}
             >
@@ -208,7 +216,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`sidebar-overlay ${isOpen ? 'show' : ''}`} onClick={() => setIsOpen(false)}></div>
+      <div
+        className={`sidebar-overlay ${isOpen ? 'show' : ''}`}
+        onClick={() => setIsOpen(false)}
+      ></div>
     </header>
   );
 };
