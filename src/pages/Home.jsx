@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ChevronLeft, ShieldAlert, Award, FileText, Calendar, BookOpen, Users, Globe, MapPin, TrendingUp, GraduationCap } from 'lucide-react';
+import heroClinicalNutrition from '../assets/hero_clinical_nutrition.png';
+import heroNutritionCongress from '../assets/hero_nutrition_congress.png';
+import heroEspenTraining from '../assets/hero_espen_training.png';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,6 +16,7 @@ const Home = () => {
       ctaText: 'Become a Member',
       ctaLink: '/membership',
       bgGradient: 'linear-gradient(135deg, var(--primary-navy) 0%, var(--primary) 100%)',
+      image: heroClinicalNutrition,
     },
     {
       title: 'Indian Clinical Nutrition Congress 2026',
@@ -21,6 +25,7 @@ const Home = () => {
       ctaText: 'View Event Details',
       ctaLink: '/events',
       bgGradient: 'linear-gradient(135deg, var(--teal) 0%, var(--primary) 100%)',
+      image: heroNutritionCongress,
     },
     {
       title: 'ESPEN Lifelong Learning (LLL) Courses',
@@ -29,6 +34,7 @@ const Home = () => {
       ctaText: 'Explore Courses',
       ctaLink: '/courses',
       bgGradient: 'linear-gradient(135deg, var(--primary-navy) 0%, var(--accent) 100%)',
+      image: heroEspenTraining,
     }
   ];
 
@@ -77,101 +83,81 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right column: 3D floating dashboard graphics */}
-            <div className="hero-graphic-panel animate-float">
-              {currentSlide === 0 && (
-                <>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <Globe size={20} />
+            {/* Right column: 3D floating graphic banners and badges */}
+            <div className="hero-graphic-panel">
+              <div className="hero-image-wrapper">
+                <img 
+                  src={slides[currentSlide].image} 
+                  alt={slides[currentSlide].title} 
+                  className="hero-main-image" 
+                />
+                {currentSlide === 0 && (
+                  <>
+                    <div className="hero-floating-card card-top-left animate-float">
+                      <div className="hero-graphic-icon">
+                        <Globe size={18} />
+                      </div>
+                      <div className="hero-graphic-info">
+                        <h4>35+ Chapters</h4>
+                        <p>Across India</p>
+                      </div>
                     </div>
-                    <div className="hero-graphic-info">
-                      <h4>35+ Chapters</h4>
-                      <p>Established across major cities in India</p>
+                    <div className="hero-floating-card card-bottom-right animate-float" style={{ animationDelay: '1.5s' }}>
+                      <div className="hero-graphic-icon">
+                        <Award size={18} />
+                      </div>
+                      <div className="hero-graphic-info">
+                        <h4>5000+ Members</h4>
+                        <p>Doctors & Dietitians</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <Users size={20} />
+                  </>
+                )}
+                {currentSlide === 1 && (
+                  <>
+                    <div className="hero-floating-card card-top-left animate-float">
+                      <div className="hero-graphic-icon">
+                        <Calendar size={18} />
+                      </div>
+                      <div className="hero-graphic-info">
+                        <h4>Feb 20-22, 2026</h4>
+                        <p>Congress Dates</p>
+                      </div>
                     </div>
-                    <div className="hero-graphic-info">
-                      <h4>17+ Core Groups</h4>
-                      <p>Focused clinical research groups</p>
+                    <div className="hero-floating-card card-bottom-right animate-float" style={{ animationDelay: '1.5s' }}>
+                      <div className="hero-graphic-icon">
+                        <MapPin size={18} />
+                      </div>
+                      <div className="hero-graphic-info">
+                        <h4>Pune, MH</h4>
+                        <p>Physical Venue</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <Award size={20} />
+                  </>
+                )}
+                {currentSlide === 2 && (
+                  <>
+                    <div className="hero-floating-card card-top-left animate-float">
+                      <div className="hero-graphic-icon">
+                        <BookOpen size={18} />
+                      </div>
+                      <div className="hero-graphic-info">
+                        <h4>ESPEN Partner</h4>
+                        <p>Global Certification</p>
+                      </div>
                     </div>
-                    <div className="hero-graphic-info">
-                      <h4>5000+ Members</h4>
-                      <p>Registered doctors & clinical dietitians</p>
+                    <div className="hero-floating-card card-bottom-right animate-float" style={{ animationDelay: '1.5s' }}>
+                      <div className="hero-graphic-icon">
+                        <TrendingUp size={18} />
+                      </div>
+                      <div className="hero-graphic-info">
+                        <h4>CNE Credits</h4>
+                        <p>Earn standard credits</p>
+                      </div>
                     </div>
-                  </div>
-                </>
-              )}
-              {currentSlide === 1 && (
-                <>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <Calendar size={20} />
-                    </div>
-                    <div className="hero-graphic-info">
-                      <h4>Feb 20-22, 2026</h4>
-                      <p>Flagship medical congress dates</p>
-                    </div>
-                  </div>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <MapPin size={20} />
-                    </div>
-                    <div className="hero-graphic-info">
-                      <h4>Pune, MH</h4>
-                      <p>Physical venue & hybrid access</p>
-                    </div>
-                  </div>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <Award size={20} />
-                    </div>
-                    <div className="hero-graphic-info">
-                      <h4>ICNC 2026</h4>
-                      <p>Annual Parenteral & Enteral Congress</p>
-                    </div>
-                  </div>
-                </>
-              )}
-              {currentSlide === 2 && (
-                <>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <BookOpen size={20} />
-                    </div>
-                    <div className="hero-graphic-info">
-                      <h4>ESPEN Partner</h4>
-                      <p>Official global certified courses</p>
-                    </div>
-                  </div>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <GraduationCap size={20} />
-                    </div>
-                    <div className="hero-graphic-info">
-                      <h4>Teacher (T-LLL)</h4>
-                      <p>Prerequisites for certified educators</p>
-                    </div>
-                  </div>
-                  <div className="hero-graphic-card">
-                    <div className="hero-graphic-icon">
-                      <TrendingUp size={20} />
-                    </div>
-                    <div className="hero-graphic-info">
-                      <h4>CNE Credits</h4>
-                      <p>Earn standard continuing credits</p>
-                    </div>
-                  </div>
-                </>
-              )}
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>
