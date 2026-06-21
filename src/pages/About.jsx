@@ -1,526 +1,184 @@
-import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { createPortal } from 'react-dom';
-import { useLocation } from 'react-router-dom';
-import { Target, Compass, User, Landmark, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { officeBearersBios, advisoryBoardBios } from './../data/biographies';
-
-// Office Bearers Images
-import pcSir from '../assets/pc-sir.png';
-import shivSir from '../assets/shivsir.png';
-import dr7 from '../assets/dr7.png';
-import lekhaMam from '../assets/lekhamam.png';
-import smreethyMam from '../assets/smreethymam.png';
-import dr8 from '../assets/dr8.png';
-import dr13 from '../assets/dr13.png';
-
-// NEC Images
-import latha from '../assets/latha.png';
-import niharDas from '../assets/nihar-das.jpg';
-import ritaPatil from '../assets/rita-patil.png';
-import reema from '../assets/reema.png';
-import sahoo from '../assets/sahoo.png';
-import himaniPuri from '../assets/himani-puri.png';
-import ranu from '../assets/ranu.png';
-
-// Organization Structure
 import orgStructureImg from '../assets/organization-structure-image.png';
 
-// Advisory Board Images
-import whelton from '../assets/Whelton-PK-img.jpg';
-import chingSiew from '../assets/ching-siew.jpg';
-import parati from '../assets/GIANFRANCO-PARATI.jpg';
-import shashankJoshi from '../assets/drshashank-joshi.jpg';
-import anoopMishra from '../assets/anoop-mishra.jpg';
-import gopalan from '../assets/Gopalan.jpg';
-import bansiSaboo from '../assets/bansi-saboo-1.jpg';
+const Reveal = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+  >
+    {children}
+  </motion.div>
+);
 
-const About = () => {
-  const { hash } = useLocation();
-  const [selectedMember, setSelectedMember] = useState(null);
-
-  const getBio = (name) => {
-    if (officeBearersBios[name]) return officeBearersBios[name];
-    if (advisoryBoardBios[name]) return advisoryBoardBios[name];
-
-    const obKey = Object.keys(officeBearersBios).find((k) => name.includes(k) || k.includes(name));
-    if (obKey) return officeBearersBios[obKey];
-
-    const abKey = Object.keys(advisoryBoardBios).find((k) => name.includes(k) || k.includes(name));
-    if (abKey) return advisoryBoardBios[abKey];
-
-    return null;
-  };
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [hash]);
-
-  const officeBearers = [
-    {
-      name: 'Dr. P.C. Vijay Kumar',
-      role: 'Founder President & Director',
-      dept: 'Critical Care Physician, Sooriya Hospital, Chennai',
-      image: pcSir,
-    },
-    {
-      name: 'Mr. Y.T. Shivshankar',
-      role: 'National President',
-      dept: 'Chief Clinical Nutritionist, Tata Memorial Hospital, Mumbai',
-      image: shivSir,
-    },
-    {
-      name: 'Dr. Bijju Pottakat',
-      role: 'Vice President (Medical)',
-      dept: 'Professor & Head, HPB Surgery, JIPMER, Puducherry',
-      image: dr7,
-    },
-    {
-      name: 'Ms. Lekha Sreedharan',
-      role: 'Vice President (Nutrition)',
-      dept: "HOD Clinical Dietetics, Apollo Children's Hospital, Chennai",
-      image: lekhaMam,
-    },
-    {
-      name: 'Ms. Sreemathy Venkatraman',
-      role: 'National Secretary',
-      dept: 'Clinical Dietitian, Trustwell Hospital, Bangalore',
-      image: smreethyMam,
-    },
-    {
-      name: 'Ms. Sanghamitra Chakravarti',
-      role: 'National Joint Secretary',
-      dept: 'HOD Nutrition, Medica Superspecialty Hospital, Kolkata',
-      image: dr8,
-    },
-    {
-      name: 'Ms. Anshu Mehra',
-      role: 'Hon. Treasurer',
-      dept: 'Associate Professor, Home Science Department, Meerut College',
-      image: dr13,
-    },
-  ];
-
-  const necMembers = [
-    {
-      name: 'Dr. Latha Poopandian',
-      role: 'NEC Member',
-      dept: 'Consultant Intensivist & Critical Care Nutritionist, Chennai',
-      image: latha,
-    },
-    {
-      name: 'Dr. Nihar Das',
-      role: 'NEC Member',
-      dept: 'GI & Transplant Surgeon, President Delhi Chapter',
-      image: niharDas,
-    },
-    {
-      name: 'Dr. Rita Patil',
-      role: 'NEC Member',
-      dept: 'Former Vice Principal & HOD Nutrition, Nanavati College, Mumbai',
-      image: ritaPatil,
-    },
-    {
-      name: 'Ms. Rima Rao',
-      role: 'NEC Member',
-      dept: 'Associate Professor Foods & Nutrition, Rajkot',
-      image: reema,
-    },
-    {
-      name: 'Ms. Sunita Sahoo',
-      role: 'NEC Member',
-      dept: 'Chief Clinical Dietitian, Apollo Hospitals, Bhubaneswar',
-      image: sahoo,
-    },
-    {
-      name: 'Ms. Himani Puri',
-      role: 'NEC Member & Renal Lead',
-      dept: 'Founder Sattva Nutricare, Chief Dietitian Apex Hospital, Nashik',
-      image: himaniPuri,
-    },
-    {
-      name: 'Ms. Ranu Singh',
-      role: 'NEC Member & Community Lead',
-      dept: 'Community Nutritionist & Founder of NutritionPunch, Lucknow',
-      image: ranu,
-    },
-  ];
-
-  const advisoryBoard = [
-    {
-      name: 'Dr. Paul K. Whelton, MB, MD, MSc',
-      institute: 'Show Schwan Chair in Global Public Health, Tulane University, USA',
-      image: whelton,
-    },
-    {
-      name: 'Prof. Dr. Ching Siew Mooi',
-      institute: 'Professor at FPSK, Faculty of Medicine and Health Sciences, Malaysia',
-      image: chingSiew,
-    },
-    {
-      name: 'Dr. Gianfranco Parati, MD, FESC',
-      institute: 'Scientific Director & HOD Cardiology, IRCCS S.Luca Hospital, Milan, Italy',
-      image: parati,
-    },
-    {
-      name: 'Prof. Dr. Shashank R. Joshi',
-      institute:
-        'Endocrinologist, Senior Consultant, Lilavati & Sir H.N. Reliance Hospitals, Mumbai',
-      image: shashankJoshi,
-    },
-    {
-      name: 'Dr. Anoop Misra',
-      institute:
-        'Executive Chairman, Fortis C-DOC Hospital for Diabetes & Allied Sciences, New Delhi',
-      image: anoopMishra,
-    },
-    {
-      name: 'Dr. Sarath Gopalan',
-      institute:
-        "Senior Pediatric Gastroenterologist, Rainbow Children's Hospital, New Delhi, President NSI",
-      image: gopalan,
-    },
-    {
-      name: 'Dr. Banshi Saboo, PhD, MD',
-      institute: 'Chairman, Diabetes Care & Hormone Clinic, Ahmedabad, Past President RSSDI',
-      image: bansiSaboo,
-    },
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>About Us | IAPEN India</title>
-        <meta
-          name="description"
-          content="Learn about IAPEN India, our mission, vision, and the esteemed office bearers and advisory board advancing clinical nutrition."
-        />
-      </Helmet>
-      <div className="about-page animate-slide-up">
-        {/* Page Header */}
-        <section className="page-header bg-primary-dark">
-          <div className="container">
-            <span className="page-subtitle">Learn About Us</span>
-            <h1 className="page-title text-white">About IAPEN India</h1>
-          </div>
-        </section>
-
-        {/* History & Mission */}
-        <section className="section history-section">
-          <div className="container">
-            <div className="about-text-wrapper">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="section-title text-left">About IAPEN INDIA Association</h2>
-                <p className="about-text font-semibold text-primary mb-4">
-                  Pioneering Excellence in Clinical Nutrition and Health Care
-                </p>
-                <p className="about-text">
-                  The IAPEN INDIA Association for Parenteral and Enteral Nutrition (IAPEN INDIA),
-                  incorporated under CIN <strong>U85320PN2019NPL186896</strong> as a Section 8
-                  Not-for-Profit Charitable Organization, stands at the forefront of India’s
-                  nutritional healthcare revolution. Headquartered at{' '}
-                  <strong>
-                    Survey No. 8/1, Omkar Colony, Lane No. 1, Pimple Gurav, Pune, Maharashtra –
-                    411061, India
-                  </strong>
-                  , IAPEN INDIA is dedicated to advancing the rigorous science and evidence-based
-                  practice of clinical nutrition and metabolic care.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h3
-                  className="section-subtitle mt-6"
-                  style={{ textAlign: 'left', textTransform: 'none', fontSize: '1.25rem' }}
-                >
-                  A Multidisciplinary Association for Professional Empowerment
-                </h3>
-                <p className="about-text">
-                  IAPEN India unites a diverse cadre of healthcare professionals including
-                  physicians, surgeons, dietitians, nurses, pharmacists, and other healthcare
-                  professionals in a collaborative ecosystem designed to elevate clinical standards.
-                  Through interprofessional education grounded in the latest scientific literature,
-                  we empower members to implement integrated nutrition care pathways that align with
-                  international guidelines, such as those from the International Society for
-                  Clinical Nutrition and Metabolism. This approach not only mitigates risks like
-                  refeeding syndrome and micronutrient deficiencies but also promotes metabolic
-                  optimization through evidence-based protocols, including precision nutrition
-                  tailored to genetic and phenotypic profiles.
-                </p>
-              </motion.div>
-            </div>
-
-            <div className="grid-2 mt-10">
-              <div className="card mission-card">
-                <div className="card-header-with-icon">
-                  <div className="icon-wrapper bg-primary-light">
-                    <Target className="text-primary" size={24} />
-                  </div>
-                  <h3 className="card-title">Our Mission</h3>
-                </div>
-                <p className="card-text">
-                  To elevate the standards of enteral and parenteral clinical nutrition through
-                  scientific research, standardized academic courses, and active collaboration among
-                  multidisciplinary healthcare specialists.
-                </p>
-              </div>
-
-              <div className="card vision-card">
-                <div className="card-header-with-icon">
-                  <div className="icon-wrapper bg-teal-light">
-                    <Compass className="text-teal" size={24} />
-                  </div>
-                  <h3 className="card-title">Our Vision</h3>
-                </div>
-                <p className="card-text">
-                  To eradicate hospital malnutrition in India by ensuring that every patient
-                  receives optimal clinical nutrition support as an integral part of their medical
-                  treatment.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Organizational Structure - Full Width */}
-          <div className="container mt-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="section-title-wrapper text-center">
-                <h2 className="section-title">Organizational Structure</h2>
-                <p className="section-desc">
-                  The structural hierarchy defining IAPEN India's operations
-                </p>
-              </div>
-              <div
-                className="glass-panel"
-                style={{
-                  padding: '30px',
-                  borderRadius: 'var(--radius-lg)',
-                  background: 'var(--bg-white)',
-                  marginTop: '30px',
-                  textAlign: 'center',
-                }}
-              >
-                <img
-                  src={orgStructureImg}
-                  alt="IAPEN India Organizational Structure"
-                  style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Office Bearers Section */}
-        <section id="office-bearers" className="section section-bg office-bearers-section">
-          <div className="container">
-            <div className="section-title-wrapper">
-              <span className="section-subtitle">Leadership</span>
-              <h2 className="section-title">National Office Bearers</h2>
-              <p className="section-desc">
-                Meet the national executive committee members driving the administrative and
-                academic directives of IAPEN India.
-              </p>
-            </div>
-
-            <div className="grid-3 office-grid">
-              {officeBearers.map((bearer, index) => {
-                const bio = getBio(bearer.name);
-                const isClickable = !!bio;
-                return (
-                  <div
-                    key={index}
-                    className={`card bearer-card text-center ${isClickable ? 'cursor-pointer hover-lift' : ''}`}
-                    onClick={() => {
-                      if (isClickable) {
-                        setSelectedMember({
-                          name: bearer.name,
-                          role: bearer.role,
-                          dept: bearer.dept,
-                          bio: bio,
-                        });
-                      }
-                    }}
-                  >
-                    {bearer.image ? (
-                      <img src={bearer.image} alt={bearer.name} className="bearer-image" />
-                    ) : (
-                      <div
-                        className={`avatar-placeholder ${bearer.imageColor || 'bg-primary-light'}`}
-                      >
-                        <User size={36} className="text-primary-navy" />
-                      </div>
-                    )}
-                    <h3 className="bearer-name">{bearer.name}</h3>
-                    <span className="bearer-role">{bearer.role}</span>
-                    <p className="bearer-dept">{bearer.dept}</p>
-                    {isClickable && (
-                      <span className="view-profile-btn mt-auto pt-4 text-primary font-semibold text-sm inline-block">
-                        View Profile
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="section-title-wrapper mt-12">
-              <h3 className="section-title" style={{ fontSize: '1.8rem' }}>
-                National Executive Committee Members
-              </h3>
-            </div>
-
-            <div className="grid-3 office-grid mt-6">
-              {necMembers.map((bearer, index) => {
-                const bio = getBio(bearer.name);
-                const isClickable = !!bio;
-                return (
-                  <div
-                    key={index}
-                    className={`card bearer-card text-center ${isClickable ? 'cursor-pointer hover-lift' : ''}`}
-                    onClick={() => {
-                      if (isClickable) {
-                        setSelectedMember({
-                          name: bearer.name,
-                          role: bearer.role,
-                          dept: bearer.dept,
-                          bio: bio,
-                        });
-                      }
-                    }}
-                  >
-                    {bearer.image ? (
-                      <img src={bearer.image} alt={bearer.name} className="bearer-image" />
-                    ) : (
-                      <div className="avatar-placeholder bg-teal-light">
-                        <User size={36} className="text-teal" />
-                      </div>
-                    )}
-                    <h3 className="bearer-name">{bearer.name}</h3>
-                    <span className="bearer-role">{bearer.role}</span>
-                    <p className="bearer-dept">{bearer.dept}</p>
-                    {isClickable && (
-                      <span className="view-profile-btn mt-auto pt-4 text-teal font-semibold text-sm inline-block">
-                        View Profile
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Advisory Board Section */}
-        <section id="advisory-board" className="section advisory-board-section">
-          <div className="container">
-            <div className="section-title-wrapper">
-              <span className="section-subtitle">Governance</span>
-              <h2 className="section-title">National Advisory Board</h2>
-              <p className="section-desc">
-                Distinguished clinical professors and pioneers who guide the strategic and
-                scientific initiatives of the association.
-              </p>
-            </div>
-
-            <div className="grid-3 office-grid">
-              {advisoryBoard.map((advisor, index) => {
-                const bio = getBio(advisor.name);
-                const isClickable = !!bio;
-                return (
-                  <div
-                    key={index}
-                    className={`card bearer-card text-center ${isClickable ? 'cursor-pointer hover-lift' : ''}`}
-                    onClick={() => {
-                      if (isClickable) {
-                        setSelectedMember({
-                          name: advisor.name,
-                          role: advisor.institute,
-                          bio: bio,
-                        });
-                      }
-                    }}
-                  >
-                    {advisor.image ? (
-                      <img src={advisor.image} alt={advisor.name} className="bearer-image" />
-                    ) : (
-                      <div className="avatar-placeholder bg-primary-light">
-                        <Landmark size={36} className="text-primary-navy" />
-                      </div>
-                    )}
-                    <h3 className="bearer-name">{advisor.name}</h3>
-                    <p className="bearer-dept">{advisor.institute}</p>
-                    {isClickable && (
-                      <span className="view-profile-btn mt-auto pt-4 text-primary font-semibold text-sm inline-block">
-                        View Profile
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Biography Modal Overlay */}
-        {selectedMember &&
-          createPortal(
-            <div className="modal-backdrop" onClick={() => setSelectedMember(null)}>
-              <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-                <button
-                  className="modal-close"
-                  onClick={() => setSelectedMember(null)}
-                  aria-label="Close modal"
-                >
-                  <X size={24} />
-                </button>
-                <div className="modal-body-content">
-                  <div className="modal-member-header">
-                    <div className="modal-avatar">
-                      <User size={48} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="modal-member-name">{selectedMember.name}</h3>
-                      <p className="modal-member-role">{selectedMember.role}</p>
-                      {selectedMember.dept && (
-                        <p className="modal-member-dept">{selectedMember.dept}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="modal-bio-text text-left">
-                    {selectedMember.bio.split('\n').map((para, idx) => (
-                      <p key={idx} className="bio-para">
-                        {para}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>,
-            document.body
-          )}
+const About = () => (
+  <div className="about-page animate-slide-up">
+    <Helmet>
+      <title>About IAPEN India</title>
+      <meta
+        name="description"
+        content="Learn about IAPEN India, its multidisciplinary mission, research, education, global collaboration, and vision for a malnutrition-free future."
+      />
+    </Helmet>
+    <section className="page-header bg-primary-dark">
+      <div className="container">
+        <span className="page-subtitle">The Association</span>
+        <h1 className="page-title text-white">About IAPEN India</h1>
       </div>
-    </>
-  );
-};
+    </section>
+
+    <section className="section history-section">
+      <div className="container official-copy-layout">
+        <Reveal>
+          <span className="section-subtitle">
+            Pioneering Excellence in Clinical Nutrition and Health Care
+          </span>
+          <h2 className="section-title text-left">
+            About IAPEN INDIA Association for Parenteral and Enteral Nutrition
+          </h2>
+          <p>
+            The IAPEN INDIA Association for Parenteral and Enteral Nutrition (IAPEN INDIA),
+            incorporated under CIN <strong>U85320PN2019NPL186896</strong> as a Section 8
+            Not-for-Profit Charitable Organization, stands at the forefront of India’s nutritional
+            healthcare revolution. Headquartered at{' '}
+            <strong>
+              Survey No. 8/1, Omkar Colony, Lane No. 1, Pimple Gurav, Pune, Maharashtra – 411061,
+              India
+            </strong>
+            .
+          </p>
+          <p>
+            IAPEN INDIA is dedicated to advancing the rigorous science and evidence-based practice
+            of clinical nutrition and metabolic care. By integrating cutting-edge research with
+            multidisciplinary collaboration, we address the pervasive challenge of malnutrition—both
+            disease-related and socioeconomic—in hospital, community, and long-term care settings.
+          </p>
+          <p>
+            Our mission is rooted in the principle that optimal nutrition is not merely supportive
+            but fundamental to physiological healing, metabolic recovery, and enhanced quality of
+            life, as substantiated by global epidemiological data linking malnutrition to prolonged
+            hospital stays, increased morbidity, and elevated healthcare costs.
+          </p>
+          <p>
+            As India’s premier national body aligned with esteemed international Parenteral and
+            Enteral Nutrition (PEN) societies such as the European Society for Clinical Nutrition
+            and Metabolism (ESPEN), the American Society for Parenteral and Enteral Nutrition
+            (ASPEN), and the South Asia Association for Parenteral and Enteral Nutrition (SAPEN),
+            IAPEN INDIA embodies a progressive, globally connected platform. We foster seamless
+            transitions in the continuum of care, from acute hospital interventions to home-based
+            nutritional support, employing validated tools like the Malnutrition Universal Screening
+            Tool (MUST), Subjective Global Assessment (SGA), and GLIM criteria to ensure timely,
+            personalized interventions. Our commitment extends to bridging gaps in nutritional
+            epidemiology, where we advocate for policies informed by randomized controlled trials
+            (RCTs) and meta-analyses demonstrating the efficacy of parenteral and enteral nutrition
+            in reducing complications in critically ill patients.
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <h2>A Multidisciplinary Association for Professional Empowerment</h2>
+          <p>
+            IAPEN India unites a diverse cadre of healthcare professionals including physicians,
+            surgeons, dietitians, nurses, pharmacists, and other healthcare professionals in a
+            collaborative ecosystem designed to elevate clinical standards. Through
+            interprofessional education grounded in the latest scientific literature, we empower
+            members to implement integrated nutrition care pathways that align with international
+            guidelines, such as those from the International Society for Clinical Nutrition and
+            Metabolism. This approach not only mitigates risks like refeeding syndrome and
+            micronutrient deficiencies but also promotes metabolic optimization through
+            evidence-based protocols, including precision nutrition tailored to genetic and
+            phenotypic profiles.
+          </p>
+          <p>
+            Our organizational structure under the strategic oversight of the Board of Directors
+            propels this mission forward: the National Executive Committee (NEC) provides
+            leadership, the National Advisory Council fosters expert advice on policy and
+            legislative matters, formulating policies for inclusive growth, while regional Chapters
+            and specialized Core Groups drive localized initiatives. These entities spearhead the
+            development of position papers, consensus statements, and national guidelines, drawing
+            on systematic reviews and cohort studies to inform best practices. IAPEN INDIA’s
+            progressive agenda includes robust advocacy with government agencies, non-governmental
+            organizations (NGOs), academic institutions, and universities to influence public health
+            policies. By collaborating with global partners, we amplify India’s voice in
+            international forums, contributing to advancements in areas like immunonutrition and gut
+            microbiome modulation for enhanced patient outcomes.
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <h2>Driving Innovation Through Education, Research, and Global Collaboration</h2>
+          <p>
+            At the heart of IAPEN India’s operations is a commitment to scientific excellence and
+            innovation. We organize high-impact events, including national and international
+            congresses, symposia, workshops, and webinars, featuring keynote sessions on emerging
+            topics like nutrition in neonatal and pediatric conditions, women’s health, nutritional
+            assessments, nutrition in metabolic diseases, nutrition in various diseases like renal,
+            liver, cardiac and cancer, nutrigenomics, bioenergetics in critical care, and
+            sustainable enteral and parenteral formulations. These platforms facilitate knowledge
+            exchange, supported by our official publications: the Journal of Nutrition Research and
+            the Insight Newsletter, which disseminate peer-reviewed articles, systematic reviews,
+            and clinical case studies.
+          </p>
+          <p>
+            Our research initiatives emphasize translational science, from bench-to-bedside
+            applications, including multicenter studies on the impact of nutrition—oral or
+            enteral—on health outcomes and the role of pharmaconutrients in diseases. By fostering
+            partnerships with leading institutions, IAPEN INDIA is pioneering digital tools for
+            nutritional assessment, such as AI-driven apps for real-time metabolic monitoring,
+            ensuring scalability across India’s diverse healthcare landscape.
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <h2>Vision for a Malnutrition-Free Future: Nutrition as Everyone’s Responsibility</h2>
+          <p>
+            IAPEN INDIA envisions a progressive India where clinical nutrition is embedded in every
+            facet of healthcare, from preventive community programs to advanced tertiary care. We
+            are committed to building resilient health systems that prioritize equity,
+            accessibility, and evidence-based interventions, positioning ourselves as the preeminent
+            association with a strong global presence. IAPEN India champions a unified approach
+            where nutrition is everyone’s responsibility. With its vision anchored in collaboration,
+            education, and compassion, the Association continues to lead India’s movement toward
+            better health through better nutrition and drives us to cultivate a culture of shared
+            accountability, address malnutrition, and endorse mission statements like the “Chennai
+            Declaration,” where doctors optimize therapeutic regimens, dietitians design
+            individualized plans, nurses monitor compliance, and pharmacists ensure safe nutrient
+            delivery.
+          </p>
+          <p>
+            As we expand our footprint through new Chapters and international alliances, IAPEN INDIA
+            invites professionals, researchers, and stakeholders to join our movement. Together, we
+            are not just combating malnutrition; we are redefining healthcare through scientific
+            rigor, compassionate care, and unwavering global collaboration.
+          </p>
+          <p>
+            For more information on membership, events, or partnerships, explore our resources and
+            connect with us today.
+          </p>
+          <div className="official-copy-actions">
+            <Link to="/membership" className="btn btn-primary">
+              Explore Membership
+            </Link>
+            <Link to="/contact" className="btn btn-outline">
+              Connect With Us
+            </Link>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="section-title-wrapper text-center">
+            <span className="section-subtitle">How We Work</span>
+            <h2 className="section-title">Organisation Structure</h2>
+          </div>
+          <div className="glass-panel organisation-chart-panel">
+            <img src={orgStructureImg} alt="IAPEN India organisation structure" />
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  </div>
+);
 
 export default About;

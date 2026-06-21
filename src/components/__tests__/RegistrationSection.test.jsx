@@ -1,33 +1,26 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import RegistrationSection from '../RegistrationSection';
 import { describe, it, expect } from 'vitest';
 
 describe('RegistrationSection Component', () => {
-  it('renders the form correctly', () => {
+  it('shows the official membership process and bank details', () => {
     render(<RegistrationSection />);
-    expect(screen.getByText('Online Registration Form')).toBeInTheDocument();
-    expect(screen.getByLabelText(/Full Name/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Email Address/i)).toBeInTheDocument();
+    expect(screen.getByText('Apply for IAPEN India Membership')).toBeInTheDocument();
+    expect(screen.getByText('238805001011')).toBeInTheDocument();
+    expect(screen.getByText('ICIC0002388')).toBeInTheDocument();
   });
 
-  it('shows validation errors when submitting an empty form', async () => {
+  it('links to the official application form', () => {
     render(<RegistrationSection />);
-
-    const submitButton = screen.getByRole('button', { name: /Submit Application/i });
-    fireEvent.click(submitButton);
-
-    await waitFor(() => {
-      expect(screen.getByText('Full name is required')).toBeInTheDocument();
-      expect(screen.getByText('Email is required')).toBeInTheDocument();
-      expect(screen.getByText('Phone number is required')).toBeInTheDocument();
-    });
+    expect(screen.getByRole('link', { name: /Proceed to Official Google Form/i })).toHaveAttribute(
+      'href',
+      'https://forms.gle/h4kSoNmHffsNt8dP7'
+    );
   });
 
-  it('updates form state on input change', () => {
+  it('lists the documents required by the official process', () => {
     render(<RegistrationSection />);
-
-    const nameInput = screen.getByLabelText(/Full Name/i);
-    fireEvent.change(nameInput, { target: { value: 'Dr. John Doe' } });
-    expect(nameInput.value).toBe('Dr. John Doe');
+    expect(screen.getByText(/transaction receipt or UTR/i)).toBeInTheDocument();
+    expect(screen.getByText(/graduation certificate/i)).toBeInTheDocument();
   });
 });

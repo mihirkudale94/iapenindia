@@ -39,13 +39,17 @@ const AnimatedCounter = ({ from, to }) => {
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHeroPaused, setIsHeroPaused] = useState(false);
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (isHeroPaused || prefersReducedMotion) return undefined;
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isHeroPaused]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -95,55 +99,94 @@ const Home = () => {
         variants={containerVariants}
         className="home-page animate-slide-up"
       >
-        {/* Hero Slider */}
-        <section className={styles['hero-slider-section']}>
-          <div className={styles['hero-grid-pattern']}></div>
+        {/* Editorial Hero */}
+        <section
+          className={styles['hero-slider-section']}
+          aria-roledescription="carousel"
+          aria-label="IAPEN India highlights"
+          onMouseEnter={() => setIsHeroPaused(true)}
+          onMouseLeave={() => setIsHeroPaused(false)}
+          onFocusCapture={() => setIsHeroPaused(true)}
+          onBlurCapture={() => setIsHeroPaused(false)}
+        >
           {slides.map((slide, index) => (
             <div
-              key={index}
+              key={slide.title}
               className={`${styles['hero-slide']} ${index === currentSlide ? styles.active : ''}`}
               style={{
-                backgroundImage: `linear-gradient(rgba(5, 27, 44, 0.4), rgba(5, 27, 44, 0.7)), url(${slide.image})`,
+                backgroundImage: `url(${slide.image})`,
                 backgroundPosition: slide.objectPosition || 'center center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
               }}
+              aria-hidden={index !== currentSlide}
             >
-              <div className={styles['hero-content-container']}>
-                <h1 className={styles['hero-typography-title']}>{slide.title}</h1>
-                <Link to={slide.ctaLink} className="btn btn-primary mt-8 btn-lg">
-                  Explore More <ChevronRight size={20} className="ml-2" />
-                </Link>
+              <div className={`container ${styles['hero-content-container']}`}>
+                <div className={styles['hero-copy']}>
+                  <span className={styles['hero-eyebrow']}>
+                    <span aria-hidden="true" /> {slide.eyebrow}
+                  </span>
+                  <h1 className={styles['hero-typography-title']}>{slide.title}</h1>
+                  <p className={styles['hero-lede']}>{slide.description}</p>
+                  <div className={styles['hero-actions']}>
+                    <Link to={slide.ctaLink} className={styles['hero-primary-action']}>
+                      {slide.ctaLabel} <ChevronRight size={18} aria-hidden="true" />
+                    </Link>
+                    <Link to="/about" className={styles['hero-secondary-action']}>
+                      About the association
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
 
-          {/* Slider Controls */}
-          <button
-            onClick={prevSlide}
-            className={`${styles['slider-arrow']} ${styles['arrow-left']}`}
-            aria-label="Previous slide"
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button
-            onClick={nextSlide}
-            className={`${styles['slider-arrow']} ${styles['arrow-right']}`}
-            aria-label="Next slide"
-          >
-            <ChevronRight size={24} />
-          </button>
-
-          {/* Slider Indicators */}
-          <div className={styles['slider-indicators']}>
-            {slides.map((_, index) => (
+          <div className={`container ${styles['hero-controls-wrap']}`}>
+            <div className={styles['slider-indicators']}>
+              {slides.map((slide, index) => (
+                <button
+                  key={slide.title}
+                  className={`${styles['indicator-dot']} ${currentSlide === index ? styles.active : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Show: ${slide.title}`}
+                ></button>
+              ))}
+            </div>
+            <div className={styles['hero-arrows']}>
               <button
-                key={index}
-                className={`${styles['indicator-dot']} ${currentSlide === index ? styles.active : ''}`}
-                onClick={() => setCurrentSlide(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+                onClick={prevSlide}
+                className={styles['slider-arrow']}
+                aria-label="Previous slide"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={nextSlide}
+                className={styles['slider-arrow']}
+                aria-label="Next slide"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles['hero-proof-strip']} aria-label="IAPEN India at a glance">
+          <div className={`container ${styles['hero-proof-grid']}`}>
+            <div className={styles['hero-proof-intro']}>
+              <span>One national community</span>
+              <strong>Advancing nutrition care across India</strong>
+            </div>
+            <div className={styles['hero-proof-item']}>
+              <strong>5,000+</strong>
+              <span>Professionals</span>
+            </div>
+            <div className={styles['hero-proof-item']}>
+              <strong>35+</strong>
+              <span>Active chapters</span>
+            </div>
+            <div className={styles['hero-proof-item']}>
+              <strong>17+</strong>
+              <span>Clinical core groups</span>
+            </div>
           </div>
         </section>
 

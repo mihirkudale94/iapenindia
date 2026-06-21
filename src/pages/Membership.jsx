@@ -193,8 +193,8 @@ const Membership = () => {
               <span className="section-subtitle">Categories</span>
               <h2 className="section-title">Membership Pricing</h2>
               <p className="section-desc">
-                Select the category that corresponds to your profession. Student pricing is
-                available for active undergraduate and postgraduate students.
+                Select the category that corresponds to your profession. Student membership is
+                available to students of bachelor’s courses.
               </p>
             </div>
 

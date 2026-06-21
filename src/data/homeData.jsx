@@ -1,28 +1,35 @@
 import { Globe, Users, Award, Calendar } from 'lucide-react';
 
-// Images
-import heroClinicalNutrition from '../assets/hero_clinical_nutrition_new.png';
-import heroNutritionCongress from '../assets/hero_nutrition_congress_new.png';
-import heroEspenTraining from '../assets/hero_espen_training_new.png';
-
 export const slidesData = [
   {
-    title: 'Promoting Clinical Nutrition in India',
+    eyebrow: 'Advancing clinical nutrition',
+    title: 'Better nutrition. Better outcomes.',
+    description:
+      'Uniting healthcare professionals to move evidence-based nutrition from knowledge into everyday clinical practice.',
+    ctaLabel: 'Discover IAPEN India',
     ctaLink: '/membership',
-    image: heroClinicalNutrition,
-    objectPosition: 'center center',
+    image: '/images/events/icnc-2022-2.jpeg',
+    objectPosition: 'center 42%',
   },
   {
-    title: 'Indian Clinical Nutrition Congress 2026',
+    eyebrow: 'Indian Clinical Nutrition Congress',
+    title: 'Where the field moves forward.',
+    description:
+      'A national platform for ideas, collaboration and the people shaping the future of nutrition care in India.',
+    ctaLabel: 'Explore our events',
     ctaLink: '/events',
-    image: heroNutritionCongress,
-    objectPosition: 'center center',
+    image: '/images/events/icnc-2022-1.jpeg',
+    objectPosition: 'center 48%',
   },
   {
-    title: 'ESPEN Lifelong Learning (LLL) Courses',
+    eyebrow: 'Education without boundaries',
+    title: 'Knowledge that changes care.',
+    description:
+      'Learn with clinical leaders through courses, congresses and lifelong professional development.',
+    ctaLabel: 'Explore education',
     ctaLink: '/courses',
-    image: heroEspenTraining,
-    objectPosition: 'center 20%',
+    image: '/images/events/icnc-2022-8.jpeg',
+    objectPosition: 'center 32%',
   },
 ];
 

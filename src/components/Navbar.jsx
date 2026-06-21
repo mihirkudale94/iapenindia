@@ -44,33 +44,38 @@ const Navbar = () => {
       name: 'About Us',
       dropdown: [
         { name: 'About IAPEN India', path: '/about' },
-        { name: 'Office Bearers', path: '/about#office-bearers' },
-        { name: 'Advisory Board', path: '/about#advisory-board' },
+        { name: 'Office Bearers', path: '/office-bearers' },
+        { name: 'Advisory Board', path: '/advisory-board' },
+        { name: 'Bylaws', path: '/bylaws' },
       ],
     },
     {
       name: 'Chapters',
       path: '/chapters',
-      dropdown: [
-        { name: 'Search Chapters', path: '/chapters' },
-        { name: 'Chapters Directory', path: '/chapters#directory' },
-      ],
     },
     {
       name: 'Core Groups',
       path: '/core-groups',
     },
     {
-      name: 'ESPEN',
+      name: 'Education',
       dropdown: [
+        { name: 'Courses & Education', path: '/courses' },
         { name: 'ESPEN LLL Courses', path: '/courses#espen-lll' },
         { name: 'ESPEN Membership', path: '/courses#espen-membership' },
         { name: 'Eligibility for T-LLL', path: '/courses#t-lll' },
+        { name: 'Newsletter Archive', path: '/newsletter-anniversary-edition' },
+        { name: 'Malnutrition Activities', path: '/malnutrition' },
       ],
     },
-    { name: 'Courses', path: '/courses' },
-    { name: 'Journal', path: '/journal' },
+    { name: 'Journal', path: 'https://jnutres.com/', external: true },
     { name: 'Events', path: '/events' },
+    {
+      name: 'ICNC',
+      path: 'https://iapenindia.org/PDF/ICNC-2026.pdf',
+      external: true,
+      newTab: true,
+    },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -85,9 +90,12 @@ const Navbar = () => {
             <span className="top-divider">|</span>
             <span className="top-time">Mon - Fri: 10:00 AM - 6:00 PM</span>
           </div>
-          <div className="top-right-links" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <button 
-              onClick={toggleTheme} 
+          <div
+            className="top-right-links"
+            style={{ display: 'flex', alignItems: 'center', gap: '12px' }}
+          >
+            <button
+              onClick={toggleTheme}
               style={{
                 background: 'none',
                 border: 'none',
@@ -98,11 +106,15 @@ const Navbar = () => {
                 color: 'inherit',
                 padding: '4px',
                 borderRadius: '50%',
-                transition: 'background 0.2s'
+                transition: 'background 0.2s',
               }}
               title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
             >
-              {theme === 'light' ? <Moon size={16} /> : <Sun size={16} style={{ color: 'var(--accent)' }} />}
+              {theme === 'light' ? (
+                <Moon size={16} />
+              ) : (
+                <Sun size={16} style={{ color: 'var(--accent)' }} />
+              )}
             </button>
             <span className="top-divider">|</span>
             <Link to="/dashboard" className="top-auth-btn">
@@ -111,14 +123,11 @@ const Navbar = () => {
             <Link to="/dashboard?role=admin" className="top-auth-btn">
               Admin Login
             </Link>
-            <Link to="/membership" className="top-primary-cta">
-              Become a Member
-            </Link>
           </div>
         </div>
       </div>
 
-      <nav className="main-nav glass-nav">
+      <nav className="main-nav glass-nav" aria-label="Primary navigation">
         <div className="container nav-container">
           {/* Logo */}
           <Link to="/" className="logo-container">
@@ -135,16 +144,28 @@ const Navbar = () => {
                 onMouseLeave={() => !link.path && setActiveDropdown(null)}
               >
                 {link.path ? (
-                  <Link
-                    to={link.path}
-                    className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                  >
-                    {link.name}
-                  </Link>
+                  link.external ? (
+                    <a
+                      href={link.path}
+                      target={link.newTab ? '_blank' : undefined}
+                      rel={link.newTab ? 'noopener noreferrer' : undefined}
+                      className="nav-link"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                    >
+                      {link.name}
+                    </Link>
+                  )
                 ) : (
                   <button
                     onClick={() => toggleDropdown(link.name)}
                     className={`nav-link dropdown-toggle ${activeDropdown === link.name ? 'active' : ''}`}
+                    aria-expanded={activeDropdown === link.name}
                   >
                     {link.name} <ChevronDown size={14} />
                   </button>
@@ -170,7 +191,9 @@ const Navbar = () => {
           <button
             className="mobile-menu-btn"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -178,7 +201,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Sidebar */}
-      <div className={`mobile-sidebar ${isOpen ? 'open' : ''}`}>
+      <div id="mobile-navigation" className={`mobile-sidebar ${isOpen ? 'open' : ''}`}>
         <div className="mobile-sidebar-header">
           <Link to="/" className="logo-container" onClick={() => setIsOpen(false)}>
             <img
@@ -188,7 +211,11 @@ const Navbar = () => {
               style={{ height: '36px' }}
             />
           </Link>
-          <button onClick={() => setIsOpen(false)} className="close-sidebar-btn">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="close-sidebar-btn"
+            aria-label="Close navigation menu"
+          >
             <X size={24} />
           </button>
         </div>
@@ -197,18 +224,31 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <div key={link.name} className="mobile-nav-group">
               {link.path ? (
-                <Link
-                  to={link.path}
-                  className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
+                link.external ? (
+                  <a
+                    href={link.path}
+                    target={link.newTab ? '_blank' : undefined}
+                    rel={link.newTab ? 'noopener noreferrer' : undefined}
+                    className="mobile-nav-link"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                )
               ) : (
                 <>
                   <button
                     onClick={() => toggleDropdown(link.name)}
                     className="mobile-nav-link dropdown-toggle"
+                    aria-expanded={activeDropdown === link.name}
                   >
                     {link.name}{' '}
                     <ChevronDown
