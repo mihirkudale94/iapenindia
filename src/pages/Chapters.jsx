@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useLocation } from 'react-router-dom';
 import { Search, MapPin, Mail, User, Info, Building, X } from 'lucide-react';
 import { chaptersCommittees } from './../data/committees';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 import { motion } from 'framer-motion';
 
-const geoUrl = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
+const geoUrl = 'https://raw.githubusercontent.com/gramener/mapviewer/init/test/india-states.geojson';
 
 const chaptersData = [
   {
@@ -281,7 +282,7 @@ const chaptersData = [
     coordinates: [82.9739, 25.3176],
   },
   {
-    name: 'Vijaywada Chapter',
+    name: 'Vijayawada Chapter',
     state: 'Andhra Pradesh',
     region: 'South',
     coordinator: 'Dr. P. V. Rao',
@@ -298,13 +299,34 @@ const chaptersData = [
   },
 ];
 
-const MapChart = ({ chapters }) => {
+const getPastelColor = (stateName) => {
+  if (!stateName) return '#f1f5f9';
+  let hash = 0;
+  for (let i = 0; i < stateName.length; i++) {
+    hash = stateName.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const colors = [
+    '#ffe4e6', // Soft Rose
+    '#d1fae5', // Soft Mint Green
+    '#dbeafe', // Soft Sky Blue
+    '#e0e7ff', // Soft Lavender Blue
+    '#ffedd5', // Soft Peach/Orange
+    '#fef9c3', // Soft Pastel Yellow
+    '#ccfbf1', // Soft Teal
+  ];
+  const index = Math.abs(hash) % colors.length;
+  return colors[index];
+};
+
+const MapChart = ({ chapters, selectedState, onStateClick }) => {
+  const [hoveredState, setHoveredState] = useState(null);
+
   return (
     <div
       style={{
         width: '100%',
-        height: '400px',
-        background: 'rgba(5, 27, 44, 0.05)',
+        height: '450px',
+        background: 'rgba(5, 27, 44, 0.03)',
         borderRadius: 'var(--radius-lg)',
         border: '1px solid rgba(11, 60, 93, 0.1)',
         overflow: 'hidden',
@@ -314,57 +336,370 @@ const MapChart = ({ chapters }) => {
     >
       <ComposableMap
         projection="geoMercator"
-        projectionConfig={{ scale: 800, center: [80, 22] }}
+        projectionConfig={{ scale: 1000, center: [82, 22] }}
         style={{ width: '100%', height: '100%' }}
       >
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
-            geographies.map((geo) => (
-              <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                fill={geo.properties.name === 'India' ? 'var(--primary-light)' : '#EAEAEC'}
-                stroke="#D6D6DA"
-                style={{
-                  default: { outline: 'none' },
-                  hover: {
-                    fill: geo.properties.name === 'India' ? 'var(--primary)' : '#EAEAEC',
-                    outline: 'none',
-                    transition: 'all 250ms',
-                  },
-                  pressed: { outline: 'none' },
-                }}
-              />
-            ))
+            geographies.map((geo) => {
+              const stateName = geo.properties.ST_NM;
+              // Check if chapters exist in this state
+              const chaptersInState = chapters.filter(
+                (c) => c.state.toLowerCase() === stateName.toLowerCase()
+              );
+              const isSelected = selectedState && selectedState.toLowerCase() === stateName.toLowerCase();
+
+              // Styling color variables
+              const stateBaseColor = getPastelColor(stateName);
+              let fillColour = stateBaseColor;
+              if (isSelected) {
+                fillColour = 'var(--accent)'; // Highlighted gold
+              }
+
+              return (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  fill={fillColour}
+                  stroke={isSelected ? '#051b2c' : '#b8c6d4'}
+                  strokeWidth={isSelected ? 1.5 : 0.5}
+                  onMouseEnter={() => {
+                    setHoveredState({
+                      name: stateName,
+                      count: chaptersInState.length,
+                    });
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredState(null);
+                  }}
+                  onClick={() => {
+                    onStateClick(stateName);
+                  }}
+                  style={{
+                    default: { 
+                      outline: 'none', 
+                      transition: 'all 200ms ease' 
+                    },
+                    hover: {
+                      fill: isSelected ? 'var(--accent)' : 'var(--primary)',
+                      stroke: '#051b2c',
+                      strokeWidth: 1,
+                      outline: 'none',
+                      cursor: 'pointer',
+                      transition: 'all 200ms ease'
+                    },
+                    pressed: { 
+                      outline: 'none' 
+                    },
+                  }}
+                />
+              );
+            })
           }
         </Geographies>
         {chapters.map(
           (chapter, idx) =>
             chapter.coordinates && (
               <Marker key={idx} coordinates={chapter.coordinates}>
-                <circle r={6} fill="var(--accent)" />
+                <circle 
+                  r={5} 
+                  fill="var(--primary-dark)" 
+                  stroke="var(--accent)" 
+                  strokeWidth={1.5}
+                  style={{ pointerEvents: 'none' }}
+                />
               </Marker>
             )
         )}
       </ComposableMap>
+
+      {/* Floating Info Panel in bottom-left */}
       <div
         style={{
           position: 'absolute',
           bottom: '20px',
           left: '20px',
-          background: 'rgba(255,255,255,0.9)',
-          padding: '10px 16px',
+          background: 'rgba(255, 255, 255, 0.95)',
+          backdropFilter: 'blur(4px)',
+          padding: '12px 18px',
           borderRadius: '8px',
+          border: '1px solid rgba(11, 60, 93, 0.1)',
           boxShadow: 'var(--shadow-md)',
+          textAlign: 'left',
+          pointerEvents: 'none',
+          maxWidth: '260px'
         }}
       >
-        <h4 style={{ margin: 0, fontSize: '14px', color: 'var(--primary-dark)' }}>
-          National Presence
+        <h4 style={{ margin: 0, fontSize: '13px', color: 'var(--primary-dark)', fontWeight: '700' }}>
+          Interactive Map of India
         </h4>
-        <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)' }}>
-          {chapters.length} Active Chapters Shown
-        </p>
+        
+        {hoveredState ? (
+          <div style={{ marginTop: '4px' }}>
+            <span style={{ fontSize: '14px', fontWeight: '600', color: 'var(--accent)', display: 'block' }}>
+              {hoveredState.name}
+            </span>
+            <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block' }}>
+              {hoveredState.count} active chapter{hoveredState.count !== 1 ? 's' : ''}
+            </span>
+          </div>
+        ) : selectedState ? (
+          <div style={{ marginTop: '4px' }}>
+            <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--primary)', display: 'block' }}>
+              Filtered: {selectedState}
+            </span>
+            <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block' }}>
+              Click state again or reset filter below
+            </span>
+          </div>
+        ) : (
+          <p style={{ margin: '4px 0 0 0', fontSize: '11px', color: 'var(--text-muted)' }}>
+            Hover over states or click to filter chapters.
+          </p>
+        )}
       </div>
+
+      {/* Map Reset Button in bottom-right */}
+      {selectedState && (
+        <button
+          onClick={() => onStateClick(null)}
+          style={{
+            position: 'absolute',
+            bottom: '20px',
+            right: '20px',
+            background: 'var(--primary)',
+            color: 'white',
+            border: 'none',
+            padding: '8px 14px',
+            borderRadius: '6px',
+            fontSize: '12px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            boxShadow: 'var(--shadow-sm)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            transition: 'background 150ms'
+          }}
+        >
+          Reset Map Filter
+        </button>
+      )}
+    </div>
+  );
+};
+
+const consolidateMembers = (members) => {
+  if (!members || !Array.isArray(members)) return [];
+
+  const cleaned = [];
+  
+  const isContinuation = (name) => {
+    if (!name) return true;
+    const cleanName = name.trim().toLowerCase();
+    if (/^[(\-,.]/.test(cleanName)) return true;
+    if (cleanName.startsWith('at ') || 
+        cleanName.startsWith('of ') || 
+        cleanName.startsWith('in ') || 
+        cleanName.startsWith('and ') ||
+        cleanName.startsWith('– ')) return true;
+    if (cleanName.includes('achievements') || 
+        cleanName.includes('educational') || 
+        cleanName.includes('qualification') ||
+        cleanName.includes('affiliation') ||
+        cleanName.includes('experience')) return true;
+    if (cleanName === 'of iapen' || 
+        cleanName === 'of indian' || 
+        cleanName === 'at gujarat' || 
+        cleanName === 'isccm ahmedabad' ||
+        cleanName === '– aster' ||
+        cleanName === 'she' ||
+        cleanName === ', indian') return true;
+    return false;
+  };
+
+  const isContinuationNameFragment = (name) => {
+    const clean = name.trim().toLowerCase();
+    return clean === ', indian' || clean === '- indian' || clean === 'of iapen' || clean === 'at gujarat' || clean === 'she' || clean === '– aster' || clean === 'of indian';
+  };
+
+  members.forEach((member) => {
+    let name = member.name || '';
+    name = name.replace(/\s*educational\s*qualifications?\s*/gi, '');
+    name = name.replace(/\s*qualification\s*/gi, '');
+    name = name.replace(/\s*experience\s*/gi, '');
+    name = name.replace(/\s*affiliation\s*/gi, '');
+    name = name.replace(/\s*chief dietician\s*/gi, '');
+    name = name.trim();
+
+    if (isContinuation(name) && cleaned.length > 0) {
+      const prev = cleaned[cleaned.length - 1];
+      let detailsText = '';
+      if (member.name && !isContinuationNameFragment(member.name)) {
+        detailsText += member.name + ' ';
+      }
+      detailsText += member.details || '';
+      prev.details = prev.details 
+        ? `${prev.details.trim()} ${detailsText.trim()}`
+        : detailsText.trim();
+    } else {
+      let role = member.role || 'Committee Member';
+      role = role.replace(/hon\s*\.?\s*/gi, 'Hon. ');
+      role = role.charAt(0).toUpperCase() + role.slice(1);
+      cleaned.push({
+        name: name,
+        role: role,
+        details: member.details || '',
+        image: member.image || ''
+      });
+    }
+  });
+
+  return cleaned;
+};
+
+const parseDetails = (detailsText) => {
+  if (!detailsText) return {};
+
+  const parsed = {
+    qualifications: '',
+    affiliation: '',
+    experience: '',
+    societies: '',
+    achievements: '',
+    interests: '',
+    general: ''
+  };
+
+  const text = detailsText.trim();
+  const splitRegex = /(AFFILIATION|DESIGNATION|EXPERIENCE|WORK EXPERIENCE|ASSOCIATION WITH OTHER[S]? SOCIETIES|ASSOCIATION WITH OTHER[S]? ASSOCIATIONS?|ASSOCIATION WITH OTHER[S]? ORGANIZATIONS?|ASSOCIATION WITH OTHER[S]? SOCIETIES AND ASSOCIATIONS|ACHIEVEMENTS|ACHIEVEMENTS AND ACCOLADES|AWARDS AND CERTIFICATES|AWARDS|AREAS OF SPECIAL INTEREST|AREAS OF INTEREST|FIELD OF INTEREST IN NUTRITION|FIELD OF INTEREST|SPECIAL INTERESTS)\s*[-:]\s*/g;
+  const parts = text.split(splitRegex);
+  
+  if (parts.length <= 1) {
+    parsed.general = text;
+    return parsed;
+  }
+  
+  parsed.qualifications = parts[0].trim();
+  
+  for (let i = 1; i < parts.length; i += 2) {
+    const heading = parts[i].toUpperCase();
+    const content = parts[i + 1] ? parts[i + 1].trim() : '';
+    
+    if (heading.includes('AFFILIATION') || heading.includes('DESIGNATION')) {
+      parsed.affiliation = content;
+    } else if (heading.includes('EXPERIENCE')) {
+      parsed.experience = content;
+    } else if (heading.includes('ASSOCIATION')) {
+      parsed.societies = content;
+    } else if (heading.includes('ACHIEVEMENT') || heading.includes('AWARD')) {
+      parsed.achievements = content;
+    } else if (heading.includes('INTEREST')) {
+      parsed.interests = content;
+    }
+  }
+  
+  return parsed;
+};
+
+// eslint-disable-next-line no-unused-vars
+const MemberProfileItem = ({ member, isExpanded, onToggle }) => {
+  const parsed = parseDetails(member.details);
+  const hasParsedFields = parsed.affiliation || parsed.experience || parsed.societies || parsed.achievements || parsed.interests || parsed.qualifications;
+
+  return (
+    <div
+      className="chapter-member-item"
+      style={{
+        borderBottom: '1px solid var(--border-ultra-light)',
+        paddingBottom: '16px',
+        paddingTop: '16px',
+        textAlign: 'left'
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          cursor: 'pointer',
+          userSelect: 'none'
+        }}
+        onClick={onToggle}
+      >
+        <div>
+          <strong style={{ fontSize: '16px', color: 'var(--primary-dark)' }}>
+            {member.name}
+          </strong>
+          <span
+            className="custom-badge bg-primary-light"
+            style={{ fontSize: '11px', marginLeft: '10px', verticalAlign: 'middle', padding: '3px 8px', borderRadius: '12px', color: 'var(--primary)', fontWeight: '600' }}
+          >
+            {member.role}
+          </span>
+        </div>
+        <span style={{ fontSize: '12px', color: 'var(--primary)', fontWeight: '600' }}>
+          {isExpanded ? 'Hide Details ▲' : 'View Details ▼'}
+        </span>
+      </div>
+
+      {isExpanded && (
+        <div 
+          style={{ 
+            marginTop: '12px', 
+            fontSize: '14px', 
+            color: 'var(--text-dark)', 
+            lineHeight: '1.6',
+            backgroundColor: 'var(--bg-section)',
+            padding: '16px',
+            borderRadius: '8px',
+            border: '1px solid var(--border-ultra-light)'
+          }}
+        >
+          {hasParsedFields ? (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {parsed.affiliation && (
+                <div>
+                  <strong style={{ color: 'var(--primary-navy)' }}>Designation & Affiliation:</strong>
+                  <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.affiliation}</p>
+                </div>
+              )}
+              {parsed.qualifications && (
+                <div>
+                  <strong style={{ color: 'var(--primary-navy)' }}>Educational Qualifications:</strong>
+                  <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.qualifications}</p>
+                </div>
+              )}
+              {parsed.experience && (
+                <div>
+                  <strong style={{ color: 'var(--primary-navy)' }}>Professional Experience:</strong>
+                  <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.experience}</p>
+                </div>
+              )}
+              {parsed.societies && (
+                <div>
+                  <strong style={{ color: 'var(--primary-navy)' }}>Memberships & Affiliations:</strong>
+                  <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.societies}</p>
+                </div>
+              )}
+              {parsed.achievements && (
+                <div>
+                  <strong style={{ color: 'var(--primary-navy)' }}>Key Achievements & Accolades:</strong>
+                  <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.achievements}</p>
+                </div>
+              )}
+              {parsed.interests && (
+                <div>
+                  <strong style={{ color: 'var(--primary-navy)' }}>Areas of Special Interest:</strong>
+                  <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.interests}</p>
+                </div>
+              )}
+            </div>
+          ) : (
+            <p style={{ margin: 0, color: 'var(--text-muted)' }}>{member.details || 'No biography details provided.'}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };
@@ -373,7 +708,9 @@ const Chapters = () => {
   const { hash } = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
   const [filterRegion, setFilterRegion] = useState('All');
+  const [selectedState, setSelectedState] = useState(null);
   const [selectedChapter, setSelectedChapter] = useState(null);
+  const [expandedMember, setExpandedMember] = useState(null);
 
   useEffect(() => {
     if (hash) {
@@ -386,6 +723,15 @@ const Chapters = () => {
     }
   }, [hash]);
 
+  const handleStateClick = (stateName) => {
+    if (selectedState && stateName && selectedState.toLowerCase() === stateName.toLowerCase()) {
+      setSelectedState(null);
+    } else {
+      setSelectedState(stateName);
+      setFilterRegion('All');
+    }
+  };
+
   const regions = ['All', 'North', 'South', 'East', 'West', 'Central'];
 
   const filteredChapters = chaptersData.filter((chapter) => {
@@ -394,7 +740,8 @@ const Chapters = () => {
       chapter.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
       chapter.coordinator.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRegion = filterRegion === 'All' || chapter.region === filterRegion;
-    return matchesSearch && matchesRegion;
+    const matchesState = !selectedState || chapter.state.toLowerCase() === selectedState.toLowerCase();
+    return matchesSearch && matchesRegion && matchesState;
   });
 
   return (
@@ -424,7 +771,7 @@ const Chapters = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <MapChart chapters={filteredChapters} />
+            <MapChart chapters={chaptersData} selectedState={selectedState} onStateClick={handleStateClick} />
           </motion.div>
 
           {/* Interactive Search Controls */}
@@ -455,7 +802,10 @@ const Chapters = () => {
                 <button
                   key={reg}
                   className={`region-tab-btn ${filterRegion === reg ? 'active' : ''}`}
-                  onClick={() => setFilterRegion(reg)}
+                  onClick={() => {
+                    setFilterRegion(reg);
+                    setSelectedState(null);
+                  }}
                 >
                   {reg === 'All' ? 'All Regions' : reg}
                 </button>
@@ -464,8 +814,20 @@ const Chapters = () => {
           </div>
 
           {/* Results Summary */}
-          <div className="results-info">
-            <p>Showing {filteredChapters.length} active chapters</p>
+          <div className="results-info" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
+            <p style={{ margin: 0 }}>Showing {filteredChapters.length} active chapters</p>
+            {selectedState && (
+              <span className="custom-badge bg-primary-light" style={{ padding: '6px 12px', fontSize: '13px', borderRadius: '20px', color: 'var(--primary)', fontWeight: '600' }}>
+                Filtered by State: <strong>{selectedState}</strong>
+                <button 
+                  onClick={() => handleStateClick(selectedState)} 
+                  style={{ border: 'none', background: 'none', marginLeft: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '14px', color: 'var(--primary-dark)', verticalAlign: 'middle' }}
+                  aria-label="Clear state filter"
+                >
+                  &times;
+                </button>
+              </span>
+            )}
           </div>
 
           {/* Grid of Chapter Cards */}
@@ -484,6 +846,7 @@ const Chapters = () => {
                         region: chapter.region,
                         ...chaptersCommittees[chapter.name],
                       });
+                      setExpandedMember(null);
                     }
                   }}
                 >
@@ -534,142 +897,387 @@ const Chapters = () => {
       </section>
 
       {/* Chapter Committee Modal */}
-      {selectedChapter && (
-        <div className="modal-backdrop" onClick={() => setSelectedChapter(null)}>
-          <div
-            className="modal-container"
-            onClick={(e) => e.stopPropagation()}
-            style={{ maxWidth: '800px' }}
-          >
-            <button
-              className="modal-close"
-              onClick={() => setSelectedChapter(null)}
-              aria-label="Close modal"
-            >
-              <X size={24} />
-            </button>
-            <div className="modal-body-content">
-              <div
-                className="modal-member-header"
-                style={{ marginBottom: '16px', paddingBottom: '16px' }}
-              >
-                <div className="modal-avatar" style={{ backgroundColor: 'var(--primary-light)' }}>
-                  <Building size={36} className="text-primary" />
-                </div>
-                <div>
-                  <h3 className="modal-member-name">{selectedChapter.name}</h3>
-                  <p className="modal-member-role" style={{ color: 'var(--text-muted)' }}>
-                    Region: {selectedChapter.region} India &bull; State: {selectedChapter.state}
-                  </p>
-                </div>
-              </div>
+      {selectedChapter && createPortal((() => {
+        try {
+          const cleanedMembers = consolidateMembers(selectedChapter.members);
+          const officeBearers = cleanedMembers.filter(m => 
+            m.role && (
+              m.role.toLowerCase().includes('president') || 
+              m.role.toLowerCase().includes('secretary') || 
+              m.role.toLowerCase().includes('treasurer') || 
+              m.role.toLowerCase().includes('convener') ||
+              m.role.toLowerCase().includes('coordinator') ||
+              m.role.toLowerCase().includes('chair')
+            )
+          );
+          const executiveCommittee = cleanedMembers.filter(m => !officeBearers.includes(m));
 
-              <div className="chapter-committee-section text-left">
-                <h4
-                  className="details-title"
-                  style={{
-                    fontSize: '1.2rem',
-                    marginBottom: '16px',
-                    color: 'var(--primary-dark)',
-                    borderBottom: '2px solid var(--primary-light)',
-                    paddingBottom: '6px',
-                  }}
+          return (
+            <div className="modal-backdrop" onClick={() => setSelectedChapter(null)}>
+              <div
+                className="modal-container"
+                onClick={(e) => e.stopPropagation()}
+                style={{ maxWidth: '800px' }}
+              >
+                <button
+                  className="modal-close"
+                  onClick={() => setSelectedChapter(null)}
+                  aria-label="Close modal"
                 >
-                  Executive Committee Members
-                </h4>
-                <div
-                  className="chapter-members-list"
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '20px',
-                    maxHeight: '50vh',
-                    overflowY: 'auto',
-                    paddingRight: '10px',
-                  }}
-                >
-                  {selectedChapter.members.map((member, idx) => (
-                    <div
-                      key={idx}
-                      className="chapter-member-item"
-                      style={{
-                        borderBottom:
-                          idx < selectedChapter.members.length - 1
-                            ? '1px dashed var(--border-ultra-light)'
-                            : 'none',
-                        paddingBottom: '16px',
-                      }}
-                    >
-                      <div
-                        style={{
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          alignItems: 'flex-start',
-                          flexWrap: 'wrap',
-                          gap: '8px',
-                        }}
-                      >
-                        <strong style={{ fontSize: '16px', color: 'var(--primary-dark)' }}>
-                          {member.name}
-                        </strong>
-                        <span
-                          className="custom-badge bg-primary-light"
-                          style={{ fontSize: '12px' }}
-                        >
-                          {member.role}
-                        </span>
-                      </div>
-                      <p
-                        style={{
-                          fontSize: '14px',
-                          color: 'var(--text-muted)',
-                          marginTop: '6px',
-                          lineHeight: '1.5',
-                        }}
-                      >
-                        {member.details}
+                  <X size={24} />
+                </button>
+                <div className="modal-body-content" style={{ maxHeight: '75vh', overflowY: 'auto', paddingRight: '5px' }}>
+                  <div
+                    className="modal-member-header"
+                    style={{ marginBottom: '20px', paddingBottom: '16px' }}
+                  >
+                    <div className="modal-avatar" style={{ backgroundColor: 'var(--primary-light)' }}>
+                      <Building size={36} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="modal-member-name" style={{ color: 'var(--primary-dark)', fontSize: '20px', fontWeight: '700', margin: 0 }}>
+                        {selectedChapter.name}
+                      </h3>
+                      <p className="modal-member-role" style={{ color: 'var(--text-muted)', margin: '4px 0 0 0', fontSize: '13px' }}>
+                        Region: {selectedChapter.region} India &bull; State: {selectedChapter.state}
                       </p>
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
 
-              <div
-                className="chapter-contact-box"
-                style={{
-                  marginTop: '24px',
-                  backgroundColor: 'var(--bg-section)',
-                  padding: '16px',
-                  borderRadius: 'var(--radius-sm)',
-                  border: '1px solid var(--border-ultra-light)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  flexWrap: 'wrap',
-                  gap: '12px',
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <Mail size={20} className="text-primary" />
-                  <div className="text-left">
-                    <strong
-                      style={{ display: 'block', fontSize: '14px', color: 'var(--primary-navy)' }}
-                    >
-                      Official Chapter Contact Email
-                    </strong>
-                    <a
-                      href={`mailto:${selectedChapter.email}`}
-                      style={{ fontSize: '14px', fontWeight: '600' }}
-                    >
-                      {selectedChapter.email}
-                    </a>
+                  {/* Office Bearers Section */}
+                  {officeBearers.length > 0 && (
+                    <div className="chapter-committee-section text-left" style={{ marginBottom: '24px' }}>
+                      <h4
+                        className="details-title"
+                        style={{
+                          fontSize: '1.1rem',
+                          fontWeight: '700',
+                          marginBottom: '12px',
+                          color: 'var(--primary-navy)',
+                          borderBottom: '2px solid var(--accent)',
+                          paddingBottom: '4px',
+                        }}
+                      >
+                        Office Bearers (Leadership Team)
+                      </h4>
+                      <div>
+                        {officeBearers.map((member, idx) => {
+                          const isExpanded = expandedMember === `office-${idx}`;
+                          const parsed = parseDetails(member.details);
+                          const hasParsedFields = parsed.affiliation || parsed.experience || parsed.societies || parsed.achievements || parsed.interests || parsed.qualifications;
+
+                          return (
+                            <div
+                              key={`office-${idx}`}
+                              className="chapter-member-item"
+                              style={{
+                                borderBottom: '1px solid var(--border-ultra-light)',
+                                paddingBottom: '16px',
+                                paddingTop: '16px',
+                                textAlign: 'left'
+                              }}
+                            >
+                              <div
+                                style={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  cursor: 'pointer',
+                                  userSelect: 'none'
+                                }}
+                                onClick={() => setExpandedMember(isExpanded ? null : `office-${idx}`)}
+                              >
+                                <div>
+                                  <strong style={{ fontSize: '16px', color: 'var(--primary-dark)' }}>
+                                    {member.name}
+                                  </strong>
+                                  <span
+                                    className="custom-badge bg-primary-light"
+                                    style={{ fontSize: '11px', marginLeft: '10px', verticalAlign: 'middle', padding: '3px 8px', borderRadius: '12px', color: 'var(--primary)', fontWeight: '600' }}
+                                  >
+                                    {member.role}
+                                  </span>
+                                </div>
+                                <span style={{ fontSize: '12px', color: 'var(--primary)', fontWeight: '600' }}>
+                                  {isExpanded ? 'Hide Details ▲' : 'View Details ▼'}
+                                </span>
+                              </div>
+
+                              {isExpanded && (
+                                <div 
+                                  style={{ 
+                                    marginTop: '12px', 
+                                    fontSize: '14px', 
+                                    color: 'var(--text-dark)', 
+                                    lineHeight: '1.6',
+                                    backgroundColor: 'var(--bg-section)',
+                                    padding: '16px',
+                                    borderRadius: '8px',
+                                    border: '1px solid var(--border-ultra-light)',
+                                    display: 'flex',
+                                    gap: '16px',
+                                    flexDirection: 'row',
+                                    alignItems: 'flex-start',
+                                    flexWrap: 'wrap'
+                                  }}
+                                >
+                                  {member.image && (
+                                    <div style={{ flexShrink: 0, width: '180px', height: '180px', borderRadius: '8px', overflow: 'hidden', border: '2px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
+                                      <img 
+                                        src={member.image} 
+                                        alt={member.name} 
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                                        onError={(e) => { e.target.style.display = 'none'; }}
+                                      />
+                                    </div>
+                                  )}
+                                  <div style={{ flex: 1, minWidth: '200px' }}>
+                                    {hasParsedFields ? (
+                                      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                        {parsed.affiliation && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Designation & Affiliation:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.affiliation}</p>
+                                          </div>
+                                        )}
+                                        {parsed.qualifications && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Educational Qualifications:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.qualifications}</p>
+                                          </div>
+                                        )}
+                                        {parsed.experience && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Professional Experience:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.experience}</p>
+                                          </div>
+                                        )}
+                                        {parsed.societies && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Memberships & Affiliations:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.societies}</p>
+                                          </div>
+                                        )}
+                                        {parsed.achievements && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Key Achievements & Accolades:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.achievements}</p>
+                                          </div>
+                                        )}
+                                        {parsed.interests && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Areas of Special Interest:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.interests}</p>
+                                          </div>
+                                        )}
+                                      </div>
+                                    ) : (
+                                      <p style={{ margin: 0, color: 'var(--text-muted)' }}>{member.details || 'No biography details provided.'}</p>
+                                    )}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Executive Committee Section */}
+                  {executiveCommittee.length > 0 && (
+                    <div className="chapter-committee-section text-left" style={{ marginBottom: '24px' }}>
+                      <h4
+                        className="details-title"
+                        style={{
+                          fontSize: '1.1rem',
+                          fontWeight: '700',
+                          marginBottom: '12px',
+                          color: 'var(--primary-navy)',
+                          borderBottom: '2px solid var(--border-light)',
+                          paddingBottom: '4px',
+                        }}
+                      >
+                        Executive Committee Members
+                      </h4>
+                      <div>
+                        {executiveCommittee.map((member, idx) => {
+                          const isExpanded = expandedMember === `exec-${idx}`;
+                          const parsed = parseDetails(member.details);
+                          const hasParsedFields = parsed.affiliation || parsed.experience || parsed.societies || parsed.achievements || parsed.interests || parsed.qualifications;
+
+                          return (
+                            <div
+                              key={`exec-${idx}`}
+                              className="chapter-member-item"
+                              style={{
+                                borderBottom: '1px solid var(--border-ultra-light)',
+                                paddingBottom: '16px',
+                                paddingTop: '16px',
+                                textAlign: 'left'
+                              }}
+                            >
+                              <div
+                                style={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  cursor: 'pointer',
+                                  userSelect: 'none'
+                                }}
+                                onClick={() => setExpandedMember(isExpanded ? null : `exec-${idx}`)}
+                              >
+                                <div>
+                                  <strong style={{ fontSize: '16px', color: 'var(--primary-dark)' }}>
+                                    {member.name}
+                                  </strong>
+                                  <span
+                                    className="custom-badge bg-primary-light"
+                                    style={{ fontSize: '11px', marginLeft: '10px', verticalAlign: 'middle', padding: '3px 8px', borderRadius: '12px', color: 'var(--primary)', fontWeight: '600' }}
+                                  >
+                                    {member.role}
+                                  </span>
+                                </div>
+                                <span style={{ fontSize: '12px', color: 'var(--primary)', fontWeight: '600' }}>
+                                  {isExpanded ? 'Hide Details ▲' : 'View Details ▼'}
+                                </span>
+                              </div>
+
+                              {isExpanded && (
+                                <div 
+                                  style={{ 
+                                    marginTop: '12px', 
+                                    fontSize: '14px', 
+                                    color: 'var(--text-dark)', 
+                                    lineHeight: '1.6',
+                                    backgroundColor: 'var(--bg-section)',
+                                    padding: '16px',
+                                    borderRadius: '8px',
+                                    border: '1px solid var(--border-ultra-light)',
+                                    display: 'flex',
+                                    gap: '16px',
+                                    flexDirection: 'row',
+                                    alignItems: 'flex-start',
+                                    flexWrap: 'wrap'
+                                  }}
+                                >
+                                  {member.image && (
+                                    <div style={{ flexShrink: 0, width: '180px', height: '180px', borderRadius: '8px', overflow: 'hidden', border: '2px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
+                                      <img 
+                                        src={member.image} 
+                                        alt={member.name} 
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                                        onError={(e) => { e.target.style.display = 'none'; }}
+                                      />
+                                    </div>
+                                  )}
+                                  <div style={{ flex: 1, minWidth: '200px' }}>
+                                    {hasParsedFields ? (
+                                      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                        {parsed.affiliation && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Designation & Affiliation:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.affiliation}</p>
+                                          </div>
+                                        )}
+                                        {parsed.qualifications && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Educational Qualifications:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.qualifications}</p>
+                                          </div>
+                                        )}
+                                        {parsed.experience && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Professional Experience:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.experience}</p>
+                                          </div>
+                                        )}
+                                        {parsed.societies && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Memberships & Affiliations:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.societies}</p>
+                                          </div>
+                                        )}
+                                        {parsed.achievements && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Key Achievements & Accolades:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.achievements}</p>
+                                          </div>
+                                        )}
+                                        {parsed.interests && (
+                                          <div>
+                                            <strong style={{ color: 'var(--primary-navy)' }}>Areas of Special Interest:</strong>
+                                            <p style={{ margin: '2px 0 0 0', color: 'var(--text-muted)' }}>{parsed.interests}</p>
+                                          </div>
+                                        )}
+                                      </div>
+                                    ) : (
+                                      <p style={{ margin: 0, color: 'var(--text-muted)' }}>{member.details || 'No biography details provided.'}</p>
+                                    )}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  <div
+                    className="chapter-contact-box"
+                    style={{
+                      marginTop: '24px',
+                      backgroundColor: 'var(--bg-section)',
+                      padding: '16px',
+                      borderRadius: 'var(--radius-sm)',
+                      border: '1px solid var(--border-ultra-light)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      flexWrap: 'wrap',
+                      gap: '12px',
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <Mail size={20} className="text-primary" />
+                      <div className="text-left">
+                        <strong
+                          style={{ display: 'block', fontSize: '13px', color: 'var(--primary-navy)' }}
+                        >
+                          Official Chapter Contact Email
+                        </strong>
+                        <a
+                          href={`mailto:${selectedChapter.email}`}
+                          style={{ fontSize: '14px', fontWeight: '600', color: 'var(--primary)' }}
+                        >
+                          {selectedChapter.email}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          );
+        } catch (err) {
+          console.error("Modal Render Error:", err);
+          return (
+            <div className="modal-backdrop" onClick={() => setSelectedChapter(null)}>
+              <div className="modal-container" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '600px', padding: '30px', backgroundColor: '#ffffff', borderRadius: '12px' }}>
+                <button className="modal-close" onClick={() => setSelectedChapter(null)}>&times;</button>
+                <div style={{ color: '#b91c1c', textAlign: 'left' }}>
+                  <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px' }}>Modal Load Error</h3>
+                  <p style={{ fontSize: '14px', marginBottom: '15px' }}>An error occurred while loading this chapter's committee details.</p>
+                  <pre style={{ backgroundColor: '#fef2f2', padding: '12px', borderRadius: '6px', fontSize: '12px', overflowX: 'auto', border: '1px solid #fee2e2' }}>
+                    {err.message}
+                  </pre>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })(), document.body)}
     </div>
   );
 };

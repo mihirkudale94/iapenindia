@@ -4,6 +4,10 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingSocials from './components/FloatingSocials';
+import SupportWidget from './components/SupportWidget';
+import { DemoProvider } from './components/DemoContext';
+import ToastContainer from './components/ToastContainer';
+import GuidedTour from './components/GuidedTour';
 
 // Lazy load pages for better performance (Code Splitting)
 const Home = lazy(() => import('./pages/Home'));
@@ -16,6 +20,7 @@ const Journal = lazy(() => import('./pages/Journal'));
 const Events = lazy(() => import('./pages/Events'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Policies = lazy(() => import('./pages/Policies'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
 
 // Simple loading fallback
 const PageLoader = () => (
@@ -27,31 +32,37 @@ const PageLoader = () => (
 function App() {
   return (
     <HelmetProvider>
-      <Router>
-        <div className="app-container">
-          <Navbar />
-          <FloatingSocials />
-          <main className="main-content">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/chapters" element={<Chapters />} />
-                <Route path="/core-groups" element={<CoreGroups />} />
-                <Route path="/membership" element={<Membership />} />
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/journal" element={<Journal />} />
-                <Route path="/events" element={<Events />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/privacy-policy" element={<Policies defaultTab="privacy" />} />
-                <Route path="/terms-and-conditions" element={<Policies defaultTab="terms" />} />
-                <Route path="/refund-policy" element={<Policies defaultTab="refund" />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <DemoProvider>
+        <Router>
+          <div className="app-container">
+            <Navbar />
+            <FloatingSocials />
+            <SupportWidget />
+            <ToastContainer />
+            <GuidedTour />
+            <main className="main-content">
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/chapters" element={<Chapters />} />
+                  <Route path="/core-groups" element={<CoreGroups />} />
+                  <Route path="/membership" element={<Membership />} />
+                  <Route path="/courses" element={<Courses />} />
+                  <Route path="/journal" element={<Journal />} />
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/privacy-policy" element={<Policies defaultTab="privacy" />} />
+                  <Route path="/terms-and-conditions" element={<Policies defaultTab="terms" />} />
+                  <Route path="/refund-policy" element={<Policies defaultTab="refund" />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </DemoProvider>
     </HelmetProvider>
   );
 }

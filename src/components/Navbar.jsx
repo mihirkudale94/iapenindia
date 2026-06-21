@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Mail } from 'lucide-react';
+import { Menu, X, ChevronDown, Mail, Sun, Moon } from 'lucide-react';
+import { useDemo } from './DemoContext';
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useDemo();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -83,8 +85,33 @@ const Navbar = () => {
             <span className="top-divider">|</span>
             <span className="top-time">Mon - Fri: 10:00 AM - 6:00 PM</span>
           </div>
-          <div className="top-right-links">
-            <Link to="/membership" className="top-link-btn">
+          <div className="top-right-links" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <button 
+              onClick={toggleTheme} 
+              style={{
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'inherit',
+                padding: '4px',
+                borderRadius: '50%',
+                transition: 'background 0.2s'
+              }}
+              title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
+            >
+              {theme === 'light' ? <Moon size={16} /> : <Sun size={16} style={{ color: 'var(--accent)' }} />}
+            </button>
+            <span className="top-divider">|</span>
+            <Link to="/dashboard" className="top-auth-btn">
+              Member Login
+            </Link>
+            <Link to="/dashboard?role=admin" className="top-auth-btn">
+              Admin Login
+            </Link>
+            <Link to="/membership" className="top-primary-cta">
               Become a Member
             </Link>
           </div>
@@ -135,7 +162,7 @@ const Navbar = () => {
               </div>
             ))}
             <Link to="/membership#register" className="btn btn-accent btn-sm header-register-btn">
-              Register Now
+              Become a Member
             </Link>
           </div>
 
@@ -207,11 +234,25 @@ const Navbar = () => {
           ))}
           <div className="mobile-cta-wrapper">
             <Link
+              to="/dashboard"
+              className="btn btn-outline w-full"
+              onClick={() => setIsOpen(false)}
+            >
+              Member Login
+            </Link>
+            <Link
+              to="/dashboard?role=admin"
+              className="btn btn-outline w-full"
+              onClick={() => setIsOpen(false)}
+            >
+              Admin Login
+            </Link>
+            <Link
               to="/membership#register"
               className="btn btn-accent w-full"
               onClick={() => setIsOpen(false)}
             >
-              Register Now
+              Become a Member
             </Link>
           </div>
         </div>

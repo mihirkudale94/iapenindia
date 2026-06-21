@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Search, Info, Activity, ChevronDown, CheckCircle, X } from 'lucide-react';
 import { coreGroupsCommittees } from './../data/committees';
 
@@ -369,7 +370,7 @@ const CoreGroups = () => {
       </section>
 
       {/* Core Group Detailed Modal */}
-      {selectedGroup && coreGroupsCommittees[selectedGroup.name] && (
+      {selectedGroup && coreGroupsCommittees[selectedGroup.name] && createPortal(
         <div className="modal-backdrop" onClick={() => setSelectedGroup(null)}>
           <div
             className="modal-container"
@@ -549,7 +550,8 @@ const CoreGroups = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
