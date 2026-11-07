@@ -1,0 +1,136 @@
+/**
+ * Core groups index and its accordions.
+ */
+
+/* CORE GROUPS Accordions */
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.group-results-count {
+  color: var(--text-muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.group-results-count strong {
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+
+.group-card {
+  width: 100%;
+  min-height: 210px;
+  border: 1px solid var(--border-ultra-light);
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.group-card-header,
+.group-card-title-area,
+.group-member-count {
+  display: flex;
+  align-items: center;
+}
+
+.group-card-title-area {
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.group-card-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.group-card-summary {
+  margin-top: 24px;
+}
+
+.group-member-count {
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.core-group-modal {
+  max-width: 920px;
+}
+
+.core-group-modal-scroll {
+  max-height: 62vh;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+.core-group-aim {
+  background: var(--bg-section);
+  border: 1px solid var(--border-ultra-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.core-group-aim h4,
+.core-group-members-title {
+  color: var(--primary-dark);
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.core-group-aim p,
+.core-group-member p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.core-group-members-title {
+  border-bottom: 2px solid var(--teal-light);
+  padding-bottom: 9px;
+}
+
+.core-group-member-list {
+  display: grid;
+  gap: 0;
+}
+
+.core-group-member {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-ultra-light);
+}
+
+.core-group-member-image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 18px;
+  background: var(--bg-section);
+  border: 1px solid var(--border-ultra-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.core-group-member-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.core-group-member-heading h5 {
+  color: var(--primary-dark);
+  font-size: 16px;
+}

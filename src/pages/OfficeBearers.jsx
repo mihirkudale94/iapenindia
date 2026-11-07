@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
-import LeadershipGrid from '../components/LeadershipGrid';
-import leadership from '../data/leadershipOfficial.json';
+import LeadershipGrid from '@/components/widgets/LeadershipGrid';
+import leadership from '@/data/leadershipOfficial.json';
 
 const boardOfDirectors = leadership.officeBearers.members.slice(0, 4);
 const officeBearers = leadership.officeBearers.members.slice(4, 10);

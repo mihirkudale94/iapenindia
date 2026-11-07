@@ -1,0 +1,161 @@
+/**
+ * Bylaws, newsletter archive and malnutrition document pages.
+ */
+
+/* Official document and archive resources */
+.resource-container {
+  max-width: 1120px;
+}
+
+.resource-introduction,
+.resource-document-card,
+.resource-table-wrap {
+  background: var(--bg-white);
+  border: 1px solid var(--border-ultra-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.resource-introduction {
+  padding: clamp(24px, 4vw, 42px);
+  margin-bottom: 28px;
+}
+
+.resource-introduction h2 {
+  color: var(--primary-dark);
+  margin: 8px 0 20px;
+}
+
+.resource-introduction p {
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.resource-document-card {
+  padding: clamp(22px, 4vw, 38px);
+}
+
+.resource-document-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.resource-document-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--primary);
+  background: var(--primary-light);
+  flex: 0 0 auto;
+}
+
+.resource-document-heading h2 {
+  color: var(--primary-dark);
+  margin: 5px 0;
+}
+
+.resource-document-heading p {
+  color: var(--text-muted);
+}
+
+.resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.resource-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resource-pdf-frame {
+  width: 100%;
+  min-height: 720px;
+  border: 1px solid var(--border-ultra-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-section);
+}
+
+.resource-table-wrap {
+  overflow-x: auto;
+}
+
+.resource-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 820px;
+}
+
+.resource-table th,
+.resource-table td {
+  text-align: left;
+  padding: 18px;
+  border-bottom: 1px solid var(--border-ultra-light);
+  vertical-align: top;
+}
+
+.resource-table th {
+  color: var(--primary-dark);
+  background: var(--bg-section);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.resource-table td {
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  .resource-document-heading {
+    flex-direction: column;
+  }
+  .resource-pdf-frame {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .groups-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .groups-grid {
+    grid-template-columns: 1fr;
+  }
+  .group-card {
+    min-height: 170px;
+  }
+  .group-results-count {
+    width: 100%;
+    text-align: center;
+  }
+  .core-group-member {
+    grid-template-columns: 1fr;
+  }
+  .core-group-member-image {
+    width: 112px;
+    height: 112px;
+  }
+  .core-group-member-heading {
+    flex-direction: column;
+  }
+}
+
+.group-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+/* Slide animation body */

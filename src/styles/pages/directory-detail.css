@@ -1,0 +1,251 @@
+/**
+ * Shared detail layout for a single chapter or core group.
+ */
+
+/* Data-rich chapter and Core Group detail pages */
+.directory-detail-container {
+  max-width: 1180px;
+}
+
+.directory-detail-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 42px;
+}
+
+.directory-detail-toolbar .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.directory-detail-intro {
+  margin-bottom: 32px;
+}
+
+.directory-detail-intro .section-desc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 0;
+}
+
+.profile-directory-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.profile-directory-card {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 28px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-ultra-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-directory-image {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 18px;
+  background: var(--bg-section);
+}
+
+.profile-directory-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+}
+
+.profile-directory-content h3 {
+  color: var(--primary-dark);
+  font-size: 21px;
+  margin: 10px 0 9px;
+}
+
+.profile-directory-content p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.72;
+  white-space: pre-line;
+}
+
+@media (max-width: 700px) {
+  .directory-detail-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .profile-directory-card {
+    grid-template-columns: 1fr;
+  }
+  .profile-directory-image {
+    width: 132px;
+    height: 132px;
+  }
+}
+
+.official-copy-layout {
+  max-width: 980px;
+}
+
+.official-copy-layout > div,
+.official-copy-layout > article,
+.advisory-introduction {
+  margin-bottom: 48px;
+}
+
+.official-registration-grid {
+  gap: 26px;
+}
+
+.official-registration-card {
+  height: 100%;
+}
+
+.bank-detail-list {
+  display: grid;
+  gap: 0;
+  margin-top: 22px;
+}
+
+.bank-detail-list > div {
+  display: grid;
+  grid-template-columns: 135px minmax(0, 1fr);
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border-ultra-light);
+}
+
+.bank-detail-list dt {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bank-detail-list dd {
+  color: var(--primary-dark);
+  font-size: 14px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.registration-security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--teal);
+  background: var(--teal-light);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-top: 18px;
+}
+
+.registration-security-note p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.official-process-list {
+  list-style: none;
+  display: grid;
+  gap: 15px;
+  margin: 22px 0;
+}
+
+.official-process-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.official-process-list svg {
+  color: var(--teal);
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.official-form-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.membership-help-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+  .bank-detail-list > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+.official-copy-layout h2 {
+  color: var(--primary-dark);
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.25;
+  margin: 10px 0 18px;
+}
+
+.official-copy-layout p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.82;
+  margin-bottom: 16px;
+}
+
+.official-copy-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.organisation-chart-panel {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: clamp(18px, 4vw, 34px);
+  text-align: center;
+}
+
+.organisation-chart-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.advisory-introduction {
+  padding: clamp(22px, 4vw, 40px);
+  background: var(--bg-section);
+  border: 1px solid var(--border-ultra-light);
+  border-radius: var(--radius-lg);
+}

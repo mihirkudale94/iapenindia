@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Mail, Users } from 'lucide-react';
-import officialChapters from '../data/chaptersOfficial.json';
+import officialChapters from '@/data/chaptersOfficial.json';
 
 const getMemberIdentity = (title) => {
   const lines = title

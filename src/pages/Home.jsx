@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { animate } from 'framer-motion';
-import { slidesData as slides, statsData as stats } from '../data/homeData';
+import { slidesData as slides, statsData as stats } from '@/data/homeData';
 import styles from './Home.module.css';
 
 const AnimatedCounter = ({ from, to }) => {

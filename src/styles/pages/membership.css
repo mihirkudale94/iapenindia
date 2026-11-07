@@ -1,0 +1,156 @@
+/**
+ * Membership tiers and the registration form.
+ */
+
+/* MEMBERSHIP PAGE STYLES */
+.benefits-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefits-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 15px;
+}
+
+.benefits-sidebar {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  border-left: 6px solid var(--primary);
+}
+
+.sidebar-icon-large {
+  margin-bottom: 24px;
+  color: var(--primary);
+}
+
+.benefits-sidebar h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.benefits-sidebar p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pricing-grid {
+  margin-top: 48px;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+.popular-card {
+  border: 2px solid var(--primary);
+  transform: scale(1.03);
+}
+
+.popular-card:hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: var(--shadow-primary-glow);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  color: var(--bg-white);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.05em;
+}
+
+.tier-badge {
+  background-color: var(--bg-section);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.tier-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--primary-dark);
+}
+
+.tier-price-box {
+  margin-bottom: 28px;
+}
+
+.tier-price {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 850;
+  color: var(--primary-dark);
+  letter-spacing: -0.02em;
+}
+
+.tier-type {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: 4px;
+  font-weight: 500;
+}
+
+.tier-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+  text-align: left;
+  width: 100%;
+}
+
+.tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.tier-features li svg {
+  color: var(--primary);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Membership form container */
+
+/* File uploading field */
+
+/* Success Card details */
+
+@media (max-width: 768px) {
+  .pricing-card {
+    transform: none !important;
+  }
+}

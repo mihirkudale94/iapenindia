@@ -1,0 +1,65 @@
+/**
+ * Late global overrides.
+ * These win on source order alone, so this file must stay the last
+ * import before print styles. Fold each rule into its owning partial
+ * when that partial is next touched.
+ */
+
+/* Custom form container box and form alignments */
+.form-container-box {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%230b3c5d' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 20px;
+  padding-right: 48px !important;
+  cursor: pointer;
+}
+
+/* Responsive Grid Improvements for Mobile/Tablet */
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container-box {
+    padding: 24px 16px;
+  }
+}
+
+/* Alignments and Flex utilities */
+@media (min-width: 768px) {
+  .text-right-md {
+    text-align: right;
+  }
+}
+
+.flex {
+  display: flex;
+}

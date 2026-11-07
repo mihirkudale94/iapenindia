@@ -1,0 +1,126 @@
+/**
+ * Design tokens: the single source of colour, type, spacing and elevation.
+ */
+
+:root {
+  /* Logo-Inspired Premium Corporate Palette */
+  --primary-dark: #051b2c; /* Deep Sapphire Dark Navy */
+  --primary-navy: #0c2b45; /* Slate Navy */
+  --primary: #0b3c5d; /* Classic Logo Navy */
+  --primary-light: #f0f5fa; /* Ice Blue Light Tint */
+  --accent: #c99b3b; /* Refined Prestige Gold */
+  --accent-light: #fdfaf2; /* Warm Ivory Tint */
+  --teal: #2080a8; /* Deep Steel Teal */
+  --teal-light: #f2fafe; /* Soft Teal Tint */
+
+  --text-dark: #051b2c; /* Deep Navy Text */
+  --text-muted: #4e5d6c; /* Slate Grey Body Text */
+  --bg-light: #ffffff; /* Pure White */
+  --bg-section: #f7f9fa; /* Soft Grey Section Background */
+  --bg-white: #ffffff;
+
+  /* Borders and Shadows */
+  --border-light: #cbd2d9; /* Slate Grey Outline */
+  --border-ultra-light: #e4e7eb; /* Soft visual dividers */
+
+  --shadow-sm: 0 1px 3px rgba(5, 27, 44, 0.02), 0 1px 2px rgba(5, 27, 44, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(5, 27, 44, 0.04), 0 8px 10px -6px rgba(5, 27, 44, 0.03);
+  --shadow-lg: 0 20px 40px -10px rgba(5, 27, 44, 0.06), 0 10px 15px -8px rgba(5, 27, 44, 0.04);
+
+  /* Premium Stripe-like soft glow shadows matching brand colors */
+  --shadow-primary-glow: 0 10px 30px -10px rgba(11, 60, 93, 0.25);
+  --shadow-teal-glow: 0 10px 30px -10px rgba(32, 128, 168, 0.25);
+  --shadow-accent-glow: 0 10px 30px -10px rgba(201, 155, 59, 0.25);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark,
+[data-theme='dark'] {
+  --bg-light: #05131f;
+  --bg-section: #0b1a27;
+  --text-dark: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-light: #1e293b;
+  --border-ultra-light: #0f172a;
+  --primary-light: #0a243a;
+  --primary-navy: #0e2d48;
+  --bg-white: #0c1c2b;
+}
+
+.dark .glass-panel {
+  background: rgba(11, 26, 43, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .glass-nav {
+  background: rgba(5, 19, 31, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #f8fafc !important;
+}
+
+.dark p,
+.dark li,
+.dark span,
+.dark label,
+.dark td {
+  color: #cbd5e1;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #05131f !important;
+  color: #f1f5f9 !important;
+  border-color: #1e293b !important;
+}
+
+.dark th {
+  color: var(--accent) !important;
+  background-color: #0a243a !important;
+}
+
+.dark tr {
+  border-bottom: 1px solid #1e293b !important;
+}
+
+.dark .card {
+  background: #0c1c2b !important;
+  border-color: #1e293b !important;
+}
+
+.dark .btn-outline {
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.dark .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .top-right-links .top-auth-btn {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}

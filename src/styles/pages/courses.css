@@ -1,0 +1,17 @@
+/**
+ * ESPEN LLL and course listings.
+ */
+
+/* COURSES PAGE STYLES */
+
+.course-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.course-meta-item svg {
+  color: var(--primary);
+}

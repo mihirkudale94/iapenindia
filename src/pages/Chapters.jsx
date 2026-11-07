@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { Search, MapPin, Mail, User, Info, Building, X } from 'lucide-react';
-import officialChapters from '../data/chaptersOfficial.json';
+import officialChapters from '@/data/chaptersOfficial.json';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 import { motion } from 'framer-motion';
 
@@ -1672,7 +1672,7 @@ const Chapters = () => {
                         Modal Load Error
                       </h3>
                       <p style={{ fontSize: '14px', marginBottom: '15px' }}>
-                        An error occurred while loading this chapter's committee details.
+                        An error occurred while loading this chapter’s committee details.
                       </p>
                       <pre
                         style={{

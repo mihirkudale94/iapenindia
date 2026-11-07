@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { Check, User, Briefcase, Award, Sparkles } from 'lucide-react';
-import RegistrationSection from '../components/RegistrationSection';
-import { lifeBenefits, studentBenefits, pricingTiers } from '../data/membershipData';
+import RegistrationSection from '@/components/widgets/RegistrationSection';
+import { lifeBenefits, studentBenefits, pricingTiers } from '@/data/membershipData';
 
 const Membership = () => {
   const { hash } = useLocation();

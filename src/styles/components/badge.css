@@ -1,0 +1,29 @@
+/**
+ * Badges and pills.
+ */
+
+/* Custom Badge */
+.custom-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  width: max-content;
+}
+
+.bg-teal-light {
+  background-color: var(--teal-light);
+  color: var(--teal);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.bg-accent-light {
+  background-color: var(--accent-light);
+  color: var(--accent);
+}

@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Users } from 'lucide-react';
-import officialCoreGroups from '../data/coreGroupsOfficial.json';
+import officialCoreGroups from '@/data/coreGroupsOfficial.json';
 
 const sourceSlug = (source) => source.split('/').filter(Boolean).pop();
 

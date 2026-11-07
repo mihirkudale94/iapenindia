@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { Helmet } from 'react-helmet-async';
 import { Activity, Search, Users, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import officialCoreGroups from '../data/coreGroupsOfficial.json';
+import officialCoreGroups from '@/data/coreGroupsOfficial.json';
 
 const groups = officialCoreGroups;
 

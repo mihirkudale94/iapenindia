@@ -1,0 +1,35 @@
+/**
+ * Global stylesheet entry point.
+ *
+ * Imports are ordered by cascade, not alphabetically: tokens and element
+ * defaults first, then shared components, then page-level styles, then the
+ * overrides that have to come last. Page-scoped styles that do not need to be
+ * global live in a *.module.css next to their page instead.
+ */
+
+@import './base/tokens.css';
+@import './base/base.css';
+@import './layout/containers.css';
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/section-header.css';
+@import './base/utilities.css';
+@import './components/badge.css';
+@import './components/spinner.css';
+@import './base/animations.css';
+@import './components/forms.css';
+@import './layout/navbar.css';
+@import './layout/footer.css';
+@import './components/floating-socials.css';
+@import './pages/about.css';
+@import './pages/chapters.css';
+@import './pages/core-groups.css';
+@import './pages/directory-detail.css';
+@import './pages/resources.css';
+@import './pages/membership.css';
+@import './pages/courses.css';
+@import './pages/contact.css';
+@import './pages/policies.css';
+@import './pages/dashboard.css';
+@import './base/overrides.css';
+@import './base/print.css';
