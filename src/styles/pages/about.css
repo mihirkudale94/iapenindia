@@ -101,3 +101,42 @@
 }
 
 /* Advisory Board style */
+
+/* Past President message */
+.president-message {
+  margin: 0 auto;
+}
+
+.president-message .section-title-wrapper {
+  margin-bottom: 24px;
+}
+
+.president-message-body {
+  background: var(--surface, #fff);
+  border: 1px solid var(--border-ultra-light);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-sm);
+  padding: 36px 40px;
+}
+
+.president-message-body p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.president-message-body p:last-child {
+  margin-bottom: 0;
+}
+
+.president-message-signature {
+  font-weight: 700;
+  color: var(--primary);
+  text-align: right;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .president-message-body {
+    padding: 24px 20px;
+  }
+}

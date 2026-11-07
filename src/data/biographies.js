@@ -19,14 +19,14 @@ Author - Low Carb, Low Sugar Diabetes Friendly Recipes Book.
 Editor - Diabetes Mellitus, Nutrition, Functional Foods and Nutraceuticals - A Handbook.
 Editor - Diabetes Chronicles- Real World Case Studies and Insights`,
   'Dr. Mansi Patil': `DR. MANSI PATIL Dr. Mansi Patil, PhD, is a renowned Nutrition Consultant and expert in hypertension management. Dr. Patil holds key positions in esteemed organizations, including the National Executive Committee of IAPEN INDIA, Chief Program Officer for Hypertension and Nutrition, and Committee Member for Regional Advisory Group for South and Central Asia, International Society of Hypertension. She also serves as Committee Chair for Disparities in CVD, American Society of Preventive Cardiology, and Associate Editor for ESPEN Clinical Nutrition. With a focus on improving healthcare in underserved communities, Dr. Patil is working extensively in the field of hypertension in low-resource settings. She is also a faculty member at Victoria University, Australia, where she shares her expertise and contributes to the development of future healthcare leaders.`,
-  'Ms. Datta Patel': `MS. DATTA PATEL Head of the Department, Nutrition &amp; Dietetics
-Program Coordinator – School of Sports, Exercise &amp; Nutrition Sciences
+  'Ms. Datta Patel': `MS. DATTA PATEL Head of the Department, Nutrition & Dietetics
+Program Coordinator – School of Sports, Exercise & Nutrition Sciences
 D Y Patil University, Navi Mumbai
 Professional Affiliations :
 - National Executive Committee Member, IAPEN INDIA – Association for Parenteral and
 Enteral Nutrition
-- Co-Treasurer, South Asian Parenteral &amp; Enteral Nutrition (2025)
-- Member Secretary, Board of Studies – School of Sports, Exercise &amp; Nutrition Sciences, D Y
+- Co-Treasurer, South Asian Parenteral & Enteral Nutrition (2025)
+- Member Secretary, Board of Studies – School of Sports, Exercise & Nutrition Sciences, D Y
 Patil (Deemed to be) University, Navi Mumbai
 - Joint Program Officer, IAPEN INDIA – Core Group on Nutrition and Diabetes
 - Associate Editor, Clinical Nutrition ESPEN
@@ -43,7 +43,7 @@ Nutrition Partnership)
 Qualifications :
 - Registered Dietician
 - PhD Scholar
-- MSc in Food Science &amp; Nutrition
+- MSc in Food Science & Nutrition
 - ESPEN Diploma in Clinical Nutrition and Metabolism
 - ESPEN T-LLL Certified Professional
 - Certified in Nutrigenomics
@@ -51,14 +51,11 @@ Qualifications :
 - Certified Sports Nutritionist
 - ESPEN Certified in Clinical Nutrition and Metabolic Care
 - Holder of multiple ESPEN LLL Certifications
-Publications &amp; Contributions :
+Publications & Contributions :
 - Co-authoring books, abstracts, and scientific publications
 - Authoring chapters in national and international journals and textbooks
 - Serving as Editor of "Diabetes Chronicles – Real World Case Studies and Insights", offering
 clinical perspectives and case-based learning for healthcare professionals`,
-  'Dr. P.C. Vijay Kumar - Journey': `Message from past President – Dr. P C Vijay Kumar
-My Journey as the President of IAPEN INDIA My association with IAPEN began at the state level, where I was appointed as the President of the Tamil Nadu Chapter. This was my first leadership role in the organization, and I embraced it with the commitment to promote clinical nutrition in my state. During this tenure, I was also entrusted with the responsibility of chairing the ERAS (Enhanced Recovery After Surgery) core group. Under this capacity, I organized EnhaNS 2015 in Chennai, a pioneering conference that emphasized the implementation of ERAS protocols in surgical practice. The overwhelming success of this event reinforced my belief in the power of structured nutritional interventions in improving surgical outcomes. Recognizing my contributions, I was soon elevated to the National Executive Committee (NEC) of IAPEN, where I played a role in shaping key decisions for the organization. As a firm believer in “one man, one post”, I voluntarily stepped down from my Tamil Nadu Chapter presidency, allowing new leadership to emerge and strengthening the decentralization of power within the association. I have always advocated for a leadership model that fosters growth rather than political entrenchment, and this decision was a reflection of that principle. The year 2019 was a turning point, both for the world, grappling with the COVID-19 pandemic, and for IAPEN, which faced internal turmoil due to irregularities within the leadership. It was during this challenging period that the NEC placed its trust in me, asking me to lead as the President of IAPEN. My ascent to this position was unplanned—it was a role I assumed out of necessity rather than ambition. With the association in crisis, we had to rebuild IAPEN from scratch. To navigate legal complexities and secure our identity, we rebranded ourselves as IAPEN INDIA, ensuring that we could move forward without ownership disputes. This transition came at the cost of financial and branding losses, but it was a necessary step to reclaim our integrity. The process was demanding – we established a new logo, new website, new bank account, and a new audit system, all while maintaining the unwavering support of our dedicated members. Under my leadership, IAPEN INDIA emerged like a phoenix, stronger and more determined than ever. Today, IAPEN INDIA has grown into a formidable organization with over 3,500 members and 30 active chapters across the country. One of my primary objectives was to increase the involvement of doctors in the association, and I am proud to see this vision gradually coming to fruition. On the international front, IAPEN INDIA faced a major challenge when ESPEN had to choose between two PEN societies in INDIA. Through a strategic and transparent approach, we presented our case in a virtual meeting with ESPEN Chairman Dr. Rocco Barazzoni and other council members. With the unified efforts of our NEC team and a compelling presentation, we successfully secured our status as the only recognized PEN society of INDIA under ESPEN. This was a defining moment for IAPEN INDIA, ensuring our credibility and paving the way for further international collaborations. I personally took it upon myself to strengthen our relationship with ESPEN by attending multiple ESPEN Council Meetings and Congresses abroad. This led to IAPEN INDIA being granted the authority to conduct ESPEN’s LLL (Life-Long Learning) programs in INDIA, which has significantly contributed to the professional development of our members. We now have a growing number of TLLL (Trained Life-Long Learning) professionals, further enhancing our academic and clinical credibility. Under my leadership, ICNC (IAPEN Clinical Nutrition Congress) has been a flagship event that consistently showcases our progress and scientific excellence. Each year, we have expanded participation, enriched the scientific content, and enhanced international faculty involvement, making ICNC a premier event in the field of clinical nutrition. Leadership is not about holding on to power; it is about empowering others to lead. From the moment I took on the responsibility of President of IAPEN INDIA, my vision was clear to build an association that thrives on transparency, democracy, and collective strength. Transforming IAPEN INDIA into a true democratic body was not an easy path. Finding the right balance between electing fresh, passionate leaders while valuing the wisdom of experienced seniors was a challenge that required patience, strategy, and above all, commitment to the greater good. Drafting the SOPs, bylaws, and guidelines was no less than a Herculean task, ensuring that every step we took strengthened the foundation of this great organization. But today, as we see new leaders emerging through a fair electoral process, I know in my heart that we did the right thing. A true leader must know when to step down, and I have always believed that leadership is about building a system that can sustain itself beyond any individual. “A great leader’s legacy is not measured by how long they lead, but by how well the organization thrives after they step down.” With that thought in mind, I made the conscious decision not to contest this election, choosing instead to gracefully pass the baton to the next generation of leaders. This is not an end, but a beautiful new beginning – for IAPEN INDIA, for all of you, and for me in a different role. I will continue to stand by IAPEN INDIA, not as its President, but as its unwavering supporter and guide in my new role as DIRECTOR. To my colleagues, my friends, and every single member who has been a part of this incredible journey—thank you. Your faith in me gave me strength, your dedication inspired me, and your passion built this organization into what it is today. As I take a step back, I do so with immense pride and gratitude. IAPEN INDIA is not just an association; it is my heart and soul, and it will always remain so. “True leadership is not about being in charge; it is about taking care of those in your charge.” IAPEN INDIA, you will always have my care, my support, and my unwavering belief in your future. Good luck, IAPEN INDIA. The best is yet to come!
-Core Team`,
   'Mr. Y.T. Shivshankar': `President Mr. Y.T. Shivshankar Shivshankar Timmanpyati is a seasoned and highly accomplished clinical nutritionist with over 25 years of experience in the field of nutrition and oncology. He currently serves as the Chief Clinical Nutritionist at Tata Memorial Hospital (TMH), Mumbai, in the Department of Digestive Diseases and Clinical Nutrition, where he oversees the nutritional care of cancer patients, particularly in the domains of critical care, oncology, and gastrointestinal disorders. With a focus on evidence-based practices and patient-centered care, he has contributed significantly to the development of guidelines and clinical protocols in oncology nutrition both in INDIA and internationally.
 With over 25 years of experience in clinical nutrition, Shivshankar Timmanpyati is a seasoned professional specializing in oncology nutrition. He currently serves as the Chief Clinical Nutritionist at Tata Memorial Hospital, Mumbai, focusing on digestive diseases and clinical nutrition. He holds a post-graduate degree in Clinical Dietetics and an MSc in Dietetics and Food Service Management.
 He has contributed significantly to research, with many publications and multiple abstract awards, including accolades at national and international conferences. As a distinguished academic, Shivshankar has designed and delivered numerous educational programs. He has presented extensively at global conferences and is a sought-after speaker on topics ranging from critical care nutrition to cancer rehabilitation.
@@ -67,46 +64,46 @@ In addition to his clinical expertise, Shivshankar has been deeply involved in a
   'Dr. Bijju Pottakat': `Vice President (Medical) Dr. Bijju Pottakat Professor and Head, Surgical Gastroenterology, Jawaharlal Institute of Postgraduate Medical Education Research, Puducherry Executive committee member of three professional societies, Guide to PhD and Post-Doctoral Fellows, Programme Director of fellowship in HPB Surgery, Expert committee member of several faculty selection boards, examiner for several institutions and national board, author of national guidelines in patient safety, more than 100 scientific publications including text book chapters.`,
   'Ms. Lekha Sreedharan': `Vice President (Nutrition) Ms. Lekha Sreedharan MSc, PGCPN, PhD Scholar,
 Certified Pediatric Dietitian, ESPEN LLL Teacher
-Ms. Lekha is a pioneer in pediatric nutrition with over 27 years of experience in Clinical dietetics. She serves as the Head of the Department of Clinical Dietetics at Apollo Children's &amp; Women’s Hospitals ,Chennai. In addition to providing individualized nutritional interventions for children with complex pediatric disorders, she is actively involved in research and the implementation of protocols to ensure best clinical practices in nutrition within the hospital.
+Ms. Lekha is a pioneer in pediatric nutrition with over 27 years of experience in Clinical dietetics. She serves as the Head of the Department of Clinical Dietetics at Apollo Children's & Women’s Hospitals ,Chennai. In addition to providing individualized nutritional interventions for children with complex pediatric disorders, she is actively involved in research and the implementation of protocols to ensure best clinical practices in nutrition within the hospital.
 Ms. Lekha has co-edited the Child Nutrition in Health book and contributed articles to various journals, including Nutrition in Disease Update Series and Newsletter. She has co-authored chapters in books such as Diet for Children, Diabetes Chronicles: Real-World Cases and Insights, and the Apollo Clinical Nutrition Handbook and Apollo Pocket books. Ms. Lekha has also delivered lectures and interviews on topics related to nutrition in television and print media`,
   'Ms. Sreemathy Venkatraman': `Secretary Ms. Sreemathy Venkatraman MSc, P.G. DND, CBN, CDE
 Clinical Dietitian
-&amp; Wellness Nutritionist –
+& Wellness Nutritionist –
 Trustwell Hospitals, Bangalore
 Portfolio : National Secretary - IAPEN INDIA,
 Chief Program Officer - Dysphagia Core Group IAPEN INDIA,
 Elected Executive Board member - ESSD ( European Society of Swallowing Disorders),
 Founder Mitha Aahara - Eat to Live- Nutrition Consultancy,
-Consultant Nutritionist - Divine Mother and Child Health Program &amp; Debra INDIA,
+Consultant Nutritionist - Divine Mother and Child Health Program & Debra INDIA,
 Gut Health Dietitian
-Experience &amp; Specializations :
+Experience & Specializations :
 25 years’ experience in Clinical Dietetics,
-Master level specialization - Diet in Health and Disease – Cal State Northridge &amp; Seattle Pacific University, P.G.DND ( Nutrition &amp; Hospital Dietetics). Certificate course in Community Nutrition &amp; Sustainability Development (IGNOU) &amp; CDE - Certified Diabetes Educator,
+Master level specialization - Diet in Health and Disease – Cal State Northridge & Seattle Pacific University, P.G.DND ( Nutrition & Hospital Dietetics). Certificate course in Community Nutrition & Sustainability Development (IGNOU) & CDE - Certified Diabetes Educator,
 Certified Bariatric Nutritionist,
-ESPEN LLL in Critical Care Nutrition &amp; GI diseases
+ESPEN LLL in Critical Care Nutrition & GI diseases
 Publications:
-Textbook - Nutrition &amp; Biochemistry for Nurses by Reed Elsevier 2015, &amp; Applied Nutrition For Nurses-2021,2023
+Textbook - Nutrition & Biochemistry for Nurses by Reed Elsevier 2015, & Applied Nutrition For Nurses-2021,2023
 Awards: Mitha Aahara- Best promising Nutrition Consultancy by Silicon INDIA Magazine – Jan 2023,
-Excellence &amp; Leadership In Healthcare- Most Trusted Online Nutrition Consultant in Bangalore - Golden AIM Awards,
+Excellence & Leadership In Healthcare- Most Trusted Online Nutrition Consultant in Bangalore - Golden AIM Awards,
 Michael Donovan Award – Advocacy leadership in Dysphagia`,
   'Ms. Sanghamitra Chakravarti': `Joint Secretary Ms. Sanghamitra Chakravarti Trained as a Clinical Dietitian from all INDIA Institute of Public Health, Kolkata
 Working as a Clinical Dietitian since 1994 with leading hospitals in Kolkata
 Presently associated with Medica Superspecialty Hospital, Kolkata since
-inception in 2010 as HOD - Dept of Nutrition &amp; Dietetics
-Special interest in Critical Care Nutrition, Immuno Nutrition &amp; GUT
+inception in 2010 as HOD - Dept of Nutrition & Dietetics
+Special interest in Critical Care Nutrition, Immuno Nutrition & GUT
 Microbiome
 Has acted as an expert in the advisory boards for the publications in IJCCM -
 ‘Practice Guidelines for Nutrition in Critically Ill Patients - A Relook for
-Indian Scenario ‘ &amp; ‘Practice Guidelines for Enteral Nutrition Management of
+Indian Scenario ‘ & ‘Practice Guidelines for Enteral Nutrition Management of
 Dysglycaemia in Critically ill Patients in ICU’
 Has conducted numerous health talks for nutrition awareness
-Has acted as a faculty of clinical nutrition at various CMEs &amp; Educational
+Has acted as a faculty of clinical nutrition at various CMEs & Educational
 Programmes
 National Joint Secretary - IAPEN INDIA
 Co-ordinator- IAPEN ASPEN GNP`,
   'Ms. Anshu Mehra': `Treasurer Ms. Anshu Mehra Associate professor Department of home science, Meerut College, Meerut. Ms. Anshu Mehra is an academician and a clinical nutritionist with over 20 years of experience. She has mentored many student projects and trained upcoming dieticians. She has been involved in patient awareness and community health. She has organized various nutrition awareness events and conferences.
 NEC Members`,
-  'Dr. Latha Poopandian': `Dr. Latha Poopandian Anaesthetist | Intensivist | Clinical Nutritionist A dedicated healthcare professional with 13 years of experience in Anaesthesia and Intensive Care, Dr. Latha Poopandian is a Consultant at Sooriya Hospital, Chennai and a Diplomate of the European Society of Anaesthesiology &amp; Intensive Care. She is a National Executive Committee Member of IAPEN INDIA and has 10 years of expertise in Critical Care Nutrition, specializing in Parenteral, Enteral, SPN, and SEN. Certified in Diabetology, she practices both general and critical care diabetology. Dr. Latha is skilled in providing anaesthesia for all surgical procedures and is actively involved in Enhanced Recovery After Surgery (ERAS) protocols, training perioperative teams. As an Intensivist, she specializes in emergency medical care, life support, and organ support, with strong communication skills to support patients and their families during critical situations.`,
+  'Dr. Latha Poopandian': `Dr. Latha Poopandian Anaesthetist | Intensivist | Clinical Nutritionist A dedicated healthcare professional with 13 years of experience in Anaesthesia and Intensive Care, Dr. Latha Poopandian is a Consultant at Sooriya Hospital, Chennai and a Diplomate of the European Society of Anaesthesiology & Intensive Care. She is a National Executive Committee Member of IAPEN INDIA and has 10 years of expertise in Critical Care Nutrition, specializing in Parenteral, Enteral, SPN, and SEN. Certified in Diabetology, she practices both general and critical care diabetology. Dr. Latha is skilled in providing anaesthesia for all surgical procedures and is actively involved in Enhanced Recovery After Surgery (ERAS) protocols, training perioperative teams. As an Intensivist, she specializes in emergency medical care, life support, and organ support, with strong communication skills to support patients and their families during critical situations.`,
   'Dr. Nihar Das': `Dr. Nihar Das GI,HPB and liver transplant surgeon (25 years)
 President,IAPEN Delhi chapter
 President, The Ostomy Society
@@ -144,9 +141,9 @@ Initiated the Gujarat Chapter (Later converted to Surat, Ahmedabad-Rajkot and Va
 • Served as the Organizing Secretary for the International Clinical Nutrition Conference (ICNC) 2021, demonstrating strong leadership and organizational skills.
 • Active Core Group Member of the Neuro Nutrition Core Group, contributing to research and practice development in Neuro-Nutrition under IAPEN INDIA.
 • Served as Vice President of the Ahmedabad Rajkot Chapter of IAPEN INDIA, leading initiatives to enhance the organization’s impact.`,
-  'Ms. Sunita Sahoo': `Ms. Sunita Sahoo MSc Dietetics &amp; Food Science Management
-PGD in Dietetics &amp; Clinical Nutrition
-• Ms Sunita Sahoo is Chief Clinical Dietician at Apollo hospitals, Bhubaneswar ,Odisha With 17 years of experience in hospital industry with special interest in Critical care nutrition, Onco Nutrition, Renal Nutrition , Women's health, Sports &amp; Wellness Listed among Best Top 10 Dieticians of INDIA 2023 by drug research.in
+  'Ms. Sunita Sahoo': `Ms. Sunita Sahoo MSc Dietetics & Food Science Management
+PGD in Dietetics & Clinical Nutrition
+• Ms Sunita Sahoo is Chief Clinical Dietician at Apollo hospitals, Bhubaneswar ,Odisha With 17 years of experience in hospital industry with special interest in Critical care nutrition, Onco Nutrition, Renal Nutrition , Women's health, Sports & Wellness Listed among Best Top 10 Dieticians of INDIA 2023 by drug research.in
 • Received Quality excellence award for public Nutrition by IAPEN INDIA.(2020
 • Received Quality excellence award for Therapeutic Nutrition by IAPEN INDIA. (2022)
 • Co Editor in the book “My Food My Health” by Apollo Dietetics Group
@@ -157,7 +154,7 @@ Professional Membership/ Affiliates
 • Convener NetproFAN (FSSAI)Bhubaneswar Chapter
 • Executive Life member of Obesity Association,(AIRRO) Odisha Chapter.
 • Life Member of IRS(international renal society),
-• Life Member of ASNFS(Association of Sports, Nutrition &amp; Fitness Sciences
+• Life Member of ASNFS(Association of Sports, Nutrition & Fitness Sciences
 Accomplishments
 • ESPEN LLL Certified
 • Certified Diabetic Educator
@@ -168,14 +165,14 @@ Accomplishments
 • Convener NetproFAN (FSSAI)Bhubaneswar Chapter
 • Executive Committee member of Obesity Association, (AIRRO) Odisha Chapter.
 • Life Member of IRS(international renal society)
-• Life Member of ASNFS(Association of Sports, Nutrition &amp; Fitness Sciences
-Awards &amp; Recognition :
+• Life Member of ASNFS(Association of Sports, Nutrition & Fitness Sciences
+Awards & Recognition :
 • Visiting Dietician to Honorable Governor of Odisha.
-• Part of various National &amp; International studies for Critical Care, Geriatric Nutrition, Renal and Cancer Nutrition.
-• Speaker in different Nutrition Seminar &amp; conferences Pan INDIA.
+• Part of various National & International studies for Critical Care, Geriatric Nutrition, Renal and Cancer Nutrition.
+• Speaker in different Nutrition Seminar & conferences Pan INDIA.
 • Guest lecture/ Nutrition educator for Dietitians, Doctors and Nurses. in different institutes of Odisha.
-• Did more than 500 nutrition talks in different sectors in Odisha to create awareness regarding healthy nutrition &amp; lifestyle management.
-• Regular Columnist in different Print &amp; Electronic media.
+• Did more than 500 nutrition talks in different sectors in Odisha to create awareness regarding healthy nutrition & lifestyle management.
+• Regular Columnist in different Print & Electronic media.
 • Organizing Secretary Apollo International Clinical Nutrition Update 2022 at Bhubaneswar Odisha. With 600 plus Delegates.`,
   'Ms. Himani Puri': `Ms. Himani Puri Founder, Proprietor – Sattva Nutricare
 Chief Dietitian, Apex Hospital, Nashik
@@ -189,7 +186,7 @@ Global Renal Nutrition Course for Dietitians, NKF
 • Programme Officer : IAPEN Renal Nutrition Core Group
 • Chapter Secretary, IAPEN, Nashik
 • Secretary, Nashik District, International Human Rights Organisation
-• Editor – Healthcare &amp; Medicine for online bulletin IVTR
+• Editor – Healthcare & Medicine for online bulletin IVTR
 • Regular Features on the National News channel , local Community radio channel
 • Was Associated with Archery Association of INDIA and conducted many Nutrition training workshops and sessions for the archery coaches and athletes across INDIA, in collaboration with SAI – Sports Authority of INDIA
 • PCI (Para Olympics Committee of INDIA) as a part of Para Athletes Online Development Program
@@ -197,12 +194,12 @@ Global Renal Nutrition Course for Dietitians, NKF
 • Delivered talks and conducted scientific sessions and workshops at many International and National Conferences
 • Author of and Co-author in many nutrition books, Reviewer at an International Journal (Nutrition)
 • Published articles in many National Newsletters, Newspapers and Journal of National and International Repute`,
-  'Ms. Ranu Singh': `Ms. Ranu Singh Ranu Singh is a Community Nutritionist &amp; the Founder of NutritionPunch. She currently serves as a National Executive Committee Member of IAPEN INDIA &amp; holds multiple leadership roles within the organization, including Chief Program Officer of the Community Nutrition Core Group &amp; Secretary of the IAPEN INDIA Lucknow Chapter. She is also a Member &amp; Faculty of Nutrition &amp; Diabetes INDIA, a core group of IAPEN INDIA. Beyond her contributions to IAPEN, Ranu leads the Community Nutrition &amp; Public Health Committee of the Poshan Dhara Association &amp; formerly served as the Head of Uttar Pradesh for the Global Nutrition Partnership Program of IAPEN INDIA–ASPEN.
-Academically, Ranu is a PhD Scholar with an MSc in Food and Nutrition. She is a Certified Diabetes Educator (IDF) and has completed specialized training in FODMAP with Monash University, Australia. Her qualifications include multiple public health-focused programs from the Public Health Foundation of INDIA (PHFI), including Postgraduate Programs in the Management of Reproductive and Child Health and in Public Health &amp; Nutrition. She also holds a Fellowship in Clinical Nutrition, is a Certified Maternal &amp; Child Nutritionist, and has earned a Master Certificate in Programming for Infant and Young Child Feeding from UNICEF and Cornell University. Additionally, she has completed the MIYCAN course on Maternal, Infant, and Adolescent Nutrition from PHFI, and training in Water, Sanitation, and Hygiene (WASH), Humanitarian WASH Coordination, and Early Childhood Programming in the Field from UNICEF.
-Ranu works extensively with females of reproductive age in urban slums and rural areas, raising awareness about dietary needs, healthy lifestyle practices, sanitation, and hygiene. Her goal is to improve health behaviors and outcomes related to the prevention and management of diabetes and other diseases. She is also a co-author of two significant books: “Diabetes Mellitus: Nutrition, Functional Foods &amp; Nutraceuticals”, which offers insights into dietary management and metabolic health, and “Sustainable Nutrition: A Guide for Dietitians to Health and Planetary Well-being”, which integrates nutrition with environmental sustainability.
+  'Ms. Ranu Singh': `Ms. Ranu Singh Ranu Singh is a Community Nutritionist & the Founder of NutritionPunch. She currently serves as a National Executive Committee Member of IAPEN INDIA & holds multiple leadership roles within the organization, including Chief Program Officer of the Community Nutrition Core Group & Secretary of the IAPEN INDIA Lucknow Chapter. She is also a Member & Faculty of Nutrition & Diabetes INDIA, a core group of IAPEN INDIA. Beyond her contributions to IAPEN, Ranu leads the Community Nutrition & Public Health Committee of the Poshan Dhara Association & formerly served as the Head of Uttar Pradesh for the Global Nutrition Partnership Program of IAPEN INDIA–ASPEN.
+Academically, Ranu is a PhD Scholar with an MSc in Food and Nutrition. She is a Certified Diabetes Educator (IDF) and has completed specialized training in FODMAP with Monash University, Australia. Her qualifications include multiple public health-focused programs from the Public Health Foundation of INDIA (PHFI), including Postgraduate Programs in the Management of Reproductive and Child Health and in Public Health & Nutrition. She also holds a Fellowship in Clinical Nutrition, is a Certified Maternal & Child Nutritionist, and has earned a Master Certificate in Programming for Infant and Young Child Feeding from UNICEF and Cornell University. Additionally, she has completed the MIYCAN course on Maternal, Infant, and Adolescent Nutrition from PHFI, and training in Water, Sanitation, and Hygiene (WASH), Humanitarian WASH Coordination, and Early Childhood Programming in the Field from UNICEF.
+Ranu works extensively with females of reproductive age in urban slums and rural areas, raising awareness about dietary needs, healthy lifestyle practices, sanitation, and hygiene. Her goal is to improve health behaviors and outcomes related to the prevention and management of diabetes and other diseases. She is also a co-author of two significant books: “Diabetes Mellitus: Nutrition, Functional Foods & Nutraceuticals”, which offers insights into dietary management and metabolic health, and “Sustainable Nutrition: A Guide for Dietitians to Health and Planetary Well-being”, which integrates nutrition with environmental sustainability.
 Her impact extends to academia and public outreach, with over 100 articles published in leading newspapers and magazines on nutrition, public health, and community well-being. She has presented research papers at prestigious international platforms, including the European Society for Clinical Nutrition and Metabolism Congress in Lyon, France, and Milan, Italy.
 In recognition of her outstanding contributions to public health nutrition, Ranu has received numerous awards, including the National Quality Award for Excellence in Public Health Nutrition at ICNC 2023 in Chennai and the State Level Quality Award at ICNC 2025 in Varanasi, both presented by IAPEN INDIA.
-Her national and international affiliations are extensive. She holds life memberships in IAPEN INDIA, Indian Dietetic Association (IDA), Society for Renal Nutrition and Metabolism (SRNM), Nutrition Society of INDIA (NSI), Indian Public Health Association (IPHA), and the Poshan Dhara Association (PDA). She is an Associate Member of the American Diabetes Association, American Society of Nutrition, and the International Society of Hypertension. She is also a member of the South Asian Association of Parenteral and Enteral Nutrition and a block member of the European Society for Parenteral &amp; Enteral Nutrition.`,
+Her national and international affiliations are extensive. She holds life memberships in IAPEN INDIA, Indian Dietetic Association (IDA), Society for Renal Nutrition and Metabolism (SRNM), Nutrition Society of INDIA (NSI), Indian Public Health Association (IPHA), and the Poshan Dhara Association (PDA). She is an Associate Member of the American Diabetes Association, American Society of Nutrition, and the International Society of Hypertension. She is also a member of the South Asian Association of Parenteral and Enteral Nutrition and a block member of the European Society for Parenteral & Enteral Nutrition.`,
 };
 
 export const advisoryBoardBios = {
@@ -215,7 +212,7 @@ Honorary Professor of Cardiovascular Medicine, University of Milano-Bicocca.
 Institutional Affiliation : Immediate Past Chairperson, Council on Hypertension, European Society of Cardiology
 Chairperson European Society of Hypertension Working Group on Hypertension and Cardiovascular Risk in Low Resource Settings`,
   'Prof. Dr. Shashank R. Joshi': `Prof. Dr. Shashank R. Joshi Education :
-MD, DM, FICP, FACP (USA), FACE (USA), FRCP (London, Glasgow &amp; Edinburgh), Hon D.Sc (Med), Master of the American College of Endocrinology, and Padma Shri Awardee, is an internationally well known endocrinologist renowned for his clinical excellence, academic leadership, and unwavering commitment to patient-centered care.
+MD, DM, FICP, FACP (USA), FACE (USA), FRCP (London, Glasgow & Edinburgh), Hon D.Sc (Med), Master of the American College of Endocrinology, and Padma Shri Awardee, is an internationally well known endocrinologist renowned for his clinical excellence, academic leadership, and unwavering commitment to patient-centered care.
 Current Designation :
 He serves as Senior Consultant at Joshi Clinic, Lilavati Hospital, and Sir H. N. Reliance Foundation Hospital, Mumbai.
 Institutional Affiliation : A visionary in medical education, he has held key leadership roles including Current President of Asia Pacific Advisory board for American Association of Clinical Endocrinology, Past Chair of the International Diabetes Federation (Southeast Asia), Past President of the Indian Thyroid Society , Past President of Association of Physicians of India (API), Past President of Endocrine Society of India (ESI), Past President and Patron of RSSDI and All India Association of Advancing Research in Obesity, Past Dean of the Indian College of Physicians.
@@ -227,17 +224,12 @@ Executive Chairman, Fortis C-DOC Hospital for Diabetes and Allied Sciences
 Director, National Diabetes Obesity and Cholesterol Foundation (NDOC)
 President, Diabetes Foundation (India)
 Institutional Affiliation :
-Editor-in-Chief: Diabetes &amp; Metabolic Syndrome: Clinical Research &amp; Reviews (Elsevier).
+Editor-in-Chief: Diabetes & Metabolic Syndrome: Clinical Research & Reviews (Elsevier).
 Associate Editor: Journal of Diabetes (USA).
 Member of Academic Board of British Medical Journal.
 Member of BMJ’s Regional Advisory Board for South Asia.
 Member of BMJ Commission on Academic Medicine
 Member of The Lancet Commission on Obesity, 2023-25`,
-  'Dr. Sarath Gopalan': `Dr. Sarath Gopalan National Advisor (PEDIATRICS) Current Designation :
-Senior Pediatric Gastroenterologist and Hepatologist Madhukar Rainbow Children's Hospital, New Delhi
-President- Nutrition Society of India
-Institutional Affiliation :
-Member of Scientific Subcommittee on Nutrition for APPSGHAN`,
   'Dr. Banshi Saboo': `Dr. Banshi Saboo Diabetologist Core Qualifications
 • PhD, Gujarat University, 2016
 • MSc (Endo), University of South Wales, UK, 2014
@@ -254,7 +246,7 @@ Expert Knowledge On
 • RSSDI Guidelines for Management of Diabetes
 • ATTD CGM Guidelines
 • ISPAD Guidelines for Pediatric Diabetes
-Recognition &amp; Awards
+Recognition & Awards
 • Most Impactful Healthcare Leader, World Health and Wellness Congress Awards
 • Global Clinician of the Year - 2024, American College of Clinical Endocrinology
 • World Record of 1.2 million Screening on World Diabetes Day
@@ -265,7 +257,7 @@ International Honorary Position
 • International Diabetes Federation (IDF) Chair-Elect for South-East Asia
 • Vice President of the Diabetes Asia Study Group (DASG)
 • Honorary Secretary of the Diabetes in Asia Study Group (DASG)
-• Elected Executive Committee Member of the International Society for Pediatric &amp; Adolescent Diabetes (ISPAD)
+• Elected Executive Committee Member of the International Society for Pediatric & Adolescent Diabetes (ISPAD)
 National And Regional Honorary Positions
 • Immediate Past President of the Research Society for the Study of Diabetes in India (RSSDI)
 •President of All India Association for Advancing Research in Obesity (AIAARO)
@@ -273,7 +265,7 @@ National And Regional Honorary Positions
 • Honorary Secretary of the Indian Academy of Diabetes
 • Executive Secretary of Diabetes India
 • Joint Secretary of the Research Society for the Study of Diabetes in India (RSSDI)
-• Chief Diabetologist &amp; Chairman of Diabetes Care &amp; Hormone Clinic at Ahmedabad
+• Chief Diabetologist & Chairman of Diabetes Care & Hormone Clinic at Ahmedabad
 • Executive Committee Member of the Association of Physicians of India (API)
 • Executive Committee Member of the Diabetic Foot Society of India (DFSI)
 • Governing Body Member of the Diabetes in Pregnancy Study Group of India (DIPSI)
@@ -281,15 +273,15 @@ National And Regional Honorary Positions
 • Honorary Secretary API - Ahmedabad Chapter
 Editorial Positions
 • Editor-in-Chief, RSSDI Textbook of Diabetes
-• Editor-in-Chief, Journal of Nutrition, Metabolic &amp; Health Science
-• Managing Editor, Diabetes &amp; Metabolic Syndrome: Clinical Research &amp; Reviews
+• Editor-in-Chief, Journal of Nutrition, Metabolic & Health Science
+• Managing Editor, Diabetes & Metabolic Syndrome: Clinical Research & Reviews
 • Managing Editor, Sadikot's International Textbook of Diabetes
-• Associate Editor, Diabetes Research &amp; Clinical Practice (DRCP - Official Journal of IDF)
+• Associate Editor, Diabetes Research & Clinical Practice (DRCP - Official Journal of IDF)
 • Advisory Board Member, International Journal of Diabetes in Developing Countries
 • Advisory Board Member, Journal of Clinical Diabetology
-• Advisory Board Member, International Journal for Public Health &amp; Medicine
-• Advisory Board Member, Journal of Nutrition &amp; Nutraceuticals
-• Advisory Board Member, Journal of Obesity &amp; Metabolic Research (JOMR)
+• Advisory Board Member, International Journal for Public Health & Medicine
+• Advisory Board Member, Journal of Nutrition & Nutraceuticals
+• Advisory Board Member, Journal of Obesity & Metabolic Research (JOMR)
 • Advisory Board Member, Journal of Association of Physicians of India (JAPI)
 • Advisory Board Member, Journal of Diabetology (JOD)`,
 };

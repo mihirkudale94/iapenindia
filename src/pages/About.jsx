@@ -65,11 +65,11 @@ const About = () => (
             As India’s premier national body aligned with esteemed international Parenteral and
             Enteral Nutrition (PEN) societies such as the European Society for Clinical Nutrition
             and Metabolism (ESPEN), the American Society for Parenteral and Enteral Nutrition
-            (ASPEN), and the South Asia Association for Parenteral and Enteral Nutrition (SAPEN),
-            IAPEN INDIA embodies a progressive, globally connected platform. We foster seamless
+            (ASPEN), the South Asia Association for Parenteral and Enteral Nutrition (SAPEN), IAPEN
+            INDIA embodies a progressive, globally connected platform. We foster seamless
             transitions in the continuum of care, from acute hospital interventions to home-based
             nutritional support, employing validated tools like the Malnutrition Universal Screening
-            Tool (MUST), Subjective Global Assessment (SGA), and GLIM criteria to ensure timely,
+            Tool (MUST) and Subjective Global Assessment (SGA), GLIM criteria to ensure timely,
             personalized interventions. Our commitment extends to bridging gaps in nutritional
             epidemiology, where we advocate for policies informed by randomized controlled trials
             (RCTs) and meta-analyses demonstrating the efficacy of parenteral and enteral nutrition
@@ -92,18 +92,18 @@ const About = () => (
             phenotypic profiles.
           </p>
           <p>
-            Our organizational structure under the strategic oversight of the Board of Directors
-            propels this mission forward: the National Executive Committee (NEC) provides
-            leadership, the National Advisory Council fosters expert advice on policy and
-            legislative matters, formulating policies for inclusive growth, while regional Chapters
-            and specialized Core Groups drive localized initiatives. These entities spearhead the
-            development of position papers, consensus statements, and national guidelines, drawing
-            on systematic reviews and cohort studies to inform best practices. IAPEN INDIA’s
-            progressive agenda includes robust advocacy with government agencies, non-governmental
-            organizations (NGOs), academic institutions, and universities to influence public health
-            policies. By collaborating with global partners, we amplify India’s voice in
-            international forums, contributing to advancements in areas like immunonutrition and gut
-            microbiome modulation for enhanced patient outcomes.
+            Our organizational structure under the strategic oversight of Board of Directors propels
+            this mission forward: the National Executive Committee (NEC) provides leadership, the
+            National Advisory Council fosters expert advice on policy and legislative matters,
+            formulating policies for inclusive growth, while regional Chapters and specialized Core
+            Groups drive localized initiatives. These entities spearhead the development of position
+            papers, consensus statements, and national guidelines, drawing on systematic reviews and
+            cohort studies to inform best practices. IAPEN INDIA’s progressive agenda includes
+            robust advocacy with government agencies, non-governmental organizations (NGOs), and
+            academic institutions and universities to influence public health policies. By
+            collaborating with global partners, we amplify India’s voice in international forums,
+            contributing to advancements in areas like immunonutrition and gut microbiome modulation
+            for enhanced patient outcomes.
           </p>
         </Reveal>
 
@@ -115,11 +115,11 @@ const About = () => (
             congresses, symposia, workshops, and webinars, featuring keynote sessions on emerging
             topics like nutrition in neonatal and pediatric conditions, women’s health, nutritional
             assessments, nutrition in metabolic diseases, nutrition in various diseases like renal,
-            liver, cardiac and cancer, nutrigenomics, bioenergetics in critical care, and
-            sustainable enteral and parenteral formulations. These platforms facilitate knowledge
-            exchange, supported by our official publications: the Journal of Nutrition Research and
-            the Insight Newsletter, which disseminate peer-reviewed articles, systematic reviews,
-            and clinical case studies.
+            liver, cardiac, cancer, nutrigenomics, bioenergetics in critical care, and sustainable
+            enteral and parenteral formulations. These platforms facilitate knowledge exchange,
+            supported by our official publications: the Journal of Nutrition Research and the
+            Insight Newsletter, which disseminate peer-reviewed articles, systematic reviews, and
+            clinical case studies.
           </p>
           <p>
             Our research initiatives emphasize translational science, from bench-to-bedside
@@ -128,6 +128,35 @@ const About = () => (
             partnerships with leading institutions, IAPEN INDIA is pioneering digital tools for
             nutritional assessment, such as AI-driven apps for real-time metabolic monitoring,
             ensuring scalability across India’s diverse healthcare landscape.
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <h2>About the Advisory Board</h2>
+          <p>
+            At the heart of IAPEN INDIA lies a visionary Advisory Board, a council of the most
+            respected thought leaders, clinicians, medical specialists, dietetic professionals and
+            researchers shaping the future of clinical nutrition, public health initiatives and
+            metabolic healthcare.
+          </p>
+          <p>
+            These eminent experts bring together decades of experience and insight from across
+            medicine, academia, and public health to guide IAPEN India’s mission: to elevate the
+            standards of nutritional care and empower healthcare professionals with knowledge that
+            transforms patient outcomes.
+          </p>
+          <p>
+            Each member of the Advisory Board embodies IAPEN India’s core values of integrity,
+            innovation, and impact, ensuring that the organization remains at the forefront of
+            clinical nutrition education, research, and policy advocacy, both nationally and
+            internationally. Their mentorship inspires strategic direction, scientific oversight,
+            and visionary counsel for innovation, collaboration, and excellence, ensuring that every
+            IAPEN INDIA initiative reflects the highest levels of scientific rigor, compassion, and
+            commitment to human health.
+          </p>
+          <p>
+            Together, they illuminate the path forward for evidence-based, patient-centered
+            nutrition practice in India and beyond.
           </p>
         </Reveal>
 
@@ -142,8 +171,8 @@ const About = () => (
             where nutrition is everyone’s responsibility. With its vision anchored in collaboration,
             education, and compassion, the Association continues to lead India’s movement toward
             better health through better nutrition and drives us to cultivate a culture of shared
-            accountability, address malnutrition, and endorse mission statements like the “Chennai
-            Declaration,” where doctors optimize therapeutic regimens, dietitians design
+            accountability, and address malnutrition and endorse mission statements like “Chennai
+            Declaration” where doctors optimize therapeutic regimens, dietitians design
             individualized plans, nurses monitor compliance, and pharmacists ensure safe nutrient
             delivery.
           </p>
