@@ -4,6 +4,9 @@ const pastPresidentMessage = {
   sectionTitle: 'Message from past President – Dr. P C Vijay Kumar',
   heading: 'My Journey as the President of IAPEN INDIA',
   author: 'Dr. P C Vijay Kumar',
+  role: 'Past National President, IAPEN INDIA',
+  image: '/images/leadership/office-bearers-1.png',
+  imageAlt: 'Portrait of Dr. P C Vijay Kumar, Past National President of IAPEN INDIA',
   paragraphs: [
     'My association with IAPEN began at the state level, where I was appointed as the President of the Tamil Nadu Chapter. This was my first leadership role in the organization, and I embraced it with the commitment to promote clinical nutrition in my state. During this tenure, I was also entrusted with the responsibility of chairing the ERAS (Enhanced Recovery After Surgery) core group. Under this capacity, I organized EnhaNS 2015 in Chennai, a pioneering conference that emphasized the implementation of ERAS protocols in surgical practice. The overwhelming success of this event reinforced my belief in the power of structured nutritional interventions in improving surgical outcomes.',
     'Recognizing my contributions, I was soon elevated to the National Executive Committee (NEC) of IAPEN, where I played a role in shaping key decisions for the organization. As a firm believer in “one man, one post”, I voluntarily stepped down from my Tamil Nadu Chapter presidency, allowing new leadership to emerge and strengthening the decentralization of power within the association. I have always advocated for a leadership model that fosters growth rather than political entrenchment, and this decision was a reflection of that principle.',

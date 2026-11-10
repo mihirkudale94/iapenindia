@@ -102,4 +102,5 @@ export const legacyPathRedirects = [
   { from: '/espen-membership', to: '/courses#espen-membership' },
   { from: '/espen-eligibility-for-t-lll', to: '/courses#t-lll' },
   { from: '/gi-core-group', to: '/core-groups/gastrointestinal-nutrition' },
+  { from: '/dashboard', to: '/membership' },
 ];

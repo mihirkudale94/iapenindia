@@ -116,13 +116,6 @@ const Navbar = () => {
                 <Sun size={16} style={{ color: 'var(--accent)' }} />
               )}
             </button>
-            <span className="top-divider">|</span>
-            <Link to="/dashboard" className="top-auth-btn">
-              Member Login
-            </Link>
-            <Link to="/dashboard?role=admin" className="top-auth-btn">
-              Admin Login
-            </Link>
           </div>
         </div>
       </div>
@@ -273,20 +266,6 @@ const Navbar = () => {
             </div>
           ))}
           <div className="mobile-cta-wrapper">
-            <Link
-              to="/dashboard"
-              className="btn btn-outline w-full"
-              onClick={() => setIsOpen(false)}
-            >
-              Member Login
-            </Link>
-            <Link
-              to="/dashboard?role=admin"
-              className="btn btn-outline w-full"
-              onClick={() => setIsOpen(false)}
-            >
-              Admin Login
-            </Link>
             <Link
               to="/membership#register"
               className="btn btn-accent w-full"

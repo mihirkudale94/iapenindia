@@ -46,6 +46,13 @@ const LeadershipGrid = ({ members, accent = 'primary' }) => {
         {members.map((member) => {
           const profile = getIdentity(member);
           const bio = profile.bio;
+          const summary =
+            !profile.role && !profile.detail && bio
+              ? bio
+                  .split('\n')
+                  .map((line) => line.trim())
+                  .find(Boolean)
+              : '';
           return (
             <article
               key={member.title || member.name}
@@ -56,6 +63,7 @@ const LeadershipGrid = ({ members, accent = 'primary' }) => {
               <h3 className="bearer-name">{profile.name}</h3>
               {profile.role && <span className="bearer-role">{profile.role}</span>}
               {profile.detail && <p className="bearer-dept">{profile.detail}</p>}
+              {summary && <p className="bearer-dept bearer-summary">{summary}</p>}
               {bio && (
                 <span
                   className={`view-profile-btn mt-auto pt-4 text-${accent} font-semibold text-sm inline-block`}

@@ -22,7 +22,6 @@ const Courses = lazy(() => import('@/pages/Courses'));
 const Events = lazy(() => import('@/pages/Events'));
 const Contact = lazy(() => import('@/pages/Contact'));
 const Policies = lazy(() => import('@/pages/Policies'));
-const Dashboard = lazy(() => import('@/pages/Dashboard'));
 
 // Resources.jsx holds three small document pages that share one chunk.
 const Bylaws = lazy(() => import('@/pages/Resources').then((m) => ({ default: m.Bylaws })));
@@ -49,7 +48,6 @@ const AppRoutes = () => (
     <Route path="/courses" element={<Courses />} />
     <Route path="/events" element={<Events />} />
     <Route path="/contact" element={<Contact />} />
-    <Route path="/dashboard" element={<Dashboard />} />
     <Route path="/journal" element={<ExternalRedirect url={JOURNAL_URL} />} />
 
     <Route path="/privacy-policy" element={<Policies defaultTab="privacy" />} />

@@ -274,7 +274,7 @@ const SupportWidget = () => {
   const getCoordinatorResponse = (query) => {
     const cleanQuery = query.toLowerCase();
     if (/\b(member|membership|join|fee|cost|price)\b/.test(cleanQuery)) {
-      return `For Mumbai Chapter membership approvals, you can apply directly under the **Membership** page. Since I coordinate Maharashtra approvals, I will receive your details in my Coordinator Dashboard. Let me know once you submit!`;
+      return `For Mumbai Chapter membership approvals, you can apply directly under the **Membership** page. Let me know once you submit!`;
     } else if (/\b(course|espen|lll|credit|cne)\b/.test(cleanQuery)) {
       return `Our next Mumbai Chapter LLL workshop is scheduled for next month. You can submit your verified credits or attendance certificates directly in your Member Portal. I can review and verify them instantly in my coordinator panel.`;
     } else if (/\b(certificate|wallet|print)\b/.test(cleanQuery)) {

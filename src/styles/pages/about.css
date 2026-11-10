@@ -100,6 +100,16 @@
   font-size: 14px;
 }
 
+.bearer-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
 /* Advisory Board style */
 
 /* Past President message */
@@ -119,6 +129,43 @@
   padding: 36px 40px;
 }
 
+.president-message-portrait {
+  float: left;
+  width: 180px;
+  margin: 4px 28px 16px 0;
+  text-align: center;
+}
+
+.president-message-portrait img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid var(--border-ultra-light);
+  box-shadow: var(--shadow-md);
+  background: var(--surface, #fff);
+}
+
+.president-message-portrait figcaption {
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+.president-message-portrait figcaption strong {
+  display: block;
+  font-size: 15px;
+  color: var(--primary);
+}
+
+.president-message-portrait figcaption span {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
 .president-message-body p {
   margin-bottom: 18px;
   line-height: 1.8;
@@ -129,6 +176,7 @@
 }
 
 .president-message-signature {
+  clear: both;
   font-weight: 700;
   color: var(--primary);
   text-align: right;
@@ -138,5 +186,11 @@
 @media (max-width: 768px) {
   .president-message-body {
     padding: 24px 20px;
+  }
+
+  .president-message-portrait {
+    float: none;
+    width: 160px;
+    margin: 0 auto 24px;
   }
 }

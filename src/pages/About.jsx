@@ -32,12 +32,12 @@ const About = () => (
     <section className="section history-section">
       <div className="container official-copy-layout">
         <Reveal>
-          <span className="section-subtitle">
-            Pioneering Excellence in Clinical Nutrition and Health Care
-          </span>
           <h2 className="section-title text-left">
             About IAPEN INDIA Association for Parenteral and Enteral Nutrition
           </h2>
+          <span className="section-subtitle">
+            Pioneering Excellence in Clinical Nutrition and Health Care
+          </span>
           <p>
             The IAPEN INDIA Association for Parenteral and Enteral Nutrition (IAPEN INDIA),
             incorporated under CIN <strong>U85320PN2019NPL186896</strong> as a Section 8

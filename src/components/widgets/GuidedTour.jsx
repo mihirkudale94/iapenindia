@@ -35,12 +35,6 @@ const TOUR_STEPS = [
     position: 'top',
   },
   {
-    title: 'Professional Member Portal',
-    text: 'A secure gateway for registered clinical professionals with role-based access for members, coordinators, and national administrators.',
-    selector: '.top-member-portal-btn',
-    position: 'bottom',
-  },
-  {
     title: 'Agentic AI Support Assistant',
     text: 'Click here to query our database or request a human coordinator for membership, events, and education support.',
     selector: '.support-widget-fab',

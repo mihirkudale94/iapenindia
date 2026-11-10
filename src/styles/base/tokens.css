@@ -118,9 +118,3 @@
 .dark .btn-outline:hover {
   background-color: rgba(255, 255, 255, 0.08) !important;
 }
-
-.dark .top-right-links .top-auth-btn {
-  background: rgba(255, 255, 255, 0.06) !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
-}
