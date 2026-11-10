@@ -1,21 +1,6 @@
 /**
- * Membership tiers and the registration form.
+ * Membership page, plus the benefits sidebar shared with the Courses page.
  */
-
-/* MEMBERSHIP PAGE STYLES */
-.benefits-checklist {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.benefits-checklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  font-size: 15px;
-}
 
 .benefits-sidebar {
   padding: 40px;
@@ -39,118 +24,113 @@
   line-height: 1.6;
 }
 
-.pricing-grid {
-  margin-top: 48px;
-}
-
-.pricing-card {
+/* MEMBERSHIP PAGE */
+.membership-breadcrumb {
   display: flex;
-  flex-direction: column;
-  padding: 40px 30px;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  overflow: visible;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.popular-card {
-  border: 2px solid var(--primary);
-  transform: scale(1.03);
+.membership-breadcrumb a {
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.popular-card:hover {
-  transform: scale(1.03) translateY(-4px);
-  box-shadow: var(--shadow-primary-glow);
+.membership-breadcrumb a:hover {
+  color: #ffffff;
 }
 
-.popular-badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--primary);
-  color: var(--bg-white);
-  font-size: 11px;
+.membership-breadcrumb span:last-child {
+  color: #ffffff;
   font-weight: 700;
-  text-transform: uppercase;
-  padding: 4px 14px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  box-shadow: var(--shadow-sm);
-  letter-spacing: 0.05em;
 }
 
-.tier-badge {
-  background-color: var(--bg-section);
+/* Single plain column, laid out like https://iapenindia.org/membership/ */
+.membership-content {
+  max-width: 1040px;
+}
+
+.membership-intro {
   color: var(--text-muted);
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  margin-bottom: 16px;
-  letter-spacing: 0.05em;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 32px;
 }
 
-.tier-title {
-  font-size: 20px;
-  margin-bottom: 16px;
+.membership-title {
   color: var(--primary-dark);
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  margin-bottom: 12px;
 }
 
-.tier-price-box {
-  margin-bottom: 28px;
-}
-
-.tier-price {
-  font-family: var(--font-heading);
-  font-size: 40px;
-  font-weight: 850;
+.membership-heading {
   color: var(--primary-dark);
-  letter-spacing: -0.02em;
+  font-size: 18px;
+  margin: 26px 0 14px;
+  scroll-margin-top: 110px;
 }
 
-.tier-type {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-left: 4px;
-  font-weight: 500;
+.membership-heading-spaced {
+  margin-top: 40px;
 }
 
-.tier-features {
+.membership-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 36px;
-  text-align: left;
-  width: 100%;
+  display: grid;
+  gap: 6px;
 }
 
-.tier-features li {
+.membership-list > li {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 14px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.membership-list svg {
+  color: var(--primary-dark);
+  flex: 0 0 auto;
+  margin-top: 4px;
+}
+
+.membership-list-strong > li {
   color: var(--text-dark);
+  font-weight: 700;
 }
 
-.tier-features li svg {
+.membership-steps a,
+.membership-form-link a {
   color: var(--primary);
-  margin-top: 3px;
-  flex-shrink: 0;
+  overflow-wrap: anywhere;
 }
 
-/* Membership form container */
+.membership-attachments {
+  display: grid;
+  gap: 2px;
+  margin-top: 4px;
+  padding-left: 22px;
+}
 
-/* File uploading field */
+.membership-attachments li::marker {
+  font-weight: 700;
+}
 
-/* Success Card details */
+.membership-form-link {
+  margin-top: 28px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
 
-@media (max-width: 768px) {
-  .pricing-card {
-    transform: none !important;
-  }
+.membership-bank p {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
 }

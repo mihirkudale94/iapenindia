@@ -58,12 +58,6 @@ const Footer = () => {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link to="/chapters">Chapters Directory</Link>
-            </li>
-            <li>
-              <Link to="/core-groups">Clinical Core Groups</Link>
-            </li>
-            <li>
               <Link to="/courses">Courses & Education</Link>
             </li>
             <li>

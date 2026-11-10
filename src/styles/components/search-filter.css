@@ -1,0 +1,70 @@
+/**
+ * Search box and empty-results message (used by Core Groups).
+ */
+
+.search-filter-container {
+  padding: 32px;
+  border-radius: var(--radius-md);
+  margin-bottom: 40px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-ultra-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-box-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-input-field {
+  width: 100%;
+  padding: 16px 20px 16px 52px;
+  font-size: 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.search-input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.clear-search-btn:hover {
+  color: var(--text-dark);
+}
+
+.no-results-box {
+  text-align: center;
+  padding: 60px 40px;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-ultra-light);
+  color: var(--text-muted);
+}

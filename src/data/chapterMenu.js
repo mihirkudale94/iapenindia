@@ -1,0 +1,42 @@
+// Chapters listed in the "Chapters" menu, in the same order as https://iapenindia.org.
+// Kept as a small list so the navbar does not load the full chapter data.
+
+const chapterMenu = [
+  { name: 'Ahmedabad Chapter', slug: 'ahmedabad-chapter' },
+  { name: 'Bangaluru Chapter', slug: 'bangaluru-chapter' },
+  { name: 'Bhopal Chapter', slug: 'bhopal-chapter' },
+  { name: 'Bhubaneswar Chapter', slug: 'bhubaneswar-chapter' },
+  { name: 'Chandigarh Chapter', slug: 'chandigarh-chapter' },
+  { name: 'Chennai Chapter', slug: 'chennai-chapter' },
+  { name: 'Cochin Chapter', slug: 'cochin-chapter' },
+  { name: 'Coimbatore Chapter', slug: 'coimbatore-chapter' },
+  { name: 'Delhi Chapter', slug: 'delhi-chapter' },
+  { name: 'Etawah Chapter', slug: 'etawah-chapter' },
+  { name: 'Faridabad Chapter', slug: 'faridabad-chapter' },
+  { name: 'Guwahati Chapter', slug: 'guwahati-chapter' },
+  { name: 'Hyderabad Chapter', slug: 'hyderabad-chapter' },
+  { name: 'Indore Chapter', slug: 'indore-chapter' },
+  { name: 'Kannur Chapter', slug: 'kannur-chapter' },
+  { name: 'Lucknow Chapter', slug: 'lucknow-chapter' },
+  { name: 'Ludhiana Chapter', slug: 'ludhiana-chapter' },
+  { name: 'Mangaluru Chapter', slug: 'mangaluru-chapter' },
+  { name: 'Meerut Chapter', slug: 'meerut-chapter' },
+  { name: 'Mumbai Chapter', slug: 'mumbai-chapter' },
+  { name: 'Nagpur Chapter', slug: 'nagpur-chapter' },
+  { name: 'Nashik Chapter', slug: 'nashik-chapter' },
+  { name: 'Navi Mumbai Chapter', slug: 'navi-mumbai-chapter' },
+  { name: 'Patna Chapter', slug: 'patna-chapter' },
+  { name: 'Prayagraj Chapter', slug: 'prayagraj-chapter' },
+  { name: 'Puducherry Chapter', slug: 'puducherry-chapter' },
+  { name: 'Pune Chapter', slug: 'pune-chapter' },
+  { name: 'Raipur Chapter', slug: 'raipur-chapter' },
+  { name: 'Ranchi Chapter', slug: 'ranchi-chapter' },
+  { name: 'Sambhajinagar Chapter', slug: 'sambhajinagar-chapter' },
+  { name: 'Surat Chapter', slug: 'surat-chapter' },
+  { name: 'Vadodara Chapter', slug: 'vadodara-chapter' },
+  { name: 'Varanasi Chapter', slug: 'varanasi-chapter' },
+  { name: 'Vijayawada Chapter', slug: 'vijayawada-chapter' },
+  { name: 'Vizag Chapter', slug: 'vizag-chapter' },
+];
+
+export default chapterMenu;

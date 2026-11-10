@@ -1,10 +1,17 @@
+/**
+ * Membership page content, copied verbatim from https://iapenindia.org/membership/.
+ */
+
+export const membershipIntro =
+  'IAPEN INDIA welcomes all aspiring health care professionals who wish to become a Life Member of IAPEN INDIA and get connected to millions of health care professionals from across the globe through its international affiliates.';
+
 export const lifeBenefits = [
   'Access to IAPEN INDIA newsletter INSIGHT.',
   'Right to send Articles/Blogs/ Content for the prestigious IAPEN INDIA newsletter “INSIGHT”',
   'Free access to IAPEN INDIA Journal',
-  '10% discount on all IAPEN courses',
+  '10 % discount on all IAPEN courses',
   'Authorized attendance to Annual General Meeting',
-  'Voting rights and rights of contesting in Election (if eligible)',
+  'Voting rights and rights of contesting in Election (If eligible)',
 ];
 
 export const studentBenefits = [
@@ -12,35 +19,28 @@ export const studentBenefits = [
   'Authorized attendance to Annual General Meeting',
 ];
 
-export const pricingTiers = [
-  {
-    title: 'Life Member (Doctors)',
-    price: '₹5,000',
-    type: 'One-Time Payment',
-    badge: 'Doctors',
-    color: 'card-primary',
-    features: ['For doctors', 'MBBS, MD, PhD, etc.', 'Life Membership'],
-  },
-  {
-    title: 'Life Member (Allied Health)',
-    price: '₹3,000',
-    type: 'One-Time Payment',
-    badge: 'Healthcare Professionals',
-    color: 'card-teal',
-    features: [
-      'Dietitians & Allied Health Professionals',
-      'Paramedics, Pharmacists & Nurses',
-      'Researchers',
-      'Life Membership',
-    ],
-    popular: true,
-  },
-  {
-    title: 'Student Member',
-    price: '₹500',
-    type: 'Yearly Renewal',
-    badge: "Bachelor's Students",
-    color: 'card-accent',
-    features: ["Students of Bachelor's courses only", 'Yearly Student Membership'],
-  },
+export const requiredAttachments = [
+  'Valid Identify proof ( Aadhar card/ DL/ Passport/ Pan)',
+  'Transaction receipt / UTR',
+  'Graduation Certificate',
+];
+
+export const membershipEmail = 'membership@iapenindia.org';
+
+export const membershipFormUrl = 'https://forms.gle/h4kSoNmHffsNt8dP7';
+
+export const membershipFees = [
+  '5000/- INR Life Membership for Doctors (MBBS, MD, PhD etc)',
+  '3000/- INR Life Membership for (Dieticians, Allied HealthCare Professional, Paramedics, pharmacists, Nurses, Researchers, etc)',
+  '500/- INR yearly Student Membership (Student of Bachelor’s course only)',
+];
+
+// Each line exactly as written on the live page, including its separator.
+export const bankDetails = [
+  'Account holder – IAPEN INDIA ASSOCIATION FOR PARENTERAL AND ENTERAL NUTRITION',
+  'Account number – 238805001011',
+  'IFSC Code– ICIC0002388',
+  'Name of Bank – ICICI Bank, Pune',
+  'MICR CODE – 411229046',
+  'Account Type: Current',
 ];

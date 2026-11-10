@@ -1,36 +1,13 @@
-import { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { createContext, useContext, useState, useRef } from 'react';
 
 const DemoContext = createContext();
 
 export const DemoProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('iapen_theme') || 'light';
-  });
-
   const [toasts, setToasts] = useState([]);
   const [supportState, setSupportState] = useState('idle'); // 'idle' | 'ai' | 'queued' | 'live'
   const [tourStep, setTourStep] = useState(-1); // -1 means inactive
   const [chatOpened, setChatOpened] = useState(false);
   const toastIdRef = useRef(0);
-
-  // Apply theme to document root
-  useEffect(() => {
-    const root = document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-      root.setAttribute('data-theme', 'dark');
-    } else {
-      root.classList.remove('dark');
-      root.setAttribute('data-theme', 'light');
-    }
-    localStorage.setItem('iapen_theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    addToast(`Theme switched to ${newTheme === 'light' ? 'Light' : 'Dark'} Mode`, 'info');
-  };
 
   const addToast = (message, type = 'info') => {
     toastIdRef.current += 1;
@@ -48,8 +25,6 @@ export const DemoProvider = ({ children }) => {
   return (
     <DemoContext.Provider
       value={{
-        theme,
-        toggleTheme,
         toasts,
         addToast,
         removeToast,

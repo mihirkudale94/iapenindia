@@ -1,9 +1,10 @@
 [
   {
     "name": "Ahmedabad Chapter",
+    "pageTitle": "IAPEN India Ahmedabad/Rajkot",
     "slug": "ahmedabad-chapter",
     "source": "https://iapenindia.org/ahmedabad-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "ahmedabadiapenindia@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. ANISH Joshi",
@@ -59,9 +60,10 @@
   },
   {
     "name": "Bangaluru Chapter",
+    "pageTitle": "IAPEN India Bangaluru Chapter",
     "slug": "bangaluru-chapter",
     "source": "https://iapenindia.org/bangaluru-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenblr@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Amit Gururaj Yelsangikar",
@@ -123,13 +125,57 @@
         "details": "Educational Qualification: MSc Food science and Nutrtion\nAffiliation : NU Hospital\nExperience : 10 years\nAchievements And Accolades : Won Prizes in Quiz on Nutrition, Poster presentation.\nAreas Of Special Interest : Gastrointestinal Nutrition, Renal Nutrition, Functional Nutrition.",
         "image": "/images/chapters/bangaluru-chapter-12.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "CME - \"Protein delivery in critically ill \" the evolution and current update By Dr.Harish Ambekar"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img_20220430_081242.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img-20220429-wa0062.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img-20220429-wa0049.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img-2022.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img-20220429-wa0061.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img-20220429-wa0064.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img-20220429-wa0071.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/bangaluru-chapter/img-20220429-wa0057.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Bhopal Chapter",
+    "pageTitle": "IAPEN India Bhopal Chapter",
     "slug": "bhopal-chapter",
     "source": "https://iapenindia.org/bhopal-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenbhopalchapter@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Ratna Mulay",
@@ -175,9 +221,10 @@
   },
   {
     "name": "Bhubaneswar Chapter",
+    "pageTitle": "IAPEN India Bhubaneswar Chapter",
     "slug": "bhubaneswar-chapter",
     "source": "https://iapenindia.org/bhubaneswar-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenbhubaneswar@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr Saroj Pattnaik",
@@ -213,9 +260,10 @@
   },
   {
     "name": "Chandigarh Chapter",
+    "pageTitle": "IAPEN India Chandigarh Chapter",
     "slug": "chandigarh-chapter",
     "source": "https://iapenindia.org/chandigarh-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenchdchapter@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Pankaj Malhotra",
@@ -262,13 +310,165 @@
         "details": "Qualification : BSc. Hons in Food Science & Technology,\nMSc. in Dietetics & Food Service Management,\nCertified Diabetic educator,\nCertified in Hypertension And Lifestyle Management,\nPursuing Diploma in ESPEN\nCurrently worked as senior dietician at Jindal IVF & Sant Memorial Nursing Home.",
         "image": "/images/chapters/chandigarh-chapter-9.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Activities"
+      },
+      {
+        "type": "text",
+        "text": "• Name & Place of the Activity:- Celebration of DIETETICS DAY, 2026 , the theme of which was – “CONTROL OBESITY FOR HEALTHIER INDIA- AN ACTION CALL FROM NUTRITION SCIENCE PROFESSIONALS ” by the Dietetics Department, PGIMER, CHANDIGARH at Lecture Theatre-1 Nehru Hospital, PGIMER, Chandigarh.\n• Date of the Event:- 10th January 2026\n• Brief Description Members/Participants Involved:- Approximately 300 participants attended the program, comprising mainly nursing officers, hospital administrative staff, library personnel, technicians etc. The session aimed to highlight the importance of diet in managing obesity, a growing health concern in India. The attendees were educated and trained via talks, skits, healthy recipe meals and snacks and therefore were encouraged to adopt healthier lifestyle practices and effective strategies for obesity prevention and control. The discussion emphasized obesity as a growing health challenge and highlighted its connection to non-communicable diseases such as diabetes, hypertension, cardiovascular conditions and other metabolic disorders.\n• Mention if the event was conducted in collaboration with any organization (Optional):- It was done under the banner of IAPEN, CHANDIGARH CHAPTER."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c1-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c2-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c3-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c4-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c5-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c6-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c7-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/c8.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "1.Name & Place of the Activity:- Celebration of World Cancer Day, 2026 , by organising a special diet camp for day care Chemotherapy patients by the Dietetics Department, PGIMER, CHANDIGARH at New OPD, 5th Floor, PGIMER, Chandigarh.\n• Date of the Event:- 4th February, 2026\n3.Brief Description Members/Participants Involved :- IAPEN Chandigarh Chapter President , Professor (Dr.) Pankaj Malhotra and IAPEN Chandigarh Chapter Secretary, Dr. Nancy Sahni along with the organizing Committee of the Department of Dietetics, PGIMER Chandigarh, celebrated World Cancer Day, 2026 , by organising a special diet camp for day care Chemotherapy patients. The event aimed to spread awareness about medical nutrition therapy, bust dietary myths, and provide practical support to patients and families.\nTailor-made diet plans shared according to individual chemotherapy cycles. Myth-clearing session- common food beliefs/traditions discussed with evidence-based guidance. Distribution of nutritious drinks & snacks to participants. One-on-one counselling by dieticians for patients and caregivers was done.\n4. Mention if the event was conducted in collaboration with any organization (Optional):- It was done under the banner of IAPEN , CHANDIGARH CHAPTER."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/f1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/f2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/f3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/f4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/f5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/f6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/f7.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "a. Name & Place of the Activity:- Celebration of World Kidney Day, 2026 , by organising “KIDNEY FRIENDLY RECIPES COMPETITION” amongst nutrition students. Event was organised by the Dietetics Department, PGIMER, CHANDIGARH at 5th Floor, C- block PGIMER, Chandigarh.\nb.Date of the Event:- 12th March, 2026\nc. Brief Description Members/Participants Involved :- IAPEN Chandigarh Chapter President , Professor (Dr.) Pankaj Malhotra and IAPEN Chandigarh Chapter Secretary, Dr. Nancy Sahni along with the organizing Committee of the Department of Dietetics, PGIMER Chandigarh, celebrated World Kidney Day, 2026\nThe participants showcased their culinary skills in doling out kidney friendly dishes. The initiative highlighted the often under- recognized role of combining art and science in designing renal failure friendly therapeutic dishes for kidney disease patients and making them attractive , palatable as well as scientifically balanced according to high energy, low protein and balanced electrolytes demand of the disease. The competition broke the myth of such recipes to be bland and uninteresting that may further push the renal failure patient towards malnutrition and poorer quality of life. Recipes consisted of renal friendly snacks, beverages and main meals.\nd. Mention if the event was conducted in collaboration with any organization (Optional):- It was done under the banner of IAPEN , CHANDIGARH CHAPTER."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m4.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "a.Name & Place of the Activity:-Dietetics Department, GMSH-16 Chandigarh celebrated World Kidney Day, 2026 on the theme “Kidney Health for All: Caring for people , protecting the planet”.\nb. Date of the Event:- 12th March, 2026\nc.Brief Description Members/Participants Involved :- Dietician Mandeep developed meal plans for patients undergoing dialysis. Dietician Komal provided nutritional guidelines aimed at reducing the risk of kidney-related complications among diabetic, hypertensive and renal calculi patients. Diet charts were distributed to approximately 50–70 beneficiaries.\nd. Mention if the event was conducted in collaboration with any organization (Optional):- It was done under the banner of IAPEN , CHANDIGARH CHAPTER."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m6.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "a.Name & Place of the Activity:-Nutrition & Dietetics Department, Chandigarh Group of College (CGC), Landran celebrated World Kidney Day, 2026 on the theme “Kidney Health for All: Caring for people , protecting the planet”.\nb. Date of the Event:- 12th March, 2026\nc. Brief Description Members/Participants Involved:- Students of B.Sc. Nutrition and Dietetics prepared kidney-friendly recipes to promote awareness about renal health. A total of 22 entries were received, and after evaluation, first, second, and third prizes were awarded to the best recipes.\nThe activity encouraged students to apply their theoretical knowledge in a practical and creative manner while highlighting the importance of balanced nutrition for kidney care. It also helped raise awareness among participants and attendees about adopting healthy dietary habits to prevent renal complications.\nd. Mention if the event was conducted in collaboration with any organization (Optional):- It was done under the banner of IAPEN , CHANDIGARH CHAPTER."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chandigarh-chapter/m10.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Chennai Chapter",
+    "pageTitle": "IAPEN India Chennai Chapter",
     "slug": "chennai-chapter",
     "source": "https://iapenindia.org/chennai-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiachennai@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. S. Kalavathy",
@@ -345,13 +545,99 @@
         "details": "Senior Consultant Anaesthesiologist, Critical care specialist , Interventional Pain management & Palliative care specialist.\n• MBBS From Govt. Salem Medical College (GMKMC), Salem- (passed out in April2001)\n• Diploma in Anaesthesiology- Sri Ramachandra Medical college & Research Institute, Chennai. (June 2005)\n• DNB in Anaesthesiology (Dec 2011)\n• Training & Certification in Palliative care with Indian Association of Palliative Care (IAPC).- (June 2014)\n• Fellowship in interventional Pain Management (FIPM)- Back & Pain Centre, Apollo Hospitals, Chennai. (August 2014)\n• Training & Certification in interventional Pain Management (FIPM) – Daradia pain Clinic, Kolkata. (October-2019",
         "image": "/images/chapters/chennai-chapter-15.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Activities"
+      },
+      {
+        "type": "text",
+        "text": "A Hybrid webinar was organized on February 20th at the Madras Medical Mission on the topic Optimizing Nutrition and Public health through Gut Microbiome and probiotic. Dr. Neeraja Hajela from Yakult was the speaker Dr. Sivakumar GaneshBabu Head Adult ICU unit MMM was the moderator. Those participated for the program were, 40 off line and 27 online."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chennai-chapter/c1-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/c2-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/c3-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/ac1.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "CME program was organized at Saveetha medical college on 8th December 2025. Nutrition in HPB surgery was taken by Doctor and Dietitian. 70 delegates( Doctors, Nurses and Dietitians) attended this program."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chennai-chapter/i1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/i4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/i2-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/i3-1.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Case study competition was organized on 18th December 2025 at the SIMS Hospital. Case study competition winners\n• First Prize- Ms. Chandini. G ( Tamil Nadu multi super speciality hospital Omandur)\n• Second prize- Ms. Vijayashree- MGM\n• Third prize- Dhanalakshmi Apollo speciality hospital"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/chennai-chapter/i5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/i6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/i7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/i8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/chennai-chapter/i9.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Cochin Chapter",
+    "pageTitle": "IAPEN India Cochin Chapter",
     "slug": "cochin-chapter",
     "source": "https://iapenindia.org/cochin-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenkerala@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Mumtaz Khalid Ismail",
@@ -407,9 +693,10 @@
   },
   {
     "name": "Coimbatore Chapter",
+    "pageTitle": "IAPEN India Coimbatore Chapter",
     "slug": "coimbatore-chapter",
     "source": "https://iapenindia.org/coimbatore-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiacoimbatore@gmail.com",
     "members": [
       {
         "title": "President\nDr. Viswakumar. P",
@@ -450,9 +737,10 @@
   },
   {
     "name": "Delhi Chapter",
+    "pageTitle": "IAPEN India Delhi Chapter",
     "slug": "delhi-chapter",
     "source": "https://iapenindia.org/delhi-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "secretaryiapendelhi@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr Nihar Ranjan Dash",
@@ -508,9 +796,10 @@
   },
   {
     "name": "Etawah Chapter",
+    "pageTitle": "IAPEN India Etawah Chapter",
     "slug": "etawah-chapter",
     "source": "https://iapenindia.org/etawah-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiaetawah@gmail.com",
     "members": [
       {
         "title": "Hon. President\nProf(Dr.)Somendra Pal Singh",
@@ -552,13 +841,191 @@
         "details": "Education : BDS, MDS (Periodontology)\nKaruna Dental Clinic\nMember of Indian Dental Association\nMember of Indian Dental Periodontology",
         "image": "/images/chapters/etawah-chapter-8.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Anemia Testing & Counselling Camp"
+      },
+      {
+        "type": "text",
+        "text": "Date: 27th October 2023\nVenue: Janta Inter College Bakewar Etawah"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/etawah-chapter/jb1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/jb2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/jb3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/jb4.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Discussion On Nutritional Aspect of Anemia & Celebration of IAPEN INDIA Day"
+      },
+      {
+        "type": "text",
+        "text": "Date: 14­­th October 2023\nVenue: RAJKIYA KANYA INTER COLLEGE SAIFAI"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/rb10.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Inaugural ceremony of IAPEN Etawah Chapter & CNE-ROLE OF NUTRITION IN HEALTHCARE."
+      },
+      {
+        "type": "text",
+        "text": "Date: 27-09-2023\nVenue: Lecture hall Trauma center 1­­st Floor\nUPUMS Saifai Etawah"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/etawah-chapter/e1-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e2-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e3-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e4-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e5-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e6-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e20.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e19.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e18.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e17.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e16.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e15.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e11.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e12.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e13.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e14.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e7-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/etawah-chapter/e8-1.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Faridabad Chapter",
+    "pageTitle": "IAPEN INDIA - Faridabad Chapter",
     "slug": "faridabad-chapter",
     "source": "https://iapenindia.org/faridabad-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenfaridabad@gmail.com",
     "members": [
       {
         "title": "President\nAir Cmde Dr. Bhaskar Nandi",
@@ -634,9 +1101,10 @@
   },
   {
     "name": "Guwahati Chapter",
+    "pageTitle": "IAPEN India Guwahati Chapter",
     "slug": "guwahati-chapter",
     "source": "https://iapenindia.org/guwahati-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenguwahati@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr Thamizholi Selvaraju",
@@ -683,13 +1151,327 @@
         "details": "M. Sc. Food Science & Nutrition.\nWorking as Clinical Dietician, Dr. B. Borooah Cancer Institute, Guwahati.\nPreviously worked as State Nutrition Consultant, National Health Mission (NHM).\nCompleted Registered Dietitian (RD) training at Tata Memorial Hospital, Mumbai.\nCo-authored the book Consensus Guidelines and Nutrition Care Process published by IAPEN, India.\nLife Member: IAPEN, NENDA.",
         "image": "/images/chapters/guwahati-chapter-9.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Events :"
+      },
+      {
+        "type": "heading",
+        "text": "WHD at Barpeta Cancer Care Centre"
+      },
+      {
+        "type": "text",
+        "text": "World Hypertension Day 2024 was celebrated at Barpeta Cancer Centre in association with the IAPEN India Guwahati Chapter on May 17th, 2024. Posters were exhibited in the OPD waiting area, and blood pressure screenings were conducted for OPD patients and their attendants. A total of 25 people were screened during the event.Dt. Johann Marak delivered an informative talk on hypertension, which included an interactive session with the audience present."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ea2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ea3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ea4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/c1-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/c7-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/c2-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/c3-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/c6-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/c10-1.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Celebration of WHD, 24 at Narayana Super Speciality Hospital"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/guwahati-chapter/w1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/w2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/w3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/w4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/w5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/w6.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Celebration of WHD, 24 at Good Health Hospital"
+      },
+      {
+        "type": "text",
+        "text": "On May 17th, 2024, World Hypertension Day was celebrated at Good Health Hospital, Guwahati, in collaboration with the IAPEN India Guwahati Chapter. Dr. Manash Ghosh, Dr. Irshad Ali Ahmed, and Dr. Aparajita Barman delivered awareness talks on hypertension, while Ms. Sanghita Thakuria presented on the DASH diet. Additionally, students from the Nursing School of Good Health Hospital performed a play to raise awareness about hypertension."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ev1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ev2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ev3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ev4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ev5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/ev6.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Health Day celebration at Barpeta Cancer Centre"
+      },
+      {
+        "type": "text",
+        "text": "On April 7th, 2024, the IAPEN India Guwahati Chapter, in collaboration with the Barpeta Cancer Care Centre, celebrated World Health Day. The event included nutrition education sessions for cancer survivors, conducted by Ms. Johan, a Dietician from the Barpeta Cancer Care Centre. Additionally, Mr. Sudarsana Gaurachandra Dasa, a Spiritual Leader and Motivational Speaker from ISKCON, delivered a talk on the importance of spiritual healing for cancer survivors. The vote of thanks was given by Dr. Thamizholi S., President of the IAPEN India Guwahati Chapter."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm14.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm16.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm13.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm15.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm17.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/cm11.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "World Health Day celebration at H.P.B. Girls' College"
+      },
+      {
+        "type": "text",
+        "text": "As part of the World Health Day celebration, on April 6th, 2024, the IAPEN India Guwahati Chapter, in collaboration with the Department of Community Science and the Health and Wellness Club of H.P.B. Girls’ College, Golaghat, organized a cooking contest on the theme “Healthy Lunch Box” for the college students. On April 8th, 2024, an essay competition was held among the students on the World Health Day theme for that year, “My Health, My Right.” The following day, April 9th, 2024, a documentary screening highlighting “the role of nutrition in overall health” was presented to the students."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/e8.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "November 2022"
+      },
+      {
+        "type": "text",
+        "text": "Date: 14/11/2022\nVenue: H.P.B. Girls’ College, Golaghat\nEvent: World Diabetes Day Celebration, 2022\nResource person: Dr. Pritty Neog, Consultant Nutritionist, NED Care, Golaghat\nTopic: Diabetes symptoms and its management through diet"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g1n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g2n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g3n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g4n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g5n.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Date: 14/11/2022\nVenue: GNRC Good Health Hospital, Guwahati\nEvent: World Diabetes Day Celebration, 2022\nResource person: Sanghamitra Konwar, Dietician, GNRC Hospital, Sixmile, Guwahati, Assam\nTopic: Diabetes mellitus and its care"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g6n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g7n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g8n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g9n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g10n.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/guwahati-chapter/g11n.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Hyderabad Chapter",
+    "pageTitle": "IAPEN India Hyderabad/Telangana Chapter",
     "slug": "hyderabad-chapter",
     "source": "https://iapenindia.org/hyderabad-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenhyd@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr Subba Reddy",
@@ -740,9 +1522,10 @@
   },
   {
     "name": "Indore Chapter",
+    "pageTitle": "IAPEN India Indore Chapter",
     "slug": "indore-chapter",
     "source": "https://iapenindia.org/indore-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "Iapenindiaindorechepter@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Ravi Dosi",
@@ -793,9 +1576,10 @@
   },
   {
     "name": "Kannur Chapter",
+    "pageTitle": "IAPEN India Kannur Chapter",
     "slug": "kannur-chapter",
     "source": "https://iapenindia.org/kannur-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "malabariapen@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr Adharsh D",
@@ -845,78 +1629,11 @@
     ]
   },
   {
-    "name": "Kolkata Chapter",
-    "slug": "kolkata-chapter",
-    "source": "https://iapenindia.org/kolkata-chapter/",
-    "email": "info@iapenindia.org",
-    "members": [
-      {
-        "title": "President\nDr. Mahesh Ravikumar Jansari",
-        "details": "Associate Professor and in charge of Pulmonary Medicine at AIIMS Kalyani\nMBBS and MD (Pulmonary Medicine)\nDNB\nFellowship in Pulmonary Critical Care\nWorked at KEM Hospital, Parel, Mumbai; Lokmanya Tilak Municipal Medical College & Sion Hospital; Nair Hospital, Mumbai\n& the group of TB Hospitals in Mumbai.",
-        "image": "/images/chapters/kolkata-chapter-1.jpg"
-      },
-      {
-        "title": "Vice President\nMs. Ipsita Chakravarti",
-        "details": "RD, CDE, MBA\nHOD, Dietetics Department, CK Birla Hospitals, CMRI, Kolkata\nClinical Dietitian with 26 plus years of experience\nPassionate about Clinical Dietetics with a special interest in renal nutrition, critical care nutrition diabetes & obesity management.\nLife Member of IAPEN, IDA, ESPEN BLOCK MEMBER, ISPEN,DAY, SND, CCF, ADE.\n14 LLL certification from IAPEN ESPEN,\nAlso done certification from American Academy of Continuous Education.\nFODMAP certified from Monash University , Australia\nRecipient of Sadhna Award for Life Time Achievement &twice IAPEN awardee for Excellence in Clinical Nutrition Practice Brief Description/introduction",
-        "image": "/images/chapters/kolkata-chapter-2.jpg"
-      },
-      {
-        "title": "Secretary\nMs. Sudeshna Maitra Nag",
-        "details": "Chief Dietitian – Peerless Hospitex Hospital And Research Center Limited\nM.Sc (Food & Nutrition), PGDM\nPG certification in Applied Human Nutrition from Cambridge University\nCertified Diabetic Educator\nESPEN LLL certificates of 12 module\nEx Vice President IAPEN Kolkata Chapter from 2022- 2024\nAwarded for ‘Excellence in creative solutions for Food & Nutrition security’, for Asian Region from Cambridge , UK.\nAwarded with IAPEN India Excellence award in Public Health Nutrition 2025.\nMember of National SMA taskforce.",
-        "image": "/images/chapters/kolkata-chapter-3.jpg"
-      },
-      {
-        "title": "Treasurer\nMs. Debalina Dutta",
-        "details": "M.SC.(NUTRITION)-University of Calcutta\nDeputy Manager Dietetics Department CMRI hospital Kolkata.\nCertification: Diabetes Education by DMDEA and IADE.\nCertification in Nutrition in Criticare course.\nCompleted 4 LLL ESPEN course.",
-        "image": "/images/chapters/kolkata-chapter-4.jpg"
-      },
-      {
-        "title": "Executive committee members\nMs. Subarnita Mukherjee",
-        "details": "Senior Dietitian - Peerless Hospitex Hospital And Research Center Limited.\nM.Sc (Dietetics and community nutrition management)\nCertified Diabetic Educator\nESPEN LLL certification of 1 Module",
-        "image": "/images/chapters/kolkata-chapter-5.jpg"
-      },
-      {
-        "title": "Executive committee members\nMs. Santa Roy",
-        "details": "Executive Dietitian at Peerless Hospitex Hospital and Research centre Limited.\nM.Sc in Food & Nutrition .\nCertified Diabetic Educator .",
-        "image": "/images/chapters/kolkata-chapter-6.jpg"
-      },
-      {
-        "title": "Executive committee members\nMs. Anindita Mandal",
-        "details": "Consultant Dietitian, Lifestyle Management Counsellor and Diabetic Educator\nPost Graduate in Dietetics from All India Institute of Hygiene & Public Health.\nCertified in Nutrition, Lifetime Wellness and Weight Loss Management from Universal Class, Inc. Tampa, Florida,\nUSA\nCertified in Advanced Bariatric Nutrition from SNDT Women’s University, Mumbai\nDiabetic Educator from Dr. Mohan’s Diabetes Education Academy",
-        "image": "/images/chapters/kolkata-chapter-7.jpg"
-      },
-      {
-        "title": "Executive committee members\nMs. Jyoti Pachisia",
-        "details": "M.Sc in Food and Nutrition,\nPG Dip in Applied Nutrition and Dietetics [JU],\nCertified DE, Certified Renal Nutritionist\nAffiliation – Gokhale Memorial Girls College\nDesignation – Special Lecturer\nField of Interest in Nutrition – Food Science and Technology, Public Health Nutrition, Clinical Nutrition",
-        "image": "/images/chapters/kolkata-chapter-8.jpg"
-      },
-      {
-        "title": "Executive committee members\nKomal Srivastava",
-        "details": "M.Sc, B.Ed, CDE, RD.\nCertified Pediatric Dietician,\nSenior Dietitian –Apollo Multispeciality Hospital Kolkata\nPG Diploma Course in “Pediatrics Nutrition”.\nCertificate course in “Early Nutrition Specialist” recognized by Ludwig-Maximilians University, Germany (Online).\nCompleted Total 9 LLL Course.\nCompleted “Comprehensive Paediatric Nutrition Course” in July 2025, Chennai organised by IAPEN Paediatrics Core Group.\nAwarded as a “ Best Indian Diabetes Educator 2025” : Gold Medalist.",
-        "image": "/images/chapters/kolkata-chapter-9.jpg"
-      },
-      {
-        "title": "Executive committee members\nSudeshna Hom",
-        "details": "Senior Dietitian-IQ City Medical College Hospital, Durgapur, WB\nM.Sc, B.Ed (Food & Nutrition), CU\nCertified Diabetes Educator (NDEP),\nESPEN LLL Certification in Nutritional Support in ICU Patients\nCertification in Nutrigenomics (The Gene Box Academy, Mumbai)\nSix Sigma Yellow Belt Certification (Kennesaw State University, US)",
-        "image": "/images/chapters/kolkata-chapter-10.jpg"
-      },
-      {
-        "title": "Executive committee members\nMayuri Sikder",
-        "details": "Practicing as freelance Dietitian, Kolkata.\nM.Sc. in Dietetics & Food Service Management,\nCertificate in Food & Nutrition (IGNOU),\nDiploma in Food Processing Nutrition & Healthcare (Jadavpur University),\nCertified Diabetes Educator (NDEP),\nCertified Pediatric Nutritionist (FSTN)",
-        "image": "/images/chapters/kolkata-chapter-11.jpg"
-      },
-      {
-        "title": "Executive committee members\nKhusboo Singh",
-        "details": "M.Sc in Dietetics and Nutrition\nDiabetes Educator,\nPh.D. Scholar in Food and Nutrition at Swami Vivekananda University.\nAssociated with White Coat Clinic, Howrah,\nRuns Khusboo’s KAP Living, where she promotes holistic nutrition and lifestyle practices.",
-        "image": "/images/chapters/kolkata-chapter-12.jpg"
-      }
-    ]
-  },
-  {
     "name": "Lucknow Chapter",
+    "pageTitle": "IAPEN India Lucknow Chapter",
     "slug": "lucknow-chapter",
     "source": "https://iapenindia.org/lucknow-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenlucknow@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr Piyali Bhattacharya",
@@ -953,71 +1670,601 @@
         "details": "I am Hospital administrator and compassionate family physician who have special interest in Cardiology,Diabetes, palliative care, Toxicology and sonography.\nI have done my MBBS from AIMS,Kochi, MD(hospital Administartion) from KGMU, Lucknow, Masters in family Medicine (CMC,Vellore) and Palliative care from IPM, Calicut .\nLife member of IMA, AHA IAP,AFPI, IST,SSOI and IAPC.\nCurrently practicing in Cardiology dept of Medanta as clinical associate.\nMy aim to serve the community by developing community volunteer.\nMotto is “Refer less, Resolve More”\nHe is currently working in district women hospital basti Uttar Pradesh as Radiologist",
         "image": "/images/chapters/lucknow-chapter-7.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "World Nutrition Day 2023"
+      },
+      {
+        "type": "text",
+        "text": "On World Nutrition Day Department of Hepatology SGPGI & IAPEN India Lucknow Chapter Organized a Workshop on Nutritional Assessment & Management in Patients with Liver Diseases Under the Guidance of Dr. Amit Goel Sir ( Professor & Head Department of Hepatology SGPSGIMS & Lucknow Chapter president).Event was chaired by\nHon. Dr. RadhaKrishan Dhiman Sir, Director, (SGPGIMS),session was presided over by Dr.Ajay Mishra Sir & Dr. Surender Singh."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/wnd1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/wnd2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/wnd3.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "On Occasion of World Hypertension Day a BP Screening camp was organized by IAPEN INDIA Lucknow Chapter on 17th May 2023"
+      },
+      {
+        "type": "text",
+        "text": "To educate the masses and spread awareness about hypertension that is commonly known as high blood pressure. Camp was conducted at Kudiya Ghat,Chowk at 6:30 am .More than 70 people were screened"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e8.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "A Workshop on Millets was organized with the theme “Millets for a Healthier Future “ at Integral Institute of Nursing Sciences & Research Department Of Nursing ,Integral Medical University."
+      },
+      {
+        "type": "text",
+        "text": "Around 90+ students attended session followed by Recipe competition. Innovative & healthy recipes prepared by students. 8 groups participated in Recipe Contest . Certificates of Achievement and Mementos were given to all 4 winning groups under the category of -Most Nutritious Recipe, Well Presented Recipe, Most Innovative Recipe & Nutritious & Well Presented Recipe."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e6.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "CNE on the topic \"Essential Nutrients to Maximize Your Health” @ Integral Medical University @ 30th march 2023"
+      },
+      {
+        "type": "text",
+        "text": "Delivered a lecture and interacted with students of Nursing Department of INTEGRAL Medical University . 85 Student’s of Nursing had participated In the Session and Had a fruitful and Interactive session."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/e2.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Nutritional Awareness Session for parents @ Swami Vivekanand School on 23 February"
+      },
+      {
+        "type": "text",
+        "text": "An interactive nutrition education program with children and their parents was conducted at Swami Vivekanand School on 23rd Feb 2023.Healthy eating in childhood is important for proper growth and development and to prevent various health conditions. The parents’ knowledge of the principles of children’s nutrition would enhance the right child development by protecting it from various health conditions and their implications in the future. It is important to provide nutrition education to families with pre school children."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/n1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/n2.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Photographs of IAPEN INDIA Lucknow Chapter Relaunch"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r1.jpg",
+            "alt": "",
+            "caption": "IAPEN INDIA Lucknow Chapter Relaunch"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r2.jpg",
+            "alt": "",
+            "caption": "Lamp Lightning Ceremony"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r3.jpg",
+            "alt": "",
+            "caption": "Lectures delivered by eminent speakers"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r10.jpg",
+            "alt": "",
+            "caption": "Dignitaries and delegates"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r7.jpg",
+            "alt": "",
+            "caption": "Lectures delivered by chairpersons and moderators"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r8.jpg",
+            "alt": "",
+            "caption": "Lectures delivered by chairpersons and moderators"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r6.jpg",
+            "alt": "",
+            "caption": "Felicitation"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r5.jpg",
+            "alt": "",
+            "caption": "Felicitation"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r9.jpg",
+            "alt": "",
+            "caption": "Felicitation"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r4.jpg",
+            "alt": "",
+            "caption": "IAPEN INDIA Lucknow Chapter Team"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "CNE at Medanta Hospital, Lucknow"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r11.jpg",
+            "alt": "",
+            "caption": "Brochure for Invitation & Promotion on Social Media"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r12.jpg",
+            "alt": "",
+            "caption": "Banner used in CNE"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r13.jpg",
+            "alt": "",
+            "caption": "Session by Prof. R. K. Sharma Director Nephrology Medanta Hospital"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r14.jpg",
+            "alt": "",
+            "caption": "Session by Ms. Himani Puri, Program Officer Renal Nutrition India, IAPEN INDIA Core Group."
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r15.jpg",
+            "alt": "",
+            "caption": "Session By Dr. Paritosh Thakur Medical Superintendent, Medanta Hospital, Lucknow"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r16.jpg",
+            "alt": "",
+            "caption": "Felicitation of Speakers & guests by IAPEN INDIA Lucknow Chapter team."
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r17.jpg",
+            "alt": "",
+            "caption": "IAPEN INDIA Lucknow Team"
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/r18.jpg",
+            "alt": "",
+            "caption": "Participants from Medanta Hospital,Lucknow"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "MMM Camp at Ekhana Medicare & Research center"
+      },
+      {
+        "type": "text",
+        "text": "MMM (May Measurement Month) Screening and Awareness Camp was organized by IAPEN INDIA Lucknow chapter In Association with Ekana Medicare & Research Centre at Gomtinagar Extension Lucknow.\nDr. Ashutosh Sharma (Vice President) Ms. Ranu Singh(Secretary) & Ms. Sarita Tripathi (Executive member) were present in this activity.\nDr. Shivam Tripathi & his staff were actively involved in this activity. Screening of more then 50 person was done in this camp along with hypertension awareness session."
+      },
+      {
+        "type": "heading",
+        "text": "IAPEN INDIA Lucknow Chapter Team"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev2.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "BP Screening and awareness session at Ekhana Medicare & Research center"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev4.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "MMM Activity & Hypertension Awareness camp was organized by IAPEN INDIA Lucknow chapter in Association with Ekhana Medicare & Research Centre , at Village\nGopalkheda Purseni (District-Raebareli).\nMs. Ranu Singh (Secretary) & Ms. Sarita Tripathi (Executive member) were present on behalf of IAPEN INDIA Lucknow chapter.\nDr. Shivam Tripathi along with Dr. A.K Shrivastava along with his team were present in this camp & Screening and counselling of more then 100 people was done in this camp."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev14.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev11.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev12.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev13.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev15.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev16.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Under the aegis of IAPEN INDIA Lucknow Chapter, Nutritional Awareness program was conducted at Government Model School at village Sohramau in District Unnao, in\nwhich importance of food and nutrition in daily life was communicated to students by Ms.Ranu Singh (Chapter Secretary) & they were also educated about healthy food and healthy eating habits. A quiz about nutrition and healthy eating was also organized & winners were awarded with prizes.\nActivity was organized in Association with Dr. Snehil Pandey(Youngest awardee of President medal) & This school was awarded by the Ministry of Education , Government of India."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev17.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev18.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev20.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev19.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev21.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev22.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev23.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev24.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev25.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ev26.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Photographs of various activities done by IAPEN INDIA Lucknow Chapter Team"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch11.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch12.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch13.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch14.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch15.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch16.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch17.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch18.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch19.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch20.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch21.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch22.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch23.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch24.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch25.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch26.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch27.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch28.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch29.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch30.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch31.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch32.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch33.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch34.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch35.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/lucknow-chapter/ch36.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Ludhiana Chapter",
+    "pageTitle": "IAPEN India Ludhiana Chapter",
     "slug": "ludhiana-chapter",
     "source": "https://iapenindia.org/ludhiana-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenludhiana@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Vivek Gupta",
-        "details": "",
+        "details": "• MBBS, DA, DNB(Anaesthesiology), FIACTA(Cardiac anesthesia), FICCM, PGDHA\n• Consultant (Cardiac anaesthesia & Intensive care) ECMO Physician Dayanand Medical College & Hospital Unit- Hero DMC Heart Institute.\n• Course Director: ISCCM Certificate Course: ECMO & CRRT (6 month duration)\n• ACLS Instructor & Associate Training Site coordinator DMCH (American heart Association accredited)",
         "image": "/images/chapters/ludhiana-chapter-1.jpg"
       },
       {
         "title": "Hon. Vice-President\nDr. Jaspreet Kaur",
-        "details": "",
+        "details": "• M.Sc., B.Ed., M.Ed., PhD, Associate Professor teaching Home Science and Food and Nutrition from the last 22 years\n• Her research papers in physical growth and malnutrition among children are published in Indian and international peer reviewed journals and presented papers in national and international conferences.\n• Co-author of nine text books of Home Science & co-edited one book and is editor of Newsletter of IDA Punjab Chapter. She has a created many you tube videos on various health topics.\n• Prepared video lectures for two courses ‘Therapeutic Nutrition’ and ‘Nutrition for the family’ for the Swayam Prabha channel, An initiative of MHRD.\n• Life member of IDA ,& NSI\n• Certified FODMAP health professional by Monash University, Australia.\n• Certified Diabetes Educator.",
         "image": "/images/chapters/ludhiana-chapter-2.jpg"
       },
       {
         "title": "Hon.Secretary\nMs. Shaveta Batta",
-        "details": "",
+        "details": "• Registered Dietitian\n• Chief Dietitian in Dayanand Medical College and Hospital, Ludhiana.\n• Certified Diabetes Educator\n• Certified FODMAP Dietitian.\n• Total experience of twenty years.\n• Specialized in Critical Care Nutrition and Bariatric Surgery.\n• Papers published:.\nIAPEN India : Nutrition Consensus Guidelines in Oncology Clinical Practice. Journal of Nutrition Research.\nLow fermentable oligosaccharide, disaccharide, monosaccharide and polyol diet in patients with diarrhea-predominant irritable bowel syndrome: A prospective, randomized trial.",
         "image": "/images/chapters/ludhiana-chapter-3.jpg"
       },
       {
         "title": "Hon. Treasurer\nBharti Sharma",
-        "details": "",
+        "details": "• BHMS, PGDND, Certified IBD Dietitian,\n• Diploma in Naturopathy and Yoga\n• Clinical Dietitian in Dayanand Medical College and Hospital, Ludhiana\n• Total Experience of 11 years.\n• Life Memberships: IDA and NSI",
         "image": "/images/chapters/ludhiana-chapter-4.jpg"
       },
       {
         "title": "Executive Committee Member\nDr. Sonika Sharma",
-        "details": "",
+        "details": "• PhD (Food Science)\n• Associate Professor, Department of Food and Nutrition, PAU, Ludhiana\n• Awarded PAU Gold medal for BSc(Home Science )\n• Research studies that have won International awards at varoius conferences:\n- Hepato- protective effect of lemongrass (Cymbopogon flexuosus) detoxifying drink on carbon tetrachloride induced toxicity in rats.\n- Optimization of nutritional composition, bioactive compounds and antioxidant activity in broccoli (Brassica oleracea) microgreens using alternate drying techniques’\n- Inflammatory Bowel Disease: Three decadal status and trends from global burden of disease\n• Research Technologies REC approved and commercialized:\n- Pumpkin seed flour for utilization in food products\n- Formulation and standardization of Vitamin D enriched mushroom powder to develop supplemented products\n• Research Technology as PAU recommendation in Package of Practices, PAU:\n- Optimization of nutritional & biochemical composition of microgreens for utilization in food products",
         "image": "/images/chapters/ludhiana-chapter-5.jpg"
       },
       {
         "title": "Executive Committee Member\nBhavya Dhir",
-        "details": "",
+        "details": "• Private practitioner @dietitianbhavya , Ludhiana\n• Registered Dietitian (RD), India\n• Certified Diabetes Educator\n• Certified Sports Nutritionist\n• FODMAP Specialist\n• UGC-NET Qualified\n• Nutrition Expert for contestants of Miss Urban Desi Punjab (2018-2020)\n• IDA, IAPEN and NSI Life Member\n• Published research articles in international journals and presented at conferences\n• Speaker for health seminars in schools, colleges, events",
         "image": "/images/chapters/ludhiana-chapter-6.jpg"
       },
       {
         "title": "Executive Committee Member\nIsha Nagrath",
-        "details": "",
+        "details": "• Registered Dietitian\n• UGC NET qualified\n• IAPEN/IDA Life time member\n• Specialized in Diabetes using CGM\n• Nutrition Auditor (Ragus Healthcare Pvt Ltd.\n• Private Practitioner at Surakshit Diet with Isha RD\n• Course Editor: M.Sc (Diet & Food Service Management, Certificate Course, (Food & Nutrition), IGNOU\n• Published Paper:\nImpact of Nutrition Knowledge on eating behavior among college going girls (18-23 years)\n• Training Modules: Diabetes, IGMPI\n• Training to Junior Dietitians",
         "image": "/images/chapters/ludhiana-chapter-7.jpg"
       },
       {
         "title": "Executive Committee Member\nGurjeet Kaur",
-        "details": "",
+        "details": "• Deputy dietitian in Christian Medical College and hospital Ludhiana.\n• Experience in dietetics field- 8 years\n• Organized cne & various nutrition activities in cmc\n• Masters in Dietetics and Nutrition (2014 ) MMU Mullana, Ambala, Haryana.\n• Bachelor in Nutrition and Dietetics (2012) PAU Ludhiana.\n• Active member in IDA Punjab chapter.",
         "image": "/images/chapters/ludhiana-chapter-8.jpg"
       },
       {
         "title": "Executive Committee Member\nGopika Puri",
-        "details": "",
+        "details": "• Clinical Dietitian in SPS hospital\n• PhD Scholar from PAU, MSC from LPU, Jallandhar\n• Total experience of 7 years\n• Certified Metabolic Nutritionist\n• Certified in Nutrogenomics\n• PG diploma in Clinical Dietetics\n• Organised various workshops in gastrointestinal, weight loss and metabolic diseases.",
         "image": "/images/chapters/ludhiana-chapter-9.jpg"
       },
       {
         "title": "Executive Committee Member\nManmeet Grewal",
-        "details": "",
+        "details": "• Post Graduate Diploma in Nutrition & Dietetics.\n• Clinical Dietitian in Hero DMC&H , Ludhiana\n• Total Experience of 9 years\n• Participated in varios Medical Camps.\n• Conducted Nutrition Lectures for general public\n• Virtual Nutrition Lecture during COVID 19 for industrial workers, college students and faculty",
         "image": "/images/chapters/ludhiana-chapter-10.jpg"
       }
     ]
   },
   {
     "name": "Mangaluru Chapter",
+    "pageTitle": "IAPEN India Mangaluru Chapter",
     "slug": "mangaluru-chapter",
     "source": "https://iapenindia.org/mangaluru-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenmangalore@gmail.com",
     "members": [
       {
         "title": "President\nDr. Vasudeva Bhat",
@@ -1064,13 +2311,348 @@
         "details": "Chief Dietitian and Diabetic Educator at Father Muller Medical College Hospital, Mangalore.\nProviding disease specific nutrition care and support to patients, managing complications, and promoting optimal health outcomes. Developing nutrition plans to manage side effects, optimize recovery and enhance quality of life.\nCreating personalized diet plans for patients with various health conditions, including diabetic, kidney disease , ICU and cancer patients.\nEducating patients and their families on nutrition, Insulin injection technique and lifestyle modifications to manage their conditions effectively.\nConduct classes for BSc Nursing and BSc Renal Dialysis students, focusing on therapeutic nutrition and renal nutrition,\nOrganized and delivered guest lectures and seminars in college, and various organization to provide awareness about nutrition.\nLifetime member of the Indian Dietetic Association (IDA).",
         "image": "/images/chapters/mangaluru-chapter-9.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Chapter Activities"
+      },
+      {
+        "type": "text",
+        "text": "The Department of PG Studies in Food Science and Nutrition, Alva’s College (Autonomous), Moodbidri, in association with IAPEN India, organized a webinar on “Case Based Approaches in Hypertension Management” on 17th April 2026 through Google Meet on the occasion of World Hypertension Day. The webinar focused importance of case-based and evidence-based approaches in effective patient management. The session emphasized bridging the gap between theoretical knowledge and practical clinical application. Dr. Mansi Patel served as the resource person, and the session was moderated by Dr. Archana Prabhat. More than 50 participants, including faculty members, healthcare professionals, and students, actively attended the webinar. The session was highly interactive, informative, and well appreciated by all the participants."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/5.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "• Name & Place of the Activity:\nContinuous Nutrition Education (CNE) Program – IAPEN India, Mangaluru Chapter, IMA Hall, Hampankatta, Mangalore\n• Date of the Event:\n27th March 2026\n• Brief Description:\nIAPEN India – Mangaluru Chapter organized a Continuous Nutrition Education (CNE) program at IMA Hall, Hampankatta, Mangalore. The program featured guest talk sessions and an insightful panel discussion focusing on current trends and practices in nutrition and healthcare. The session provided a platform for knowledge sharing, professional interaction, and updating participants on recent advancements in the field. The event was well-attended and appreciated by healthcare professionals and students.\n• Members/Participants Involved:\nDr. Vijay Sundarsingh (Panelist), Dr. Archana Bhat (Panelist), Ms. Jane Mariya (Panelist), Dr. Archana Prabhat (Panelist), Healthcare professionals, and students."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/w1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/w2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/w3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/w4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/w5.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "• On the occasion of International Women’s Day, IAPEN India – Mangaluru Chapter organized a webinar in collaboration with Alva’s College (Autonomous), Moodbidri, to promote awareness on women’s health and nutrition. The session titled “Women’s Health & PCOS: A Practitioner’s Journey” was delivered by Ms. Annapurna Bhatnagar, Clinical Nutritionist and Secretary, IAPEN Bhopal Chapter. The talk focused on the causes, symptoms, and increasing prevalence of PCOS, emphasizing the role of balanced nutrition, physical activity, and healthy lifestyle practices in managing hormonal health. The session was interactive and well-received, providing practical insights for prevention and management. The webinar benefited UG and PG students along with faculty members.\n• Members/Participants Involved:\nMs. Annapurna Bhatnagar (Resource Person), Faculty members, UG FND and PG FSN students."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/i5.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "World Dietetics Day 2026- Webinar\nDate: 12th January 2026\nPlatform : Google meet\nBeneficiaries: 25 students and 5 faculty members\nWebinar was hosted by the chapter to commemorate World Dietetics Day on the topic “Role of nutrition in cancer care: From diagnosis to survivorship “ by Ms. Daveena Pinto, Clinical Nutritionist & IAPEN member ,Mangalore Institute of Oncology, Mangalore. The main objective of the session is to enhance the clinical knowledge of students and faculty regarding the critical impact of nutritional intervention throughout the cancer journey. The webinar focused on the nutritional assessment of the patient ,management of side-effects through diet to ensure complete recovery and also on long term dietary strategies to improve quality of life, regain strength and potentially reduce the risk of recurrence. Total of 25 students and 5 faculties benefitted from the program.\nThe program successfully highlighted the indispensable role of dietitians in the multidisciplinary approach to cancer treatment. The program was conducted in association with the Department of Food Nutrition & Dietetics, Alva’s College (Autonomous), Moodbidri"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m1-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m2-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m3-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m4-1.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Name & Place of the Activity:\nWorld Food Day 2025 Celebration – Mount Rosary Charitable Trust, Mangaluru\nDate of the Event:\n16th October 2025\nBrief Description:\nThe IAPEN Mangaluru Chapter, in collaboration with Alva’s FSN, organized a World Food Day 2025 celebration at Mount Rosary Charitable Trust, Mangaluru. The event aimed to promote nutritional awareness and community well-being among elderly residents. A nutritious Nutri Lunch was served to 135 beneficiaries, followed by an interactive nutrition education session focusing on healthy dietary practices and food sustainability. The program emphasized the importance of balanced nutrition and social responsibility in improving quality of life.\nMembers/Participants Involved:\nMembers of IAPEN Mangaluru Chapter and faculty and students from Alva’s FSN actively participated in the event.\nCollaboration:\nIn collaboration with Alva’s FSN."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m5-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m6-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m7-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m8-1.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "• The Women Conclave – Nurturer the Nurturer was held at VS Acharya Hall, Alvas College, bringing together over 800 beneficiaries from diverse backgrounds. The conclave served as a powerful platform dedicated to celebrating, educating, and empowering women at every stage of life.\n• The event hosted eminent panellists from across the country, representing various fields. Each expert shared unique insights and real-life experiences, creating a rich and interconnected dialogue.\n• The discussions provided an integrated, holistic approach to enhancing women’s health—from puberty through reproductive years and into menopause.\n• Through knowledge-sharing, interaction, and collaborative learning, the conclave strengthened awareness and inspired women to prioritize their health while also equipping them with practical strategies to thrive as the nurturers of society."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m4.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "• World Diabetes Day 2025 – Diet Camp\nLocation: Alva’s Education Foundation – Transport Division\nBeneficiaries: 80 Transport Workers\nIAPEN India – Mangaluru Chapter in association with The Dept. of PG Studies in Food Science and Nutrition, organized a World Diabetes Day 2025 diet camp for the transport workers of Alva’s Education Foundation.The camp included height, weight, BMI, blood pressure and blood glucose assessments, followed by individual diet counselling . A total of 80 participants benefitted from the initiative."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/m8.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/1-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/2-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/3-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/4-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/5-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/11.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/12.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/13.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/14.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/15.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/16.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/17.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/18.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/19.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/20.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/21.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/22.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/23.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/24.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/25.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/26.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/27.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/28.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/29.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/mangaluru-chapter/30.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Meerut Chapter",
+    "pageTitle": "IAPEN India Meerut Chapter",
     "slug": "meerut-chapter",
     "source": "https://iapenindia.org/meerut-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenmeerut@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Pranav Gupta",
@@ -1112,13 +2694,316 @@
         "details": "DESIGNATION : Dietician/Student\nACHIEVEMENTS :\nCurrently working as a Dietitian at Fitelo\nLife Member of IAPEN India Meerut Chapter\nExecutive Committee Member of meerut chapter from past 3 years",
         "image": "/images/chapters/meerut-chapter-8.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "World diabetes day photos 2023"
+      },
+      {
+        "type": "text",
+        "text": "IAPEN INDIA Meerut Chapter, Community Nutrition core group and NAS College Meerut conducted a diabetes awareness program to celebrate world diabetes day.\nTaking a holistic and multidisciplinary approach, the speakers included doctors, dietitians and yoga expert.\nThe speakers included\nDr Pranav Gupta\nDr Chavi Goel\nMr. Mohit Sharma\nMs Anshu Mehra"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/d1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/d2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/d3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/d4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/d5.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "November month activity 2023"
+      },
+      {
+        "type": "text",
+        "text": "IAPEN INDIA Meerut Chapter, Community Nutrition core group and Meerut College Meerut conducted a diabetes awareness program to celebrate world diabetes day.\nTaking a holistic and multidisciplinary approach, the speakers included doctors, dietitians and yoga expert.\nA diabetic snack competition was also organised to mark the occasion."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/nc1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/nc3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/nc4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/nc2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/nc5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/nc6.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Seminar in October month 2023"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/oct11.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Activity to Celebrate Yoga Day"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/img-20220612-wa0017.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/img-20220612-wa0019.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/img-20220612-wa0007.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/img-20220612-wa0009.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/img-20220612-wa0010.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/img-20220612-wa0014.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "School Health Day Celebrations at Blossoms School On 30.7.22"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec5-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec6-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec4-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec1-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec2-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec3-2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec7-1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/ec9.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Breastfeeding Week activity with Dr Anshu Jindal and Mrs Anshu Mehra - FB live on 2.8.22"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/img_20220802_190611.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/img-20220802-wa0034.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/bfe1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/bfe2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/bfe3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/bfe4.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "International Years of Millets"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/m1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/m2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/m3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/m4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/m5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/m6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/m7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/m8.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "World Kidney Day"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/meerut-chapter/im1.png",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/im2.png",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/im3.png",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/meerut-chapter/im4.png",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Mumbai Chapter",
+    "pageTitle": "IAPEN INDIA Mumbai Chapter",
     "slug": "mumbai-chapter",
     "source": "https://iapenindia.org/mumbai-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenmumbai@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Prashant Salvi",
@@ -1199,9 +3084,10 @@
   },
   {
     "name": "Nagpur Chapter",
+    "pageTitle": "IAPEN India Nagpur Chapter",
     "slug": "nagpur-chapter",
     "source": "https://iapenindia.org/nagpur-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindianagpur@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Meraj Shaikh",
@@ -1253,56 +3139,427 @@
         "details": "More than 9 years of experience in the field of nutrition\nDietician at Care Hospital, Nagpur\nPG. Diploma in Dietetics\nM.Sc. Dietetics &Food Service Management,\nDiabetic Educator\nExecutive Committee Member of Indian Dietetic Association Nagpur Chapter\nHave expertise in spreading Social awareness regarding diet via medium of Diet Expos, Scripting and presenting Skit and health oriented songs.",
         "image": "/images/chapters/nagpur-chapter-10.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "IAPEN NAGPUR Chapter Activity 2023"
+      },
+      {
+        "type": "text",
+        "text": "Dietetic’s Day -10th January 2024\nNutrition Awareness talk by Dr.Rita Bhargava,\nNutri quiz by Ms. Prachi Sawaikar for nursing staff at Care Hospital Nagpur."
+      },
+      {
+        "type": "text",
+        "text": "30th November- Activity – World Diabetes Day Awareness Talk\nVenue was Mahindra and Mahindra plant\nSpeakers –Dr. Himanshu Patil , Diabetologist\nSpoke on diabetes medical management\nRashmi Budhadev, Dietitian addressed gathering on diabetes and dietary management.\nAround 80 office staff attended the program.\nCollaborators – NetProfan-NC"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e40.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e41.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e42.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e43.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e44.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e45.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "29th November CNE-Malnutrition in ICCU\nSpeaker- Dr.Rajan Barokar\nTopic- Malnutrition Sarcopenia Syndrome, Role of Protein rich nutrition in combating malnutritioin leading to early recovery and better outcomes.\nVenue-Hotel Hardeo, Sponsored by Abbott Nutrition\nWelcome address and Context setting was done by Dr. Rita Bhargava. Dr.Kavita Bakshi delivered vote of Thanks. Around 25 clinical dietitians attended the program."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e38.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e39.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "8th -10th November- Activity – Diabetes Reversal Program\nVenue- Mahindra and Mahindra\nSpeakers –Dr. Vaibhav Agrawal , Physician- spoke on diabetes reversal is it a fact .Dr. Rita Bhargava, Dietitian, DE spoke on diet in diabetes reversal. Dr. Vivek Chourasiya, Physiotherapist highlighted role of exercise in DRP. Diet expo was also arranged by interns of Care hospital.\nCollaborators – Care Hosptital, Nagpur, NetProfan-NC"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e33.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e34.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e35.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e36.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e37.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "5th October- Activity – Eat Right Millet Mela\nVenue- LAD, College, seminary hills ,Nagpur\nStall coordinators – Dr.Renuka Mainde, Dr.Kavita Bakshi, Dr.Rita Bhargava, Dr.Kavita Gupta, Vineeta Mehta Prachi Sawaikar, Batul Rubberstampwala,\nCollaborators – FDA, LAD College, IDA-NC, NetProfan, NC."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e30.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e31.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e32.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "2nd October- Activity – Poshan Mela at Mahindra & Mahindra\nVenue- Mahindra & Mahindra Hingna\nStall coordinators – Dr.Renuka Mainde, Dr.Kavita Bakshi, Dr.Rita Bhargava, Prachi Sawaikar, Chitranjan Yadav, Suvarmna Dhomle, Priya Chellani, Batul Rubberstampwala,\nCollaborators – Mahindra & Mahindra, IDA-NC, NetProfan, NC,FDA Nagpur"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e26.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e27.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e28.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e29.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "30th September- Activity – Adolescent Health session\nVenue- Saksham school. sitabuildi\nSpeakers – Adolescent health and menstrual hygiene and myths by Dr. Neha Bhargava\nMindful Eating by Dr. Rita Bhargava\nAttended by 8th and 9th std girls and their mothers.\nAround 100-120 students, teachers and mothers were present.\nCollaborators – Peace Foundation"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e24.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e25.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "30th September- Activity – CNE-World Heart Day\nVenue- Tuli International Hotel\nSpeakers – Recent trends in Cardiology by Dr. Nidheesh Mishra, Director New Era Hospital.\nMNT – CHF Ms.Shahina Sheikh, Dietitian Criticare Hospital, Nagpur\nChairperson- Dr. Meraj Shaikh and Dr. Rita Bhargava\nSponsorship- Sun pharma\nCollaborators –IDA-NC, Net-Profan-NC"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e21.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e22.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e23.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "30th September- Activity – World Heart Day Rally, talk, skit\nVenue- Flag off from Saksham school buildi to Maharajbagh zoo\nSpeakers – Inaugural address by Dr.Varun Bhargava, Flag off by\nMs.Kanchan Gadkari, Nutrition awareness talk by Dr.Rita Bhargava,\nSkit by Ms.Prachi Sawaikar and team of interns from Care Hospital, Nagpur\n550 children and 40 teachers from 20 schools along with the members participated in the World Heart day rally.\nSponsorship- Glenmark pharma-T-shirt members, cap children, snack boxes for all.\nCollaborators – Peace Foundation, Care Hospital, IDA-NC, FDA, Nagpur, Net-Profan-NC"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e17.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e18.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e19.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e20.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "13th September- Activity – Wellness talk and Nutriquiz\nVenue- Ashok Leyland,Bhandara\nSpeakers – Wellness Talk by Dr.Kavita Bakshi\nNutriquiz by Ms.Prachi Sawaikar\nCollaborators –IDA-NC"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e14.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e15.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e16.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "9th September- Activity – POSHAN MAAH Awareness talk at CIPS school for class 7/8th students and parents\nVenue- Central India Public school, kapsi, Nagpur\nSpeakers – Dr. Rita Bhargava\nCollaborators – Peace Foundation, Nagpur"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e12.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e13.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "1ST September- Activity – Inauguration of Poshan Maah\nTheme Awareness talk for nurses\nVenue – Care Hospital, Nagpur\nSpeakers – Awareness Talk by Dr.Rita Bhargava\nNutriquiz by Ms.Prachi Sawaikar\nCollaborators – Care Hospital, Nagpur"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e11.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "24th August –Workshop and lecture at Nutrition Bureau, Nagpur for PHN & Pediatric nurses from all over Maharashtra.\nSpeakers- Dr.Renuka Mainde – Millets superfood for future\nDr.Kavita Bakshī Women and Bone health.\nCollaborators –IDA-NC, NetProfan-NC.\n26th August – Nutrition Awareness session for MBA students\nVenue- Ambedkar College Nagpur\nSpeakers – Mr.Chitranjan Yadav\nMs.Malvika Fulwani\nCollaborators –IDA-NC, NetProfan-NC"
+      },
+      {
+        "type": "text",
+        "text": "6th July –Health and Well-being at Work and Food at Work\nSpeaker – Malvika Fulwani Nutritionist and Diabetes Educator\nVenue –Zim Laboratories, kalmeshwar, Nagpur\nApproximately 50 officer executives benefitted from the talk conducted to celebrate corporate wellness week.\nCollaborators –IDA-NC, NetProfan-NC,"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e8.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "1st July – CNE- Obesity, Nutrition and Meal replacement\nSpeakers – Dr. Sushil Lohiya –Obesity and Bariatric Surgery\nMs.Priti Janbadkar – , Nutrition and Meal replacement\nChairperson- Dr.Meraj Shaikh and Chitranjan Yadav\nAround 40 dietitians attended the program\nCollaborators –IDA-NC\nSponsored by Prohance-Hp"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e6.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "24th June – Let’s Talk and Discuss about Walnuts\nSpeakers – Dr.Meraj Shaikh- Heart Health\nNazneen Hussain –Nutrient Insight\nGuest address Shruti Gupta California Walnuts Commission\nChairperson- Dr.Renuka Mainde and Dr. Rita Bhargava\nAround 60 dietitians attended the program\nCollaborators –IDA-NC, NetProfan-NC,\nSponsored by California Walnuts Commission"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/e4.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "27th May – IAPEN Nagpur Chapter Launch meeting held at Hotel Centre point,\nInstallation as President Dr.Meraj Shaikh ,\nHon.Secretary Dr.Rita Bhargava\nSpeaker – Alternative Diets in Cancer Therapy by Dietitian\nShivshankar Timmanpyati , Chief Clinical\nNutritionist, TMH, Mumbai, Vice President IAPEN.\nChair persons Dr.Kamal Bhutada , Gargee Rai\nGuest of Honor- Dr.Sabiha Vali and DR. Nirmal Jaiswal.\nBook Launch Dietitian’s Ready Reckoner 2nd edition authored by\nDr.Rita Bhargava and Dr.Kavita Bakshi\nProgram was attended by 75 members and few media persons"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev9.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/nagpur-chapter/ev10.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Nashik Chapter",
+    "pageTitle": "IAPEN India Nashik Chapter",
     "slug": "nashik-chapter",
     "source": "https://iapenindia.org/nashik-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapen.nashik@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Sujit Chandratreya",
-        "details": "MD,DM,DNB(Endocrinology)",
+        "details": "MD,DM,DNB(Endocrinology)\n• First Endocrinologist in North Maharashtra.\n• Multiple distinctions in MBBS curriculum.\n• First Rank and DG Paranjape Gold medal in Pune University for MD medicine .\n• First Rank in Mumbai university in DM Endocrinology.\n• First Rank in India for DNB Endocrinology.\n• Winner of AV Gandhi Gold medal and Award worth 1 lakh for best research paper in India.\n• Winner of Hargobind scholarship for Abroad studies.\n• Multiple publications and presentations in Peer review journal and conferences.\n• Principal investigator in multiple prestigious multi national clinical research trials.\n• Presently practicing in Nashik with 70,000 patients database.",
         "image": "/images/chapters/nashik-chapter-1.jpg"
       },
       {
         "title": "Hon. Vice-President\nPooja Shirbhate",
-        "details": "",
+        "details": "• BSc( food and nutrition)\n• PGD( Dietetics) SNDT mumbai\n• Certified Diabetes Educator\n• Certified Yoga Teacher\n• Working as clinical nutritionist and corporate diet consultant",
         "image": "/images/chapters/nashik-chapter-2.jpg"
       },
       {
         "title": "Hon.Secretary\nMs Himani Puri",
-        "details": "",
+        "details": "• MSc (Foods and Nutrition), Certified Paediatric Nutritionist,\n• Certified Diabetes Educator and Sports Nutrition Advisor\n• Trained on use of FODMAP for IBD, Monash University\n• Her two athletes have represented India at the Tokyo Paralympics 2021. Has been Nutrition Advisor to Grandmaster Mr Vidit Gujrathi\n• Programme Officer : IAPEN Renal Nutrition Core Group\n• SEcretary, IAPEN, Nashik\n• Secretary, Nashik District, International Human Rights Organisation\n• Editor – Healthcare & Medicine for online bulletin IVTR\n• Member / Life Member : IAPEN , IDA, National Kidney Foundation (NKF), ISRNM, RSSDI, AIAARO\n• Regular Features on the National News channel ‘SAAM TV’ under the ‘Viral Satya’ Segment.\n• Has capsule programme ‘Health Tips’ aired on a local Community radio channel ‘Radio Vishwas 90.3’\n• Associated with Archery Association of India and conducted many Nutrition training workshops and sessions for the archery coaches and athletes across India, in collaboration with SAI – Sports Authority of India\n• Associated with PCI (Para Olympics Committee of India) as a part of Para Athletes Online Development Program\n• Delivered talks and conducted scientific sessions and workshops at many International and National Conferences\n• Published articles in many National Newsletters, Newspapers and Journal of National and International Repute",
         "image": "/images/chapters/nashik-chapter-3.jpg"
       },
       {
         "title": "Hon. Treasurer\nRishti Mehta",
-        "details": "",
+        "details": "• B.H.Sc. Nutrition and dietitics\n• PG in Functional foods & Nutraceuticals\n• Certified Diabetes educator\n• Certified Nutrigentics expert\n• Owner of Nutribeats diet clinic since 2017",
         "image": "/images/chapters/nashik-chapter-4.jpg"
       },
       {
         "title": "Executive Committee Member\nVishakha Gore",
-        "details": "",
+        "details": "• MSc Nutrition and Dietetics\n• Certified Diabetes Educator\n• Yoga teacher diploma\n• Now working as a Dietician at CNS Hospital and Shree Sai Baba Hospital,\n• Founder of Mitaahar The Way Of Eating\n• Working at SMRK college as lecturer on CHB",
         "image": "/images/chapters/nashik-chapter-5.jpg"
       },
       {
         "title": "Executive Committee Member\nNeha Lotankar",
-        "details": "",
+        "details": "• MSc Public health nutrition ( The maharaja sayajirao University baroda)\n• B.Sc foods and nutrition (SMRK college nashik)\n• Post Graduate certificate diploma in food quality assurance and quality control( Institute of good manufacturing practices of India, New Delhi)\n• 5 years of experience in corporate hospitals ( Apollo hospitals)\n• Currently freelancing in Nashik",
         "image": "/images/chapters/nashik-chapter-6.jpg"
       },
       {
         "title": "Executive Committee Member\nManjri Joshi",
-        "details": "",
+        "details": "• Qualified Clinical Dietitian\n• Masters Science and Nutrition\n• Certified diabetes educator\n• UGC SET\n• Diploma in naturopathy and yogic science\n• PG Dip. Functional foods and Nutracuticals\n• Certification in Bariatic nutrition\n• Certified in Gut Health\n• Dietitian for Down’s Syndrome Care association Nashik\n• Dietitian under Khelo India, Bhosala Miltary college, Nashik",
         "image": "/images/chapters/nashik-chapter-7.jpg"
       }
     ]
   },
   {
     "name": "Navi Mumbai Chapter",
+    "pageTitle": "IAPEN India Navi Mumbai Chapter",
     "slug": "navi-mumbai-chapter",
     "source": "https://iapenindia.org/navi-mumbai-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapennavimumbai@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Kailash Jawade",
@@ -1383,9 +3640,10 @@
   },
   {
     "name": "Patna Chapter",
+    "pageTitle": "IAPEN India Patna Chapter",
     "slug": "patna-chapter",
     "source": "https://iapenindia.org/patna-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiapatnachapter@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Anand Shankar",
@@ -1432,13 +3690,53 @@
         "details": "Assistant Dietitian at Indira Gandhi Institute of Medical Sciences (IGIMS), Patna.\nTen years of experience.\nQualification: M.Sc DFSM\nAdditional Qualification/Training:\n3 years Advance Diploma in Nutrition and Dietetics\nCertificate course in Child and nutrition care\nTraining at Apollo Hospitals group Ranchi\nMagadh Hospital Patna\nAward:\nBest employee of the year award (2013-14) at Paras Hmri Hospital\nProfessional Membership:\nIndian Dietetic Association\nIAPEN",
         "image": "/images/chapters/patna-chapter-9.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Events"
+      },
+      {
+        "type": "text",
+        "text": "IAPEN Patna Chapter launched on 26th March 2023, with a scientific session. Event was graced by Chief Guest Dr. Sahjanand Prasad Singh, Immediate Past National President, Indian Medical Association (IMA), Patna, Guest of honour Mr. Shivshankar Timmanpyati, Chief Dietitian, Tata Memorial Hospital, Mumbai, National Vice-President, IAPEN INDIA and our special Invitees Dr. Rajesh Goswami, Dr Ruma Goswami & Dr. Vikas Singh & our Chapter President Dr Anand Shankar. Event started with lamp lightening, chapter introduced by Dr. Supriya, Chapter Secretary."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/patna-chapter/e3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/patna-chapter/e4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/patna-chapter/e2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/patna-chapter/e6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/patna-chapter/e5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/patna-chapter/e1.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Prayagraj Chapter",
+    "pageTitle": "IAPEN India Prayagraj Chapter",
     "slug": "prayagraj-chapter",
     "source": "https://iapenindia.org/prayagraj-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiaprayagrajchapter@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDR NEETA VERMA",
@@ -1479,9 +3777,10 @@
   },
   {
     "name": "Puducherry Chapter",
+    "pageTitle": "IAPEN India Puducherry Chapter",
     "slug": "puducherry-chapter",
     "source": "https://iapenindia.org/puducherry-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenpuducherry@gmail.com",
     "members": [
       {
         "title": "President\nDr. Anusha Cherian",
@@ -1527,13 +3826,14 @@
   },
   {
     "name": "Pune Chapter",
+    "pageTitle": "IAPEN India Pune Chapter",
     "slug": "pune-chapter",
     "source": "https://iapenindia.org/pune-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenpunechapter@gmail.com",
     "members": [
       {
         "title": "President\nDr. Sanjay Agarwal",
-        "details": "Director, Aegle Clinic-Diabetes Care\nHead, Dept. of Medicine & Diabetes,\nRuby Hall Clinic\nSr. Consultant in Diabetes & Medicine,\nJehangir Hospital",
+        "details": "Director, Aegle Clinic-Diabetes Care\nHead, Dept. of Medicine & Diabetes, Ruby Hall Clinic\nSr. Consultant in Diabetes & Medicine, Jehangir Hospital\n• Fellow of the American College of Endocrinology\n• Fellow of American College of Physicians\n• Hon. Secretary, Governing Council of National RSSDI\n• Member, Editorial Board, BMJ Open Diabetes Research & Care Journal\n• Associate Editor, International Journal of Diabetes for Developing countries (IJDDC)\n• Member of Writing Committees for RSDDI Guidelines on:\n- Inpatient Management of Hyperglycemia\n- Consensus on Glucose Monitoring in Type 1 & 2 Diabetes\n- RSSDI-ESI Clinical Practice recommendations of Type 2 diabetes\n- Guidelines on management Diabetes and Heart Failure - Guidelines on management of Diabetes & Oral Health\n- Guidelines management of Diabetes & Thyroid disease\n• Author of book “ Clinical Atlas in Diabetes “\n• Chief Editor of RSSDI’s Insulin Monograph\n• Contributed chapters in various books\n• Actively involved as Principal Investigator in Landmark International Research Trials\n• Faculty at various National and International meetings\n• Mentor for the Postgraduate program",
         "image": "/images/chapters/pune-chapter-1.jpg"
       },
       {
@@ -1548,7 +3848,7 @@
       },
       {
         "title": "Executive Committee Member\nMs. Julie Dattani",
-        "details": "",
+        "details": "• Medical Yoga Therapist & Diabetic Educator\n• Work experience: 6 years\n• Life membership: IDA, IAPEN\n• Education qualification:\n2007 clinical nutrition through distance learning.\nIn 2008 completed Diploma in pharmacy.\n2010- Diploma in dietetics, Healy and nutrition.\n2011- Diploma in nutrition and health education from Indira Gandhi open uni.\n2012- Diabetic Educator (KEM Hospital).\n2013- Clinical research from MITCON.\n2014- Nutrigenomics certification.\n2016- Yoga teacher training course.\n• Currently working as a Medical yoga therapist and conducting YCB exams.",
         "image": "/images/chapters/pune-chapter-4.jpg"
       },
       {
@@ -1558,7 +3858,7 @@
       },
       {
         "title": "Executive Committee Member\nMs Sneha Raje",
-        "details": "",
+        "details": "• Education qualification: PGD SSN, CDE\n• Life Membership: IDA, IAPEN\n• Work experience: 15 years\n• Experience: Working with Genepath Diagnostics as GenClinicX Director Lifestyle Coaching,\nFounder of Buildnbond",
         "image": "/images/chapters/pune-chapter-6.jpg"
       },
       {
@@ -1600,9 +3900,10 @@
   },
   {
     "name": "Raipur Chapter",
+    "pageTitle": "IAPEN India Raipur CG Chapter",
     "slug": "raipur-chapter",
     "source": "https://iapenindia.org/raipur-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiaraipur@gmail.com",
     "members": [
       {
         "title": "President\nDr. Vishal Kumar\nCritical Care Head",
@@ -1668,9 +3969,10 @@
   },
   {
     "name": "Ranchi Chapter",
+    "pageTitle": "IAPEN India Ranchi (Jharkhand) Chapter",
     "slug": "ranchi-chapter",
     "source": "https://iapenindia.org/ranchi-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiaranchi@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. VINAY KUMAR DHANDHANIA",
@@ -1726,9 +4028,10 @@
   },
   {
     "name": "Sambhajinagar Chapter",
+    "pageTitle": "IAPEN India Chatrapati Sambhaji Nagar",
     "slug": "sambhajinagar-chapter",
     "source": "https://iapenindia.org/sambhajinagar-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapensambhajinagar@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr Anand Nikalje",
@@ -1779,28 +4082,29 @@
   },
   {
     "name": "Surat Chapter",
+    "pageTitle": "IAPEN India Surat Chapter",
     "slug": "surat-chapter",
     "source": "https://iapenindia.org/surat-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapensuratchapter@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Piyush DesaiI",
-        "details": "Designation: Consultant Diabetologist & Endocrinologist\nQualification: MBBS and MD from Government Medical College, Surat. Post graduate in diabetes and fellowship in endocrinology from Lilavati hospital, Mumbai. Postgraduate diploma in endocrinology from the University of South Wales, UK\nAssociation with other Societies: Member of the American Association of Clinical Endocrinologists\nAchievements :",
+        "details": "Designation: Consultant Diabetologist & Endocrinologist\nQualification: MBBS and MD from Government Medical College, Surat. Post graduate in diabetes and fellowship in endocrinology from Lilavati hospital, Mumbai. Postgraduate diploma in endocrinology from the University of South Wales, UK\nAssociation with other Societies: Member of the American Association of Clinical Endocrinologists\nAchievements :\n• Recipient of award for excellence in diabetes care by RSSDI in 2019\n• Conducting many phase 3-4 clinical trials and interested in clinical research in the field of diabetes and endocrinology.",
         "image": "/images/chapters/surat-chapter-1.jpg"
       },
       {
         "title": "Hon. Secretary\nDr. Shilpee Agrawal",
-        "details": "Designation: Assistant Professor, Department of Food & Nutrition, Vanita Vishram Women’s University, Surat\nQualification: Doctorate in Food and Nutrition, Master’s in Food, Nutrition and Dietetics, B.Ed., UGC-NET-JRF, ICMR-SRF, ICAR-JRF, Certified Diabetes Educator\nAssociation with other Societies: Club Coordinator - Indian Dietetic Association, Gujarat chapter, Surat club, Life member NSI, IAPEN, IDA, HSAI, IFSO, OSSI, EFI, NetProFan etc.\nAchievements :",
+        "details": "Designation: Assistant Professor, Department of Food & Nutrition, Vanita Vishram Women’s University, Surat\nQualification: Doctorate in Food and Nutrition, Master’s in Food, Nutrition and Dietetics, B.Ed., UGC-NET-JRF, ICMR-SRF, ICAR-JRF, Certified Diabetes Educator\nAssociation with other Societies: Club Coordinator - Indian Dietetic Association, Gujarat chapter, Surat club, Life member NSI, IAPEN, IDA, HSAI, IFSO, OSSI, EFI, NetProFan etc.\nAchievements :\n• Senior and Junior Research Fellowships, Indian Council of Medical Research (ICMR) India, 2012-2016.\n• Awarded Novo Nordisk Foundation Conference Grant for Paper presentation in Copenhagen, Denmark.\n• Completed International Course in Nutrition Research Methods under Bangalore Boston Nutrition Collaborative, SJRI - Bangalore.\n• Published various research papers in National and International journals.\n• Invited as a resource person for nutrition talks and as chairperson in workshops, symposium and conferences.",
         "image": "/images/chapters/surat-chapter-2.jpg"
       },
       {
         "title": "Hon.Treasurer\nRD. Minakshi Lahar",
-        "details": "",
+        "details": "• Clinical Registered Dietitian and Certified Diabetes Educator with 8 years of experience.\n• Formerly working in Unique Hospital, Surat, for the past 8years.\n• Currently practicing in Sarthi Hospital, Surat.\n• Received an award for “Excellence in clinical nutrition practice” district level.\n• Life member of IAPEN, IDA, and NetproFan.\n• Member of Surat Nutrition Club.",
         "image": "/images/chapters/surat-chapter-3.jpg"
       },
       {
         "title": "Executive Committee Member\nDr. Manish Akbari",
-        "details": "",
+        "details": "• Clinical Nutritionist and Certified Diabetes Educator with over 15 years of professional experience. He practices in Surat and Bardoli at Figure ‘n Fit clinic, which he co-manages with his wife, Dietitian Dhrupal Akbari.\n• Honored twice with the State-Level Excellence in Nutrition Entrepreneurship Award for his outstanding contribution to the field.\n• Life Member of IAPEN and IDA, and an active member of ESPEN, the Surat Nutrition Club, and AIAARO.\n• Holding a Diploma in ESPEN, he is deeply committed to evidence-based clinical nutrition, diabetes care, and community health promotion.",
         "image": "/images/chapters/surat-chapter-4.jpg"
       },
       {
@@ -1810,16 +4114,64 @@
       },
       {
         "title": "Executive Committee Member\nMs. Geeta Chandani",
-        "details": "Educational Qualification:",
+        "details": "Educational Qualification:\n• M.Sc (DFSM), PGDD, CFN\n• Certified Diabetes Educator\n• Completed RD internship from Dhiraj Hospital, Sumadeep , Wagodia, Vadodara\nWork Experience :\n• Currently working as Consultant Nutritionist, Bombay Maternity and Surgical Hospital, Althan, Surat — since 2014 with 14 years of experience.\n• Visiting Lecturer, Surat Government Nursing College — since 2018 with 8 years of academic experience.\n• Regional Programme Associate (Nutrition), Government of Gujarat — 2015 to 2018\n• Associated with IDA as Club coordinator, Surat Club, Gujarat chapter\n• Life member- NSI and NetProfan",
         "image": "/images/chapters/surat-chapter-6.jpg"
+      }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Event Photos"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_095311.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_100233.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_095357.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_100124.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_100009.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_100055.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_095822.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_095856.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/surat-chapter/img_20220718_095938.jpg",
+            "alt": ""
+          }
+        ]
       }
     ]
   },
   {
     "name": "Vadodara Chapter",
+    "pageTitle": "IAPEN India Vadodara Chapter",
     "slug": "vadodara-chapter",
     "source": "https://iapenindia.org/vadodara-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenvadodarachapter@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Sachin Wani",
@@ -1871,71 +4223,201 @@
         "details": "> Assistant Professor, Department of Nutrition and Dietetics, Parul Institute of Applied Sciences, Parul University\n> Masters in Clinical Nutrition and Dietetics at SNDT Women’s University, Mumbai\n> Bachelors in Food and Nutrition Hons. at The Maharaja Sayajirao University of Baroda, Vadodara",
         "image": "/images/chapters/vadodara-chapter-10.jpg"
       }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "VADODARA CHAPTER LAUNCH AND CME / CNE ACTIVITY REPORT"
+      },
+      {
+        "type": "text",
+        "text": "IAPEN INDIA: INDIA ASSOCIATION FOR PARENTERAL AND ENTERAL NUTRITION, VADODARA CHAPTER WAS LAUNCHED ON\nDATE: 29TH OCTOBER, 2023.\nTIME: 9.30AM TO 1PM\nVENUE: HCG CANCER CENTRE, VADODARA\nTOPIC: “NUTRITION AND CANCER PREVENTION”.\nTHE CME / CNE ACTIVITY ORGANISED JOINTLY WITH HCG CANCER CENTRE.\nSPEAKERS: DR. MONA SHAH, SENIOR ENDOCRINOLOGIST, DR. RITESH SHAH INTENSIVIST, STERLING HOSPITAL, DR. JITENTDRA MISTRY, GI SURGEON, DR. SHISHIR SHAH, SURGICAL ONCOLOGIST, CHIEF DIETITIAN MS. JIGNA PATEL, SHREE KRISHNA HOSPITAL KARAMSAD\nTHE GLIMPSES OF THE EVENT\nINVITED SPEAKERS"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vadodara-chapter/e8.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "TEAM OF IAPEN INDIA VADODARA CHAPTER"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vadodara-chapter/e7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vadodara-chapter/e6.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vadodara-chapter/e3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vadodara-chapter/e4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vadodara-chapter/e2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vadodara-chapter/e1.jpg",
+            "alt": ""
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Varanasi Chapter",
+    "pageTitle": "IAPEN India Varanasi Chapter",
     "slug": "varanasi-chapter",
     "source": "https://iapenindia.org/varanasi-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenvns2020@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. Alankar Tiwari",
-        "details": "",
+        "details": "• MBBS and MD ( Medicine) from Moti Lal Nehru Medical College, Prayagraj\n• DM Endocrinology and Human Metabolism from Lala Lajpat Rai Memorial Medical College, Meerut\n• Currently working as a Consultant Endocrinologist & Diabetologist at Apex Super specialty Hospital, Varanasi.\n• Published 22 research papers, case reports and abstracts in various peer-reviewed national and international journals\n• Member of ESI, API, RSSDI, UPDA, UPAPI",
         "image": "/images/chapters/varanasi-chapter-1.jpg"
       },
       {
         "title": "Hon. Vice-President\nMrs. Rekha Gupta",
-        "details": "",
+        "details": "• Certified Diabetic Educator Certified by International Diabetes Federation (IDF).\n• Registered Pharmacist with Pharmacy council of India\n• Member American Association of Diabetes Educators\n• President Varanasi Diabetes Association\n• Runs her own clinic – Rekha Diet Clinic",
         "image": "/images/chapters/varanasi-chapter-2.jpg"
       },
       {
         "title": "Hon.Secretary\nMrs. Manjari Bajpai",
-        "details": "",
+        "details": "• Consultant Dietitian at D.S. Research Centre, Varanasi\n• Chief Programme officer- Bone Health and Nutrition- An IAPEN India Core Group\n• Previous work experience at Lilavati Hospital and Saifee hospital, Mumbai\n• Certified member of IDA and NSI",
         "image": "/images/chapters/varanasi-chapter-3.jpg"
       },
       {
         "title": "Hon. Joint Secretary\nDr. Sunita Asthana",
-        "details": "",
+        "details": "• Working as Consultant Dietician at Galaxy Hospital, Varanasi.\n• Worked as Dietician at Ashirvad Maternity Hospital and Heritage Hospital, Varanasi.\n• Worked as a Director, Center of Home science, Deptt of Home science in M.M.(PG College) Satikund, kankhal,Haridwar.\n• Having experience of teaching UG, PG students and Nurses training.\n• Completed Nutritional Support in Cancer and Nutritional Support in Renal Diseases (ESPN Life Long Learning Programme, July 7th , 2019)",
         "image": "/images/chapters/varanasi-chapter-4.jpg"
       },
       {
         "title": "Hon. Treasurer\nMrs. Mansha Singh",
-        "details": "",
+        "details": "• Practising Dietician, Oriana Hospital\n• Consulting dietitian and clinical Nutritionist at ORIANA Hospital, Varanasi\n• Consulting Dietician at the Vemuri Shri Ramchandra Murthy Kusumamba Memorial Trust Charity Health Centre, Varanasi.\n• Consulting Dietician at the Swastik Surgical and Multispecialty Hospital, Shivpur Varanasi since Sept.2011 till today.\n• Consulting Dietician at SHEFA Physiotherapy, Obesity Cure and Rehabilitation Center, Nawabganj, Durgakund, Varanasi.\n• Member of IDA, ICN, SRNM",
         "image": "/images/chapters/varanasi-chapter-5.jpg"
       },
       {
         "title": "Executive Committee Member\nMrs.Vandana Arora",
-        "details": "",
+        "details": "• Clinical Nutritionist at Surya Speciality Hospital, Mehmoorganj.\n• Dietitian at Holistic Diabetic Clinic\n• Personal Diet Planner of World Guinness record Holder - Soni Chaurasiya (124hrs Kathak Dancer)",
         "image": "/images/chapters/varanasi-chapter-6.jpg"
       },
       {
         "title": "Executive Committee Member\nMrs. Nutan Singh",
-        "details": "",
+        "details": "• Consultant Dietitian at Opal hospital\n• Consultant Dietician at Shreya Hospital\n• Certified Yoga Trainer",
         "image": "/images/chapters/varanasi-chapter-7.jpg"
       },
       {
         "title": "Executive Committee Member\nMs. Aanchal Singh",
-        "details": "",
+        "details": "• Clinical Dietician at CTVS Deptt. BHU\n• Founder and Lifestyle Consultant at Fit- o - Diet Clinic\n• Certified Yoga Trainer\n• Certified Member of IDA and ADE",
         "image": "/images/chapters/varanasi-chapter-8.jpg"
       },
       {
         "title": "Executive Committee Member\nMrs. Renu Srivastava",
-        "details": "",
+        "details": "• Consultant Dietician at Jamuna Seva Sadan and Research Centre\n• Certified Member of IDA",
         "image": "/images/chapters/varanasi-chapter-9.jpg"
       },
       {
         "title": "Executive Committee Member\nMrs. Nisha Prakash",
-        "details": "",
+        "details": "• Consultant Dietitian -- Freelancer\n• Certification course in Obesity, Diabetes and Cardiovascular Diseases from University of Sydney\n• Certified Diabetes Educator",
         "image": "/images/chapters/varanasi-chapter-10.jpg"
+      }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Health Awareness Programme for Mother's Day"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0087.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0091.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0096.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0123.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0125.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0161.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0175.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0184.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0190.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0199.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0201.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0203.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0227.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0230.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/varanasi-chapter/img-20220509-wa0086.jpg",
+            "alt": ""
+          }
+        ]
       }
     ]
   },
   {
     "name": "Vijayawada Chapter",
+    "pageTitle": "IAPEN India Vijayawada Chapter",
     "slug": "vijayawada-chapter",
     "source": "https://iapenindia.org/vijayawada-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenindiavijayawada@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. K. Tulasiram",
@@ -1991,9 +4473,10 @@
   },
   {
     "name": "Vizag Chapter",
+    "pageTitle": "IAPEN India Vizag Chapter",
     "slug": "vizag-chapter",
     "source": "https://iapenindia.org/vizag-chapter/",
-    "email": "info@iapenindia.org",
+    "email": "iapenvizag@gmail.com",
     "members": [
       {
         "title": "Hon. President\nDr. S Sai Rama Devi",
@@ -2034,6 +4517,310 @@
         "title": "Executive Committee Member\nFarida Sultana",
         "details": "Clinical Dietician with an MSc in Food Nutrition and Dietetics from Andhra University, Vizag.\nI have 10 years of experience as clinical Dietician at multi-speciality hospital in Visakhapatnam and have actively participated in national seminars in the field of nutrition and dietetics.",
         "image": "/images/chapters/vizag-chapter-8.jpg"
+      }
+    ],
+    "activities": [
+      {
+        "type": "heading",
+        "text": "Events"
+      },
+      {
+        "type": "heading",
+        "text": "Activities conducted in year 2025"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/a1.jpg",
+            "alt": "",
+            "caption": "World kidney day March 12th, 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a2.jpg",
+            "alt": "",
+            "caption": "Awareness talk on healthy diet & life style management, April 25th 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a3.jpg",
+            "alt": "",
+            "caption": "Cooking competition, September 2nd 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a4.jpg",
+            "alt": "",
+            "caption": "Workshop on feeding techniques, September 3rd 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a5.jpg",
+            "alt": "",
+            "caption": "Poster competition, September 4th 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a6.jpg",
+            "alt": "",
+            "caption": "Healthy fusion foods display September 5th 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a7.jpg",
+            "alt": "",
+            "caption": "Quiz competition, September 6th 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a8.jpg",
+            "alt": "",
+            "caption": "School visit September 7th 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a9.jpg",
+            "alt": "",
+            "caption": "Diet & healthy life style for veterans, 24th October 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a10.jpg",
+            "alt": "",
+            "caption": "World diabetes day,14th November 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a11.jpg",
+            "alt": "",
+            "caption": "Anti obesity day, 26th November 2025"
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/a12.jpg",
+            "alt": "",
+            "caption": "World AIDS Day, December 1st 2025"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Conducted Awareness Activities On Behalf Of World Obesity Day At Apollo Hospitals Vishakapatnam\nGLIMPSES OF THE EVENT"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/ob1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/ob5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/ob2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/ob3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/ob4.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Conducted Awareness Activities On Behalf Of World Kidney Day At Apollo Hospitals Vishakapatnam\nGLIMPSES OF THE EVENT"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/kd3-1.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Report On CME On ICU Nutrition 2023"
+      },
+      {
+        "type": "text",
+        "text": "The Above Cme Was Conduction At Gimser Vishakapatnam\nGLIMPSES OF THE EVENT"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/ev1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/ev2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/ev3.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "NATIONAL NUTRITIONAL WEEK 2023"
+      },
+      {
+        "type": "text",
+        "text": "NATIONAL NUTRITIONAL WEEK is celebrated every year from SEPTEMBER 1st to 7th, to spread awareness about the importance of nutrition.\nWe created awareness among the public & patients on this year theme i.,e\n“Suposhit bharat, sakshar bharat, sashakt bharat”. & on importance of millets.\nGLIMPSES OF THE EVENT AT APOLLO"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/e1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e3.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e4.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e5.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e6.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e7.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e8.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e9.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "World Breast Feeding Week 2023"
+      },
+      {
+        "type": "text",
+        "text": "World breast feeding week is celebrated every year from August 1st to 7th, to spread awareness about the importance of breast feeding.\nWe created awareness among the public on this year theme i.,e\nENABLING BREASTFEEDING MAKING A DIFFERENCE FOR WORKING PARENTS\nUNDER IAPEN VIZAG CHAPTER WE HAVE CONDUCTED FEW ACTIVITIES AT APOLLO HOSPITALS & GITAM INSTITUTE OF MEDICAL SCIENCE AND RESEARCH\nGLIMPSES OF THE EVENT AT APOLLO"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/e10.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e11.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/e12.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "GLIMPSES OF THE EVENT AT GITAM INSTITUTE OF MEDICAL SCIENCE AND RESEARCH"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/e13.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Conducted nutrition awareness talk on behalf of World diabetes day at Aurobindo Pharma Limited A PYDI Bhimavaram, Vishakhapatnam.\nGlimpses of Event"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/v2.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/v1.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Conducted Nutrition Awareness Activities Of World Diabetes Day At Apollo Hospitals, Vishakhapatnam.\nGlimpses of Event"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/g1.jpg",
+            "alt": ""
+          },
+          {
+            "src": "/images/chapters/events/vizag-chapter/g2.jpg",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Conducted Nutrition Awareness Activities Of World Diabetes Day At Gitam University, Vishakhapatnam.\nGlimpses of Event"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/chapters/events/vizag-chapter/g3.jpg",
+            "alt": ""
+          }
+        ]
       }
     ]
   }

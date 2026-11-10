@@ -212,10 +212,25 @@
   padding-left: 17px;
 }
 
+/* Long menus (Chapters) lay out in columns so every item fits without scrolling. */
+.dropdown-menu-wide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(640px, calc(100vw - 48px));
+  left: 50%;
+  translate: -50% 0;
+}
+
+.dropdown-menu-wide .dropdown-item {
+  padding: 8px 12px;
+}
+
 .header-register-btn {
   min-height: 42px;
   margin-left: 12px;
   padding-inline: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
   border-radius: 999px;
   box-shadow: 0 8px 22px rgba(201, 155, 59, 0.22);
 }
@@ -316,6 +331,11 @@
   max-height: 300px;
   padding: 6px 0;
   margin-top: 4px;
+}
+
+.mobile-dropdown-scroll.show {
+  max-height: 50vh;
+  overflow-y: auto;
 }
 
 .mobile-dropdown-item {

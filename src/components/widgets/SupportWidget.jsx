@@ -13,10 +13,7 @@ import {
   ThumbsDown,
   Sparkles,
   Bot,
-  Check,
   ArrowRight,
-  RefreshCw,
-  HelpCircle,
 } from 'lucide-react';
 import { useDemo } from '@/context/DemoContext';
 
@@ -47,16 +44,14 @@ const KNOWLEDGE_BASE = {
     ],
   },
   chapters: [
-    'Delhi NCR',
+    'Delhi',
     'Mumbai',
     'Pune',
-    'Bangalore',
+    'Bangaluru',
     'Chennai',
     'Hyderabad',
-    'Kolkata',
-    'Kochi',
+    'Cochin',
     'Nagpur',
-    'Jaipur',
     'Ahmedabad',
     'Bhopal',
     'Lucknow',
@@ -172,7 +167,6 @@ const SupportWidget = () => {
 
   const [inputText, setInputText] = useState('');
   const [isThinking, setIsThinking] = useState(false);
-  const [reasoningSteps, setReasoningSteps] = useState([]);
   const [isRecording, setIsRecording] = useState(false);
   const [followUps, setFollowUps] = useState([
     'How much is Life Membership?',
@@ -222,49 +216,31 @@ const SupportWidget = () => {
       setChatOpened(true);
       setIsThinking(true);
 
-      const steps = [
-        { label: 'Analyzing request semantic context...', status: 'done' },
-        { label: 'Routing to Mumbai Chapter support queue...', status: 'pending' },
-        { label: 'Awaiting coordinator connection...', status: 'waiting' },
-      ];
-      setReasoningSteps(steps);
-
       const timer = setTimeout(() => {
-        setReasoningSteps((prev) => [
-          prev[0],
-          { ...prev[1], status: 'done' },
-          { ...prev[2], status: 'pending' },
-        ]);
+        setIsThinking(false);
+        setSupportState('live');
 
-        const timer2 = setTimeout(() => {
-          setIsThinking(false);
-          setReasoningSteps([]);
-          setSupportState('live');
+        const systemMsg = {
+          id: generateMsgId('system'),
+          sender: 'system',
+          text: '🛡️ **Secure Chat established with Dr. Ritu Sinha (Mumbai Chapter Coordinator)**',
+          timestamp: getTimestamp(),
+          customType: 'none',
+          feedback: null,
+        };
 
-          const systemMsg = {
-            id: generateMsgId('system'),
-            sender: 'system',
-            text: '🛡️ **Secure Chat established with Dr. Ritu Sinha (Mumbai Chapter Coordinator)**',
-            timestamp: getTimestamp(),
-            customType: 'none',
-            feedback: null,
-          };
+        const coordinatorMsg = {
+          id: generateMsgId('assistant'),
+          sender: 'assistant',
+          text: 'Hello! I am Dr. Ritu Sinha, the Mumbai Chapter Coordinator. I received your request for human assistance. How can I support your clinical or membership queries today?',
+          timestamp: getTimestamp(),
+          customType: 'none',
+          feedback: null,
+        };
 
-          const coordinatorMsg = {
-            id: generateMsgId('assistant'),
-            sender: 'assistant',
-            text: 'Hello! I am Dr. Ritu Sinha, the Mumbai Chapter Coordinator. I received your request for human assistance. How can I support your clinical or membership queries today?',
-            timestamp: getTimestamp(),
-            customType: 'none',
-            feedback: null,
-          };
-
-          setMessages((prev) => [...prev, systemMsg, coordinatorMsg]);
-          addToast('Live coordinator connected successfully', 'success');
-        }, 1500);
-
-        return () => clearTimeout(timer2);
-      }, 1500);
+        setMessages((prev) => [...prev, systemMsg, coordinatorMsg]);
+        addToast('Live coordinator connected successfully', 'success');
+      }, 2000);
 
       return () => clearTimeout(timer);
     }
@@ -455,62 +431,18 @@ const SupportWidget = () => {
     setFollowUps(getFollowUpQuestions(intent));
 
     return new Promise((resolve) => {
-      // Define agentic reasoning steps based on intent
-      const steps = [
-        { label: 'Ingesting user query & parsing semantic intent...', status: 'pending' },
-        { label: 'Searching local knowledge vector index...', status: 'waiting' },
-        { label: `Invoking domain tool: get_${intent}_data()...`, status: 'waiting' },
-        { label: 'Synthesizing knowledge graph output...', status: 'waiting' },
-        { label: 'Formatting interactive markdown cards...', status: 'waiting' },
-      ];
-
-      setReasoningSteps(steps);
       setIsThinking(true);
 
-      // Simulate step-by-step execution to showcase "Agentic Reasoning"
+      // Brief typing pause so the reply doesn't appear jarringly instantly
       setTimeout(() => {
-        setReasoningSteps((prev) => [
-          { ...prev[0], status: 'done' },
-          { ...prev[1], status: 'pending' },
-          ...prev.slice(2),
-        ]);
+        setIsThinking(false);
 
-        setTimeout(() => {
-          setReasoningSteps((prev) => [
-            prev[0],
-            { ...prev[1], status: 'done' },
-            { ...prev[2], status: 'pending' },
-            ...prev.slice(3),
-          ]);
+        let text;
+        let customType = 'none';
 
-          setTimeout(() => {
-            setReasoningSteps((prev) => [
-              prev[0],
-              prev[1],
-              { ...prev[2], status: 'done' },
-              { ...prev[3], status: 'pending' },
-              prev[4],
-            ]);
-
-            setTimeout(() => {
-              setReasoningSteps((prev) => [
-                prev[0],
-                prev[1],
-                prev[2],
-                { ...prev[3], status: 'done' },
-                { ...prev[4], status: 'pending' },
-              ]);
-
-              setTimeout(() => {
-                setIsThinking(false);
-                setReasoningSteps([]);
-
-                let text;
-                let customType = 'none';
-
-                switch (intent) {
-                  case 'membership':
-                    text = `### 💳 IAPEN India Membership Plans
+        switch (intent) {
+          case 'membership':
+            text = `### 💳 IAPEN India Membership Plans
 We offer permanent **Lifetime Membership** for clinical professionals and a **Yearly Renewal** academic membership for students:
 * **Life Member (Doctors)**: **₹5,000** (One-Time) — Physicians, surgeons, and specialists.
 * **Life Member (Allied Health)**: **₹3,000** (One-Time) — Dietitians, nurses, and pharmacists.
@@ -521,10 +453,10 @@ We offer permanent **Lifetime Membership** for clinical professionals and a **Ye
 * **10% discount** on all ESPEN LLL training courses.
 * Rights to vote and contest in association elections (for Life Members).
 * Access to publish clinical insights in our bi-monthly newsletter **INSIGHT**.`;
-                    customType = 'membership';
-                    break;
-                  case 'courses':
-                    text = `### 📚 ESPEN Lifelong Learning (LLL) Courses
+            customType = 'membership';
+            break;
+          case 'courses':
+            text = `### 📚 ESPEN Lifelong Learning (LLL) Courses
 Coordinated by IAPEN India in collaboration with the **European Society for Clinical Nutrition and Metabolism (ESPEN)**. 
 
 The LLL program provides a standardized, internationally recognized curriculum in clinical nutrition:
@@ -534,47 +466,48 @@ The LLL program provides a standardized, internationally recognized curriculum i
 * **Teacher Training (T-LLL)**: Advanced teaching accreditation for senior practitioners.
 
 *Note: IAPEN members receive a 10% discount on registration fees.*`;
-                    customType = 'courses';
-                    break;
-                  case 'chapters':
-                    text = `### 🌐 IAPEN India Active Chapters
+            customType = 'courses';
+            break;
+          case 'chapters':
+            text = `### 🌐 IAPEN India Active Chapters
 IAPEN India maintains **over 35 active regional chapters** across major metropolitan hubs and cities, serving as local centers for CNE updates and clinical workshops:
-* **North Zone**: Delhi NCR, Jaipur, Lucknow, Chandigarh
-* **West Zone**: Mumbai, Pune, Nagpur, Ahmedabad, Bhopal
-* **South Zone**: Bangalore, Chennai, Hyderabad, Kochi, Coimbatore
-* **East Zone**: Kolkata
+* **North Zone**: Chandigarh, Delhi, Etawah, Faridabad, Lucknow, Ludhiana, Meerut, Prayagraj, Varanasi
+* **West Zone**: Ahmedabad, Mumbai, Nagpur, Nashik, Navi Mumbai, Pune, Sambhajinagar, Surat, Vadodara
+* **Central Zone**: Bhopal, Indore, Raipur
+* **South Zone**: Bangaluru, Chennai, Cochin, Coimbatore, Hyderabad, Kannur, Mangaluru, Puducherry, Vijayawada, Vizag
+* **East Zone**: Bhubaneswar, Guwahati, Patna, Ranchi
 
-You can search regional coordinator details, contact info, and upcoming local seminars on our [Chapters Directory](/chapters).`;
-                    customType = 'chapters';
-                    break;
-                  case 'journal':
-                    text = `### 📰 Publications & Scientific Journals
+Open any chapter from the **Chapters** menu at the top of the page to see its office bearers, committee members and contact email.`;
+            customType = 'chapters';
+            break;
+          case 'journal':
+            text = `### 📰 Publications & Scientific Journals
 I have indexed IAPEN India's active scientific catalogs:
 1. **Indian Journal of Parenteral and Enteral Nutrition (IJPEN)**: Our peer-reviewed quarterly journal presenting original research, audits, and clinical guidelines.
 2. **INSIGHT Newsletter**: Our bi-monthly publication featuring blogs, case studies, and letters from members.
 
 *Note: All registered members receive free online access to the IJPEN digital portal. For article submission guidelines, visit the [Journal Page](/journal).*`;
-                    break;
-                  case 'events':
-                    text = `### 📅 Events & National Congress
+            break;
+          case 'events':
+            text = `### 📅 Events & National Congress
 Check out IAPEN India's primary educational events:
 * **${KNOWLEDGE_BASE.events.flagship}**: Our premier annual clinical nutrition congress featuring international keynote speakers, panel discussions, and scientific poster presentations.
 * **CNE Webinars & Workshops**: Over 25 localized clinical updates conducted by regional chapters throughout the year.
 
 *Select the relevant event below or view timetables on the [Events Page](/events).*`;
-                    customType = 'events';
-                    break;
-                  case 'contact':
-                    text = `### ✉️ Contact IAPEN India Headquarters
+            customType = 'events';
+            break;
+          case 'contact':
+            text = `### ✉️ Contact IAPEN India Headquarters
 Feel free to reach out to the national office coordinator for administrative help:
 * 📧 **Email Support**: [info@iapenindia.org](mailto:info@iapenindia.org)
 * 🕒 **Operational Hours**: Monday to Friday (10:00 AM – 6:00 PM IST)
 * 🏢 **Headquarters**: Clinical Nutrition Division, IAPEN India National Office
 
 *For quick local assistance, please connect with your nearest coordinator on the [Contact Page](/contact).*`;
-                    break;
-                  case 'greetings':
-                    text = `### 👋 Welcome to IAPEN Copilot!
+            break;
+          case 'greetings':
+            text = `### 👋 Welcome to IAPEN Copilot!
 I am your intelligent assistant. I am equipped to query our database to guide you through:
 1. **💳 Membership**: Pricing tiers, perks, and online registration.
 2. **📚 LLL Courses**: ESPEN course credits and teacher criteria.
@@ -583,10 +516,10 @@ I am your intelligent assistant. I am equipped to query our database to guide yo
 5. **✉️ Support**: Contact coordinates and office hours.
 
 How can I help you move forward today?`;
-                    break;
-                  default:
-                    text = `🔍 **No exact database match found.**
-I ran a semantic query across the database for **"${query}"** but couldn't find a direct record. 
+            break;
+          default:
+            text = `🔍 **No exact database match found.**
+I couldn't find a direct answer for **"${query}"**.
 
 Would you like to try one of these standard queries?
 * **Membership fees and benefits**
@@ -595,14 +528,10 @@ Would you like to try one of these standard queries?
 * **Upcoming conference details**
 
 *Alternatively, you can email our administrative team at [info@iapenindia.org](mailto:info@iapenindia.org) or visit the [Contact Page](/contact).*`;
-                }
+        }
 
-                resolve({ text, customType });
-              }, 400);
-            }, 500);
-          }, 600);
-        }, 400);
-      }, 500);
+        resolve({ text, customType });
+      }, 700);
     });
   };
 
@@ -631,10 +560,6 @@ Would you like to try one of these standard queries?
     // Check if custom API endpoint is defined
     if (apiEndpoint) {
       setIsThinking(true);
-      setReasoningSteps([
-        { label: `Connecting gateway to API: ${apiEndpoint}...`, status: 'pending' },
-        { label: 'Awaiting response stream...', status: 'waiting' },
-      ]);
 
       try {
         const response = await fetch(apiEndpoint, {
@@ -643,14 +568,8 @@ Would you like to try one of these standard queries?
           body: JSON.stringify({ message: userText, history: messages }),
         });
 
-        setReasoningSteps((prev) => [
-          { ...prev[0], status: 'done' },
-          { ...prev[1], status: 'pending' },
-        ]);
-
         const data = await response.json();
         setIsThinking(false);
-        setReasoningSteps([]);
 
         const assistantMsg = {
           id: generateMsgId('assistant'),
@@ -665,7 +584,6 @@ Would you like to try one of these standard queries?
       } catch (err) {
         console.error('API Gateway connection error:', err);
         setIsThinking(false);
-        setReasoningSteps([]);
         const errorMsg = {
           id: generateMsgId('assistant-error'),
           sender: 'assistant',
@@ -789,11 +707,15 @@ Would you like to try one of these standard queries?
             Check schedules, register for live modules, or query certification requirements:
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <Link to="/courses" onClick={() => setIsOpen(false)} className="chat-card-btn teal-btn">
-              ESPEN LLL Schedule <ArrowRight size={14} style={{ marginLeft: '4px' }} />
+            <Link
+              to="/espen-lll-courses"
+              onClick={() => setIsOpen(false)}
+              className="chat-card-btn teal-btn"
+            >
+              ESPEN LLL Courses <ArrowRight size={14} style={{ marginLeft: '4px' }} />
             </Link>
             <Link
-              to="/courses#t-lll"
+              to="/espen-eligibility-for-t-lll"
               onClick={() => setIsOpen(false)}
               className="chat-card-btn secondary"
             >
@@ -943,35 +865,13 @@ Would you like to try one of these standard queries?
               </div>
             ))}
 
-            {/* Bouncing Dots typing bubble when reasoning */}
+            {/* Bouncing dots typing bubble while a reply is pending */}
             {isThinking && (
               <div className="support-message-row assistant">
                 <div className="support-message-bubble typing-indicator">
                   <span className="dot"></span>
                   <span className="dot"></span>
                   <span className="dot"></span>
-                </div>
-              </div>
-            )}
-
-            {/* Simulated Live Reasoning Steps */}
-            {isThinking && reasoningSteps.length > 0 && (
-              <div className="agentic-reasoning-container">
-                <div className="reasoning-header">
-                  <RefreshCw size={12} className="reasoning-step-icon pending" />
-                  Agent Reasoning Process
-                </div>
-                <div className="reasoning-steps">
-                  {reasoningSteps.map((step, idx) => (
-                    <div key={idx} className={`reasoning-step ${step.status}`}>
-                      <div className="reasoning-step-icon">
-                        {step.status === 'done' && <Check size={12} className="done" />}
-                        {step.status === 'pending' && <RefreshCw size={12} className="pending" />}
-                        {step.status === 'waiting' && <HelpCircle size={12} className="waiting" />}
-                      </div>
-                      <span className="reasoning-step-text">{step.label}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
             )}

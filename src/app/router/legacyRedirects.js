@@ -40,7 +40,6 @@ export const legacyChapterSlugs = [
   'hyderabad-chapter',
   'indore-chapter',
   'kannur-chapter',
-  'kolkata-chapter',
   'lucknow-chapter',
   'ludhiana-chapter',
   'mangaluru-chapter',
@@ -97,10 +96,6 @@ export const legacyPathRedirects = [
   { from: '/about-us', to: '/about' },
   { from: '/contact-us', to: '/contact' },
   { from: '/refund_returns', to: '/refund-policy' },
-  { from: '/register-now', to: '/membership#register' },
-  { from: '/espen-lll-courses', to: '/courses#espen-lll' },
-  { from: '/espen-membership', to: '/courses#espen-membership' },
-  { from: '/espen-eligibility-for-t-lll', to: '/courses#t-lll' },
   { from: '/gi-core-group', to: '/core-groups/gastrointestinal-nutrition' },
   { from: '/dashboard', to: '/membership' },
 ];

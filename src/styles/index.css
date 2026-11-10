@@ -22,9 +22,9 @@
 @import './layout/footer.css';
 @import './components/floating-socials.css';
 @import './components/support-widget.css';
+@import './components/modal.css';
 @import './pages/about.css';
-@import './pages/chapters.css';
-@import './pages/core-groups.css';
+@import './components/search-filter.css';
 @import './pages/directory-detail.css';
 @import './pages/resources.css';
 @import './pages/membership.css';

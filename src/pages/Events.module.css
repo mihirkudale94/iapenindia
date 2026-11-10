@@ -161,94 +161,32 @@
   line-height: 1.75;
 }
 
+/* Gallery grid — mirrors the Elementor image gallery on iapenindia.org/events/
+   (4 columns, 3:2 "medium" thumbnails, 18px spacing). */
 .galleryGrid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 90px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
-.galleryCard {
-  position: relative;
-  grid-column: span 4;
-  grid-row: span 4;
+.galleryItem {
+  display: block;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  padding: 0;
-  border: 0;
   background: #d8dee0;
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
-.card1,
-.card8 {
-  grid-column: span 7;
-  grid-row: span 5;
-}
-
-.card2,
-.card9 {
-  grid-column: span 5;
-  grid-row: span 5;
-}
-
-.card6 {
-  grid-column: span 8;
-}
-
-.galleryCard img {
+.galleryItem img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: transform 600ms cubic-bezier(0.2, 0.65, 0.3, 1);
 }
 
-.galleryCard:hover img,
-.galleryCard:focus-visible img {
-  transform: scale(1.04);
-}
-
-.galleryCard:focus-visible {
+.galleryItem:focus-visible {
   outline: 3px solid #c99b3b;
-  outline-offset: 4px;
-}
-
-.cardShade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(2, 15, 24, 0.58));
-  opacity: 0.7;
-  transition: opacity 200ms ease;
-}
-
-.galleryCard:hover .cardShade {
-  opacity: 1;
-}
-
-.expandIcon {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 50%;
-  background: rgba(4, 24, 38, 0.28);
-  color: #fff;
-  opacity: 0;
-  transform: translateY(6px);
-  backdrop-filter: blur(8px);
-  transition:
-    opacity 200ms ease,
-    transform 200ms ease;
-}
-
-.galleryCard:hover .expandIcon,
-.galleryCard:focus-visible .expandIcon {
-  opacity: 1;
-  transform: translateY(0);
+  outline-offset: 3px;
 }
 
 .archiveNote {
@@ -269,80 +207,163 @@
   background: #b8c0c3;
 }
 
+/* Lightbox — mirrors the Elementor lightbox slideshow used on the original site. */
 .lightbox {
   position: fixed;
   inset: 0;
   z-index: 10000;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(237, 237, 237, 0.9);
+  user-select: none;
+  outline: none;
+  animation: fadeIn 200ms ease both;
+}
+
+.lightbox:fullscreen {
+  background: #000;
+}
+
+.lightboxHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px 15px 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent);
+}
+
+.counter {
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolbar button {
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
-  padding: 54px 90px;
-  background: rgba(2, 13, 22, 0.96);
-  backdrop-filter: blur(14px);
-  animation: fadeIn 180ms ease both;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: color 150ms ease;
 }
 
-.lightboxFigure {
-  width: min(1120px, 82vw);
-  margin: 0;
+.toolbar button:hover,
+.toolbar button[aria-pressed='true'],
+.toolbar button[aria-expanded='true'] {
+  color: #fff;
 }
 
-.lightboxFigure img {
-  width: 100%;
-  max-height: calc(100vh - 150px);
+.toolbar button:focus-visible,
+.lightboxArrow:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.shareMenu {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 150ms ease both;
+}
+
+.shareMenu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: rgba(237, 237, 237, 0.9);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.shareMenu a:hover {
+  color: #fff;
+}
+
+.viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  height: 100%;
+  transition: transform 500ms ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 80px;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
   display: block;
   object-fit: contain;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  cursor: grab;
+  transition: transform 300ms ease;
+  pointer-events: auto;
 }
 
-.lightboxFigure figcaption {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 16px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.slide img.zoomed {
+  cursor: move;
+  transition: none;
 }
 
-.closeButton,
 .lightboxArrow {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  top: 50%;
+  z-index: 3;
+  width: 60px;
+  height: 100px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
-  color: #fff;
-  cursor: pointer;
-  transition:
-    background 180ms ease,
-    border-color 180ms ease;
-}
-
-.closeButton:hover,
-.lightboxArrow:hover {
-  border-color: rgba(255, 255, 255, 0.65);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.closeButton {
-  top: 24px;
-  right: 24px;
-}
-
-.lightboxArrow {
-  top: 50%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(237, 237, 237, 0.9);
   transform: translateY(-50%);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.lightboxArrow:hover {
+  color: #fff;
 }
 
 .previous {
-  left: 24px;
+  left: 10px;
 }
+
 .next {
-  right: 24px;
+  right: 10px;
 }
 
 @keyframes fadeIn {
@@ -362,33 +383,19 @@
     padding: 82px 0 70px;
   }
   .galleryGrid {
-    grid-auto-rows: 74px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .galleryCard {
-    grid-column: span 6;
-    grid-row: span 4;
-  }
-  .card1,
-  .card8 {
-    grid-column: span 12;
-    grid-row: span 5;
-  }
-  .card2,
-  .card9,
-  .card6 {
-    grid-column: span 6;
-    grid-row: span 4;
-  }
-  .lightbox {
-    padding: 60px 24px;
-  }
-  .lightboxFigure {
-    width: 100%;
+  .slide {
+    padding: 70px 20px;
   }
   .lightboxArrow {
-    top: auto;
-    bottom: 20px;
-    transform: none;
+    width: 44px;
+  }
+  .previous {
+    left: 0;
+  }
+  .next {
+    right: 0;
   }
 }
 
@@ -427,20 +434,8 @@
     font-size: 16px;
   }
   .galleryGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .galleryCard {
-    width: 100%;
-    height: 255px;
-  }
-  .galleryCard:nth-child(3n + 1) {
-    height: 330px;
-  }
-  .expandIcon {
-    opacity: 1;
-    transform: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
   .archiveNote {
     align-items: flex-start;
@@ -450,25 +445,15 @@
   .noteRule {
     width: 30px;
   }
-  .lightbox {
-    padding: 70px 16px 82px;
-  }
-  .closeButton {
-    top: 16px;
-    right: 16px;
-  }
-  .previous {
-    left: 16px;
-  }
-  .next {
-    right: 16px;
+  .slide {
+    padding: 70px 0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .galleryCard img,
-  .expandIcon,
-  .skipLink {
+  .skipLink,
+  .track,
+  .slide img {
     transition: none;
   }
 }

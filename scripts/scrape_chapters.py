@@ -19,7 +19,7 @@ CHAPTERS = [
     ("Delhi Chapter", "delhi-chapter"), ("Etawah Chapter", "etawah-chapter"),
     ("Faridabad Chapter", "faridabad-chapter"), ("Guwahati Chapter", "guwahati-chapter"),
     ("Hyderabad Chapter", "hyderabad-chapter"), ("Indore Chapter", "indore-chapter"),
-    ("Kannur Chapter", "kannur-chapter"), ("Kolkata Chapter", "kolkata-chapter"),
+    ("Kannur Chapter", "kannur-chapter"),
     ("Lucknow Chapter", "lucknow-chapter"), ("Ludhiana Chapter", "ludhiana-chapter"),
     ("Mangaluru Chapter", "mangaluru-chapter"), ("Meerut Chapter", "meerut-chapter"),
     ("Mumbai Chapter", "mumbai-chapter"), ("Nagpur Chapter", "nagpur-chapter"),

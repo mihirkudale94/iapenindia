@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async';
-import { Link, Navigate, useParams } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Mail, Users } from 'lucide-react';
+import { Navigate, useParams } from 'react-router-dom';
+import { Mail, Users } from 'lucide-react';
 import officialChapters from '@/data/chaptersOfficial.json';
+import ContentBlocks from '@/components/widgets/ContentBlocks';
 
 const getMemberIdentity = (title) => {
   const lines = title
@@ -14,9 +15,15 @@ const getMemberIdentity = (title) => {
 
 const ChapterDetail = () => {
   const { slug } = useParams();
-  const chapter = officialChapters.find((item) => item.slug === slug);
+  const officialChapter = officialChapters.find((item) => item.slug === slug);
 
-  if (!chapter) return <Navigate to="/chapters" replace />;
+  if (!officialChapter) return <Navigate to="/" replace />;
+
+  // Members marked "hidden" are kept in the data but not shown, matching the live site.
+  const chapter = {
+    ...officialChapter,
+    members: officialChapter.members.filter((member) => !member.hidden),
+  };
 
   return (
     <div className="directory-detail-page animate-slide-up">
@@ -36,28 +43,17 @@ const ChapterDetail = () => {
       <section className="section">
         <div className="container directory-detail-container">
           <div className="directory-detail-toolbar">
-            <Link to="/chapters" className="btn btn-outline btn-sm">
-              <ArrowLeft size={17} /> All Chapters
-            </Link>
             <div className="directory-detail-toolbar-links">
               {chapter.email && (
                 <a href={`mailto:${chapter.email}`} className="source-link">
                   <Mail size={15} /> {chapter.email}
                 </a>
               )}
-              <a
-                href={chapter.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="source-link"
-              >
-                Official source <ExternalLink size={15} />
-              </a>
             </div>
           </div>
           <div className="section-title-wrapper text-left directory-detail-intro">
             <span className="section-subtitle">Chapter Leadership</span>
-            <h2 className="section-title">Office Bearers & Committee Members</h2>
+            <h2 className="section-title">{chapter.pageTitle || chapter.name}</h2>
             <p className="section-desc">
               <Users size={18} /> {chapter.members.length} official profiles
             </p>
@@ -89,6 +85,7 @@ const ChapterDetail = () => {
               );
             })}
           </div>
+          <ContentBlocks blocks={chapter.activities} />
         </div>
       </section>
     </div>

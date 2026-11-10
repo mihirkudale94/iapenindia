@@ -1,8 +1,21 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, ArrowRight, Camera, Expand, X } from 'lucide-react';
+import {
+  ArrowRight,
+  Camera,
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  Maximize,
+  Minimize,
+  Share2,
+  X,
+  ZoomIn,
+  ZoomOut,
+} from 'lucide-react';
 import styles from './Events.module.css';
 
+// Same order as the gallery on iapenindia.org/events/
 const sourceOrder = [2, 1, 8, 10, 11, 3, 4, 5, 7, 6, 9];
 
 const gallery = sourceOrder.map((number, index) => ({
@@ -10,35 +23,246 @@ const gallery = sourceOrder.map((number, index) => ({
   alt: `Indian Clinical Nutrition Congress 2022 highlight ${index + 1}`,
 }));
 
-const Events = () => {
-  const [activeImage, setActiveImage] = useState(null);
+const ZOOM_SCALE = 3;
+const SWIPE_THRESHOLD = 50;
 
-  const showPrevious = useCallback(() => {
-    setActiveImage((current) => (current === 0 ? gallery.length - 1 : current - 1));
-  }, []);
+const clamp = (value, limit) => Math.max(-limit, Math.min(limit, value));
 
-  const showNext = useCallback(() => {
-    setActiveImage((current) => (current === gallery.length - 1 ? 0 : current + 1));
-  }, []);
+const Lightbox = ({ index, onChange, onClose }) => {
+  const rootRef = useRef(null);
+  const dragRef = useRef(null);
+  const [zoomed, setZoomed] = useState(false);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const [dragOffset, setDragOffset] = useState(0);
+  const [shareOpen, setShareOpen] = useState(false);
+  const [fullscreen, setFullscreen] = useState(false);
+
+  const total = gallery.length;
+  const current = gallery[index];
+  const absoluteSrc =
+    typeof window === 'undefined' ? current.src : new URL(current.src, window.location.origin).href;
+  const pageUrl = typeof window === 'undefined' ? '' : window.location.href;
+
+  const resetView = () => {
+    setZoomed(false);
+    setPan({ x: 0, y: 0 });
+    setShareOpen(false);
+  };
+
+  const go = useCallback(
+    (step) => {
+      resetView();
+      onChange((currentIndex) => (currentIndex + step + total) % total);
+    },
+    [onChange, total]
+  );
+
+  const toggleZoom = () => {
+    setZoomed((value) => !value);
+    setPan({ x: 0, y: 0 });
+  };
+
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) document.exitFullscreen?.();
+    else rootRef.current?.requestFullscreen?.();
+  };
 
   useEffect(() => {
-    if (activeImage === null) return undefined;
-
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') setActiveImage(null);
-      if (event.key === 'ArrowLeft') showPrevious();
-      if (event.key === 'ArrowRight') showNext();
+      if (event.key === 'Escape' && !document.fullscreenElement) onClose();
+      if (event.key === 'ArrowLeft') go(-1);
+      if (event.key === 'ArrowRight') go(1);
     };
+    const handleFullscreen = () => setFullscreen(Boolean(document.fullscreenElement));
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('fullscreenchange', handleFullscreen);
+    rootRef.current?.focus();
 
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('fullscreenchange', handleFullscreen);
+      if (document.fullscreenElement) document.exitFullscreen?.();
     };
-  }, [activeImage, showNext, showPrevious]);
+  }, [go, onClose]);
+
+  const handlePointerDown = (event) => {
+    if (event.button !== 0) return;
+    dragRef.current = { x: event.clientX, y: event.clientY, pan, moved: false };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const handlePointerMove = (event) => {
+    const drag = dragRef.current;
+    if (!drag) return;
+    const dx = event.clientX - drag.x;
+    const dy = event.clientY - drag.y;
+    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) drag.moved = true;
+
+    if (zoomed) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      const limitX = (rect.width * (ZOOM_SCALE - 1)) / 2;
+      const limitY = (rect.height * (ZOOM_SCALE - 1)) / 2;
+      setPan({ x: clamp(drag.pan.x + dx, limitX), y: clamp(drag.pan.y + dy, limitY) });
+    } else {
+      setDragOffset(dx);
+    }
+  };
+
+  const handlePointerUp = (event) => {
+    const drag = dragRef.current;
+    dragRef.current = null;
+    if (!drag) return;
+    const dx = event.clientX - drag.x;
+    setDragOffset(0);
+
+    if (!zoomed && Math.abs(dx) > SWIPE_THRESHOLD) {
+      go(dx < 0 ? 1 : -1);
+    } else if (!drag.moved && event.target === event.currentTarget) {
+      // Clicking the dark area around the photo closes the viewer, as on the original site.
+      onClose();
+    }
+  };
+
+  return (
+    <div
+      ref={rootRef}
+      className={styles.lightbox}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Event photo ${index + 1} of ${total}`}
+      tabIndex={-1}
+    >
+      <header className={styles.lightboxHeader}>
+        <span className={styles.counter}>
+          {index + 1} / {total}
+        </span>
+        <div className={styles.toolbar}>
+          <button
+            type="button"
+            onClick={toggleFullscreen}
+            aria-label={fullscreen ? 'Exit fullscreen' : 'Fullscreen'}
+            aria-pressed={fullscreen}
+          >
+            {fullscreen ? <Minimize size={20} /> : <Maximize size={20} />}
+          </button>
+          <button type="button" onClick={toggleZoom} aria-label="Zoom" aria-pressed={zoomed}>
+            {zoomed ? <ZoomOut size={20} /> : <ZoomIn size={20} />}
+          </button>
+          <button
+            type="button"
+            onClick={() => setShareOpen((value) => !value)}
+            aria-label="Share"
+            aria-expanded={shareOpen}
+          >
+            <Share2 size={20} />
+          </button>
+          <button type="button" onClick={onClose} aria-label="Close">
+            <X size={24} />
+          </button>
+        </div>
+      </header>
+
+      {shareOpen && (
+        <div className={styles.shareMenu}>
+          <a
+            href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(pageUrl)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Share on Facebook
+          </a>
+          <a
+            href={`https://x.com/intent/tweet?text=${encodeURIComponent(pageUrl)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Share on X
+          </a>
+          <a
+            href={`https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(
+              pageUrl
+            )}&media=${encodeURIComponent(absoluteSrc)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pin it
+          </a>
+          <a href={current.src} download>
+            <Download size={16} aria-hidden="true" /> Download image
+          </a>
+        </div>
+      )}
+
+      <div className={styles.viewport}>
+        <div
+          className={styles.track}
+          style={{
+            transform: `translateX(calc(${-index * 100}% + ${dragOffset}px))`,
+            transition: dragOffset ? 'none' : undefined,
+          }}
+        >
+          {gallery.map((image, slideIndex) => {
+            const active = slideIndex === index;
+            return (
+              <div
+                className={styles.slide}
+                key={image.src}
+                aria-hidden={!active}
+                onPointerDown={active ? handlePointerDown : undefined}
+                onPointerMove={active ? handlePointerMove : undefined}
+                onPointerUp={active ? handlePointerUp : undefined}
+                onPointerCancel={() => {
+                  dragRef.current = null;
+                  setDragOffset(0);
+                }}
+                onDoubleClick={active ? toggleZoom : undefined}
+              >
+                {Math.abs(slideIndex - index) <= 1 && (
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    draggable="false"
+                    className={active && zoomed ? styles.zoomed : undefined}
+                    style={
+                      active && zoomed
+                        ? { transform: `translate(${pan.x}px, ${pan.y}px) scale(${ZOOM_SCALE})` }
+                        : undefined
+                    }
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <button
+        type="button"
+        className={`${styles.lightboxArrow} ${styles.previous}`}
+        onClick={() => go(-1)}
+        aria-label="Previous slide"
+      >
+        <ChevronLeft size={34} />
+      </button>
+      <button
+        type="button"
+        className={`${styles.lightboxArrow} ${styles.next}`}
+        onClick={() => go(1)}
+        aria-label="Next slide"
+      >
+        <ChevronRight size={34} />
+      </button>
+    </div>
+  );
+};
+
+const Events = () => {
+  const [activeImage, setActiveImage] = useState(null);
+  const closeLightbox = useCallback(() => setActiveImage(null), []);
 
   return (
     <div className={styles.page}>
@@ -95,19 +319,18 @@ const Events = () => {
 
           <div className={styles.galleryGrid}>
             {gallery.map((image, index) => (
-              <button
-                className={`${styles.galleryCard} ${styles[`card${index + 1}`] || ''}`}
+              <a
+                className={styles.galleryItem}
                 key={image.src}
-                type="button"
-                onClick={() => setActiveImage(index)}
+                href={image.src}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setActiveImage(index);
+                }}
                 aria-label={`Open photo ${index + 1} of ${gallery.length}`}
               >
-                <img src={image.src} alt={image.alt} loading={index > 2 ? 'lazy' : 'eager'} />
-                <span className={styles.cardShade} />
-                <span className={styles.expandIcon}>
-                  <Expand size={18} aria-hidden="true" />
-                </span>
-              </button>
+                <img src={image.src} alt={image.alt} loading={index > 3 ? 'lazy' : 'eager'} />
+              </a>
             ))}
           </div>
 
@@ -120,46 +343,7 @@ const Events = () => {
       </main>
 
       {activeImage !== null && (
-        <div
-          className={styles.lightbox}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Event photo ${activeImage + 1} of ${gallery.length}`}
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) setActiveImage(null);
-          }}
-        >
-          <button
-            type="button"
-            className={styles.closeButton}
-            onClick={() => setActiveImage(null)}
-            aria-label="Close photo viewer"
-          >
-            <X size={24} />
-          </button>
-          <button
-            type="button"
-            className={`${styles.lightboxArrow} ${styles.previous}`}
-            onClick={showPrevious}
-            aria-label="Previous photo"
-          >
-            <ArrowLeft size={24} />
-          </button>
-          <figure className={styles.lightboxFigure}>
-            <img src={gallery[activeImage].src} alt={gallery[activeImage].alt} />
-            <figcaption>
-              <span>ICNC 2022</span>
-            </figcaption>
-          </figure>
-          <button
-            type="button"
-            className={`${styles.lightboxArrow} ${styles.next}`}
-            onClick={showNext}
-            aria-label="Next photo"
-          >
-            <ArrowRight size={24} />
-          </button>
-        </div>
+        <Lightbox index={activeImage} onChange={setActiveImage} onClose={closeLightbox} />
       )}
     </div>
   );

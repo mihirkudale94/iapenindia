@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Mail, Sun, Moon } from 'lucide-react';
-import { useDemo } from '@/context/DemoContext';
+import { Menu, X, ChevronDown, Mail } from 'lucide-react';
+import chapterMenu from '@/data/chapterMenu';
+import coreGroupMenu from '@/data/coreGroupMenu';
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useDemo();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -51,28 +51,41 @@ const Navbar = () => {
     },
     {
       name: 'Chapters',
-      path: '/chapters',
+      wide: true,
+      dropdown: chapterMenu.map((chapter) => ({
+        name: chapter.name,
+        path: `/chapters/${chapter.slug}`,
+      })),
     },
     {
       name: 'Core Groups',
-      path: '/core-groups',
+      wide: true,
+      dropdown: coreGroupMenu.map((group) => ({
+        name: group.name,
+        path: `/core-groups/${group.slug}`,
+      })),
     },
     {
       name: 'Education',
       dropdown: [
         { name: 'Courses & Education', path: '/courses' },
-        { name: 'ESPEN LLL Courses', path: '/courses#espen-lll' },
-        { name: 'ESPEN Membership', path: '/courses#espen-membership' },
-        { name: 'Eligibility for T-LLL', path: '/courses#t-lll' },
         { name: 'Newsletter Archive', path: '/newsletter-anniversary-edition' },
         { name: 'Malnutrition Activities', path: '/malnutrition' },
+      ],
+    },
+    {
+      name: 'ESPEN',
+      dropdown: [
+        { name: 'ESPEN LLL Courses', path: '/espen-lll-courses' },
+        { name: 'ESPEN MEMBERSHIP', path: '/espen-membership' },
+        { name: 'ESPEN Eligibility for T-LLL', path: '/espen-eligibility-for-t-lll' },
       ],
     },
     { name: 'Journal', path: 'https://jnutres.com/', external: true },
     { name: 'Events', path: '/events' },
     {
       name: 'ICNC',
-      path: 'https://iapenindia.org/PDF/ICNC-2026.pdf',
+      path: '/documents/icnc-2026.pdf',
       external: true,
       newTab: true,
     },
@@ -89,33 +102,6 @@ const Navbar = () => {
             </a>
             <span className="top-divider">|</span>
             <span className="top-time">Mon - Fri: 10:00 AM - 6:00 PM</span>
-          </div>
-          <div
-            className="top-right-links"
-            style={{ display: 'flex', alignItems: 'center', gap: '12px' }}
-          >
-            <button
-              onClick={toggleTheme}
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'inherit',
-                padding: '4px',
-                borderRadius: '50%',
-                transition: 'background 0.2s',
-              }}
-              title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
-            >
-              {theme === 'light' ? (
-                <Moon size={16} />
-              ) : (
-                <Sun size={16} style={{ color: 'var(--accent)' }} />
-              )}
-            </button>
           </div>
         </div>
       </div>
@@ -165,7 +151,9 @@ const Navbar = () => {
                 )}
 
                 {link.dropdown && (
-                  <div className={`dropdown-menu ${activeDropdown === link.name ? 'show' : ''}`}>
+                  <div
+                    className={`dropdown-menu ${link.wide ? 'dropdown-menu-wide' : ''} ${activeDropdown === link.name ? 'show' : ''}`}
+                  >
                     {link.dropdown.map((subItem) => (
                       <Link key={subItem.name} to={subItem.path} className="dropdown-item">
                         {subItem.name}
@@ -175,8 +163,8 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link to="/membership#register" className="btn btn-accent btn-sm header-register-btn">
-              Become a Member
+            <Link to="/register-now" className="btn btn-accent btn-sm header-register-btn">
+              Register Now
             </Link>
           </div>
 
@@ -249,7 +237,9 @@ const Navbar = () => {
                       className={`chevron-icon ${activeDropdown === link.name ? 'rotate' : ''}`}
                     />
                   </button>
-                  <div className={`mobile-dropdown ${activeDropdown === link.name ? 'show' : ''}`}>
+                  <div
+                    className={`mobile-dropdown ${link.wide ? 'mobile-dropdown-scroll' : ''} ${activeDropdown === link.name ? 'show' : ''}`}
+                  >
                     {link.dropdown.map((subItem) => (
                       <Link
                         key={subItem.name}
@@ -267,11 +257,11 @@ const Navbar = () => {
           ))}
           <div className="mobile-cta-wrapper">
             <Link
-              to="/membership#register"
+              to="/register-now"
               className="btn btn-accent w-full"
               onClick={() => setIsOpen(false)}
             >
-              Become a Member
+              Register Now
             </Link>
           </div>
         </div>

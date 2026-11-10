@@ -13,15 +13,25 @@ const Home = lazy(() => import('@/pages/Home'));
 const About = lazy(() => import('@/pages/About'));
 const OfficeBearers = lazy(() => import('@/pages/OfficeBearers'));
 const AdvisoryBoard = lazy(() => import('@/pages/AdvisoryBoard'));
-const Chapters = lazy(() => import('@/pages/Chapters'));
 const ChapterDetail = lazy(() => import('@/pages/ChapterDetail'));
-const CoreGroups = lazy(() => import('@/pages/CoreGroups'));
 const CoreGroupDetail = lazy(() => import('@/pages/CoreGroupDetail'));
 const Membership = lazy(() => import('@/pages/Membership'));
 const Courses = lazy(() => import('@/pages/Courses'));
 const Events = lazy(() => import('@/pages/Events'));
 const Contact = lazy(() => import('@/pages/Contact'));
+const RegisterNow = lazy(() => import('@/pages/RegisterNow'));
 const Policies = lazy(() => import('@/pages/Policies'));
+
+// Espen.jsx holds the three ESPEN menu pages, which share one chunk.
+const EspenLllCourses = lazy(() =>
+  import('@/pages/Espen').then((m) => ({ default: m.EspenLllCourses }))
+);
+const EspenMembership = lazy(() =>
+  import('@/pages/Espen').then((m) => ({ default: m.EspenMembership }))
+);
+const EspenTlllEligibility = lazy(() =>
+  import('@/pages/Espen').then((m) => ({ default: m.EspenTlllEligibility }))
+);
 
 // Resources.jsx holds three small document pages that share one chunk.
 const Bylaws = lazy(() => import('@/pages/Resources').then((m) => ({ default: m.Bylaws })));
@@ -40,14 +50,20 @@ const AppRoutes = () => (
     <Route path="/about" element={<About />} />
     <Route path="/office-bearers" element={<OfficeBearers />} />
     <Route path="/advisory-board" element={<AdvisoryBoard />} />
-    <Route path="/chapters" element={<Chapters />} />
     <Route path="/chapters/:slug" element={<ChapterDetail />} />
-    <Route path="/core-groups" element={<CoreGroups />} />
+    <Route
+      path="/core-groups"
+      element={<Navigate to="/core-groups/core-groups-diabetes-india" replace />}
+    />
     <Route path="/core-groups/:slug" element={<CoreGroupDetail />} />
     <Route path="/membership" element={<Membership />} />
     <Route path="/courses" element={<Courses />} />
+    <Route path="/espen-lll-courses" element={<EspenLllCourses />} />
+    <Route path="/espen-membership" element={<EspenMembership />} />
+    <Route path="/espen-eligibility-for-t-lll" element={<EspenTlllEligibility />} />
     <Route path="/events" element={<Events />} />
     <Route path="/contact" element={<Contact />} />
+    <Route path="/register-now" element={<RegisterNow />} />
     <Route path="/journal" element={<ExternalRedirect url={JOURNAL_URL} />} />
 
     <Route path="/privacy-policy" element={<Policies defaultTab="privacy" />} />

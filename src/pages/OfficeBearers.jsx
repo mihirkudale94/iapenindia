@@ -5,7 +5,8 @@ import pastPresidentMessage from '@/data/pastPresidentMessage';
 
 const boardOfDirectors = leadership.officeBearers.members.slice(0, 4);
 const coreTeam = leadership.officeBearers.members.slice(4, 10);
-const necMembers = leadership.officeBearers.members.slice(10);
+// Members marked "hidden" are kept in the data but not shown, matching the live site.
+const necMembers = leadership.officeBearers.members.slice(10).filter((member) => !member.hidden);
 
 const OfficeBearers = () => (
   <div className="about-page animate-slide-up">
@@ -71,7 +72,7 @@ const OfficeBearers = () => (
           <span className="section-subtitle">Executive Committee</span>
           <h2 className="section-title">NEC Members</h2>
         </div>
-        <LeadershipGrid members={necMembers} accent="teal" />
+        <LeadershipGrid members={necMembers} />
       </div>
     </section>
   </div>

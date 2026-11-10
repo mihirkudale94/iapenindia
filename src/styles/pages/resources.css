@@ -123,39 +123,4 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .groups-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .groups-grid {
-    grid-template-columns: 1fr;
-  }
-  .group-card {
-    min-height: 170px;
-  }
-  .group-results-count {
-    width: 100%;
-    text-align: center;
-  }
-  .core-group-member {
-    grid-template-columns: 1fr;
-  }
-  .core-group-member-image {
-    width: 112px;
-    height: 112px;
-  }
-  .core-group-member-heading {
-    flex-direction: column;
-  }
-}
-
-.group-name {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--primary-dark);
-}
-
 /* Slide animation body */

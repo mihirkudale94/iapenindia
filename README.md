@@ -83,12 +83,6 @@ for editor navigation.
 **Routes** are declared only in `src/app/router/AppRoutes.jsx`. Pages are lazy
 so a visitor downloads one route, not the whole site.
 
-### Notes on dependencies
-
-`prop-types` is a direct dependency even though this codebase does not use
-PropTypes: `react-simple-maps@3` imports it at runtime and declares it as a
-peer, so dropping it breaks `/chapters` in a production install.
-
 ## Content sources
 
 `src/data/*Official.json` is scraped from the live association site by the

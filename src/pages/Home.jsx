@@ -362,32 +362,26 @@ const Home = () => {
             </div>
 
             <div className={`grid-3 ${styles['preview-groups-grid']}`}>
-              <div className={styles['preview-group-card']}>
+              <Link to="/core-groups/pediatric-core-group" className={styles['preview-group-card']}>
                 <h4>Pediatric Nutrition</h4>
                 <p>
                   Addressing nutritional care of infants and children in hospital and community
                   settings.
                 </p>
-              </div>
-              <div className={styles['preview-group-card']}>
+              </Link>
+              <Link to="/core-groups/onco-core" className={styles['preview-group-card']}>
                 <h4>Oncology Nutrition</h4>
                 <p>
                   Specialized oncology core group focuses on medical nutrition therapy in cancer
                   patients.
                 </p>
-              </div>
-              <div className={styles['preview-group-card']}>
+              </Link>
+              <Link to="/core-groups/critical-care" className={styles['preview-group-card']}>
                 <h4>Critical Care</h4>
                 <p>
                   Targeting guidelines for parenteral and enteral feeding protocols in ICU
                   environments.
                 </p>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Link to="/core-groups" className="btn btn-primary">
-                View All 17 Core Groups <ChevronRight size={16} />
               </Link>
             </div>
           </div>

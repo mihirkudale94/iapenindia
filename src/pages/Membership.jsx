@@ -1,9 +1,29 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import { Check, User, Briefcase, Award, Sparkles } from 'lucide-react';
-import RegistrationSection from '@/components/widgets/RegistrationSection';
-import { lifeBenefits, studentBenefits, pricingTiers } from '@/data/membershipData';
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowRight, Check } from 'lucide-react';
+import {
+  bankDetails,
+  lifeBenefits,
+  membershipEmail,
+  membershipFees,
+  membershipFormUrl,
+  membershipIntro,
+  requiredAttachments,
+  studentBenefits,
+} from '@/data/membershipData';
+
+// Tick-mark list, as used for benefits and fees on the live page.
+const IconList = ({ items, strong = false }) => (
+  <ul className={`membership-list ${strong ? 'membership-list-strong' : ''}`}>
+    {items.map((item) => (
+      <li key={item}>
+        <Check size={15} />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+);
 
 const Membership = () => {
   const { hash } = useLocation();
@@ -25,216 +45,101 @@ const Membership = () => {
         <title>Membership | IAPEN India</title>
         <meta
           name="description"
-          content="Join IAPEN India. Discover membership benefits, fees, and apply online to become a part of India's leading clinical nutrition community."
+          content="IAPEN INDIA membership benefits, application process, membership fees and bank account details."
         />
       </Helmet>
       <div className="membership-page animate-slide-up">
-        {/* Header */}
         <section className="page-header bg-primary-dark">
           <div className="container">
-            <span className="page-subtitle">Join the Association</span>
-            <h1 className="page-title text-white">Professional Membership</h1>
+            <h1 className="page-title text-white">Membership</h1>
+            <nav className="membership-breadcrumb" aria-label="Breadcrumb">
+              <Link to="/">IAPEN INDIA Association</Link>
+              <span aria-hidden="true">&gt;</span>
+              <span>Membership</span>
+            </nav>
           </div>
         </section>
 
-        {/* Benefits and Pricing */}
-        <section className="section benefits-section">
-          <div className="container">
-            <div className="grid-2 align-start">
-              <div>
-                <h2 className="section-title text-left">Why Join IAPEN India?</h2>
-                <p className="about-text font-semibold text-primary mb-4">
-                  IAPEN INDIA welcomes all aspiring health care professionals who wish to become a
-                  Life Member of IAPEN INDIA and get connected to millions of health care
-                  professionals from across the globe through its international affiliates.
-                </p>
+        <section className="section">
+          <div className="container membership-content">
+            <p className="membership-intro">{membershipIntro}</p>
 
-                <div
-                  className="benefits-columns mt-6"
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                    gap: '20px',
-                  }}
-                >
-                  <div
-                    className="glass-panel"
-                    style={{
-                      padding: '24px',
-                      borderRadius: 'var(--radius-lg)',
-                      background:
-                        'linear-gradient(145deg, rgba(255,255,255,0.9), rgba(240,245,250,0.5))',
-                      border: '1px solid rgba(11,60,93,0.1)',
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        marginBottom: '16px',
-                      }}
-                    >
-                      <div
-                        style={{
-                          padding: '10px',
-                          background: 'var(--primary-light)',
-                          borderRadius: '12px',
-                          color: 'var(--primary)',
-                        }}
-                      >
-                        <Briefcase size={24} />
-                      </div>
-                      <h3 style={{ fontSize: '18px', color: 'var(--primary-navy)', margin: 0 }}>
-                        Life Membership
-                      </h3>
-                    </div>
-                    <ul
-                      className="benefits-checklist"
-                      style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}
-                    >
-                      {lifeBenefits.map((benefit, idx) => (
-                        <li
-                          key={idx}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'flex-start',
-                            gap: '12px',
-                            fontSize: '14px',
-                            color: 'var(--text-muted)',
-                          }}
-                        >
-                          <Check
-                            size={16}
-                            style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '2px' }}
-                          />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+            <h2 className="membership-title">Membership Benefits</h2>
 
-                  <div
-                    className="glass-panel"
-                    style={{
-                      padding: '24px',
-                      borderRadius: 'var(--radius-lg)',
-                      background:
-                        'linear-gradient(145deg, rgba(255,255,255,0.9), rgba(242,250,254,0.5))',
-                      border: '1px solid rgba(32,128,168,0.1)',
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        marginBottom: '16px',
-                      }}
-                    >
-                      <div
-                        style={{
-                          padding: '10px',
-                          background: 'var(--teal-light)',
-                          borderRadius: '12px',
-                          color: 'var(--teal)',
-                        }}
-                      >
-                        <User size={24} />
-                      </div>
-                      <h3 style={{ fontSize: '18px', color: 'var(--teal)', margin: 0 }}>
-                        Student Membership
-                      </h3>
-                    </div>
-                    <ul
-                      className="benefits-checklist"
-                      style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}
-                    >
-                      {studentBenefits.map((benefit, idx) => (
-                        <li
-                          key={idx}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'flex-start',
-                            gap: '12px',
-                            fontSize: '14px',
-                            color: 'var(--text-muted)',
-                          }}
-                        >
-                          <Check
-                            size={16}
-                            style={{ color: 'var(--teal)', flexShrink: 0, marginTop: '2px' }}
-                          />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <h3 className="membership-heading">Privilege of Life Membership:</h3>
+            <IconList items={lifeBenefits} />
 
-              <div className="glass-panel benefits-sidebar">
-                <Award className="text-accent sidebar-icon-large" size={48} />
-                <h3>Certified Standards</h3>
-                <p>
-                  Our members are recognized nationally for adhering to ethical and evidence-based
-                  nutrition protocols. Membership provides credentials that reflect commitment to
-                  professional excellence.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+            <h3 className="membership-heading">Privilege For Student Membership:</h3>
+            <IconList items={studentBenefits} />
 
-        {/* Pricing Tiers */}
-        <section className="section section-bg pricing-section">
-          <div className="container">
-            <div className="section-title-wrapper">
-              <span className="section-subtitle">Categories</span>
-              <h2 className="section-title">Membership Pricing</h2>
-              <p className="section-desc">
-                Select the category that corresponds to your profession. Student membership is
-                available to students of bachelor’s courses.
-              </p>
-            </div>
-
-            <div className="grid-3 pricing-grid">
-              {pricingTiers.map((tier, index) => (
-                <div
-                  key={index}
-                  className={`card pricing-card ${tier.color} ${tier.popular ? 'popular-card' : ''}`}
-                >
-                  {tier.popular && (
-                    <div className="popular-badge">
-                      <Sparkles size={12} /> Popular
-                    </div>
-                  )}
-                  <span className="tier-badge">{tier.badge}</span>
-                  <h3 className="tier-title">{tier.title}</h3>
-                  <div className="tier-price-box">
-                    <span className="tier-price">{tier.price}</span>
-                    <span className="tier-type">/ {tier.type}</span>
-                  </div>
-
-                  <ul className="tier-features">
-                    {tier.features.map((feat, idx) => (
-                      <li key={idx}>
-                        <Check size={14} className="text-teal" />
-                        <span>{feat}</span>
-                      </li>
+            <h3 id="register" className="membership-heading">
+              Process for Membership Application :
+            </h3>
+            <ul className="membership-list membership-steps">
+              {[
+                'Make the Payment as per the respective category to the Bank Account mentioned in the form.',
+                'Fill the Google form attached below with all compulsory questions duly completed.',
+              ].map((step) => (
+                <li key={step}>
+                  <ArrowRight size={15} />
+                  <span>{step}</span>
+                </li>
+              ))}
+              <li>
+                <ArrowRight size={15} />
+                <span>
+                  Google form requires the candidate to attach:
+                  <ol className="membership-attachments" type="a">
+                    {requiredAttachments.map((item) => (
+                      <li key={item}>{item}</li>
                     ))}
-                  </ul>
-                  <a href="#register" className="btn btn-primary w-full mt-6">
-                    Select & Register
-                  </a>
-                </div>
+                  </ol>
+                </span>
+              </li>
+              {[
+                'Acknowledgment of the Application and payment will be communicated within 7 working days.',
+                'Candidates will receive a Certificate of Membership within 30 days.',
+              ].map((step) => (
+                <li key={step}>
+                  <ArrowRight size={15} />
+                  <span>{step}</span>
+                </li>
+              ))}
+              <li>
+                <ArrowRight size={15} />
+                <span>
+                  For any further queries write to us on{' '}
+                  <a href={`mailto:${membershipEmail}`}>{membershipEmail}</a>
+                </span>
+              </li>
+              <li>
+                <ArrowRight size={15} />
+                <span>
+                  Applicants please note that membership is voluntary and once issued it is non
+                  refundable and non transferable
+                </span>
+              </li>
+            </ul>
+
+            <p className="membership-form-link">
+              <strong>Kindly click on the google form to proceed</strong> :
+              <br />
+              <a href={membershipFormUrl} target="_blank" rel="noopener noreferrer">
+                {membershipFormUrl}
+              </a>
+            </p>
+
+            <h3 className="membership-heading membership-heading-spaced">Membership Fees</h3>
+            <IconList items={membershipFees} strong />
+
+            <h3 className="membership-heading">Bank Account Details</h3>
+            <div className="membership-bank">
+              {bankDetails.map((line) => (
+                <p key={line}>{line}</p>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Application Form Extracted Component */}
-        <RegistrationSection />
       </div>
     </>
   );
