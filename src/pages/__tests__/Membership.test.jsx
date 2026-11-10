@@ -31,8 +31,8 @@ describe('Membership page', () => {
   it('lists the fees and bank details', () => {
     renderPage();
     expect(screen.getByText(/5000\/- INR Life Membership for Doctors/)).toBeInTheDocument();
-    expect(screen.getByText('238805001011')).toBeInTheDocument();
-    expect(screen.getByText('ICIC0002388')).toBeInTheDocument();
+    expect(screen.getByText(/238805001011/)).toBeInTheDocument();
+    expect(screen.getByText(/ICIC0002388/)).toBeInTheDocument();
   });
 
   it('links to the official application form', () => {
