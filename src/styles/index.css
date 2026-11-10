@@ -21,6 +21,7 @@
 @import './layout/navbar.css';
 @import './layout/footer.css';
 @import './components/floating-socials.css';
+@import './components/support-widget.css';
 @import './pages/about.css';
 @import './pages/chapters.css';
 @import './pages/core-groups.css';

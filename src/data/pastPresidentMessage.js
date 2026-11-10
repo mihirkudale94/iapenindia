@@ -1,6 +1,6 @@
 // Message from the past President, reproduced from https://iapenindia.org/office-bearers/
 
-export const pastPresidentMessage = {
+const pastPresidentMessage = {
   sectionTitle: 'Message from past President – Dr. P C Vijay Kumar',
   heading: 'My Journey as the President of IAPEN INDIA',
   author: 'Dr. P C Vijay Kumar',

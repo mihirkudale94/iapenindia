@@ -18,7 +18,6 @@ import {
   RefreshCw,
   HelpCircle,
 } from 'lucide-react';
-import './SupportWidget.css';
 import { useDemo } from '@/context/DemoContext';
 
 // Local Search Database derived from website content
